@@ -1,0 +1,19 @@
+Time : 10:46:44
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : SELECT product_id, product_url, product_name, product_main_img, product_initial_price, product_current_price, product_bid_ends_on FROM tbl_product WHERE product_status = 1 AND product_bid_ends_on >= :currentdateandtime ORDER BY product_id DESC LIMIT 12
+
+Time : 10:44:43
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : SELECT product_id, product_url, product_name, product_main_img, product_initial_price, product_current_price, product_bid_ends_on FROM tbl_product WHERE product_status = 1 AND product_bid_ends_on >= :currentdateandtime ORDER BY product_id DESC LIMIT 12
+
+Time : 09:44:23
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : SELECT product_id, product_url, product_name, product_main_img, product_initial_price, product_current_price, product_bid_ends_on FROM tbl_product WHERE product_status = 1 AND product_bid_ends_on >= :currentdateandtime ORDER BY product_id DESC LIMIT 12
+
+Time : 09:40:08
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : SELECT product_id, product_url, product_name, product_main_img, product_initial_price, product_current_price, product_bid_ends_on FROM tbl_product WHERE product_status = 1 AND product_bid_ends_on >= :currentdateandtime ORDER BY product_id DESC LIMIT 12
+
+Time : 09:37:46
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : SELECT product_id, product_url, product_name, product_main_img, product_initial_price, product_current_price FROM tbl_product WHERE product_status = 1 AND product_bid_ends_on >= :currentdateandtime ORDER BY product_id DESC LIMIT 12

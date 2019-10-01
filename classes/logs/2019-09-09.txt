@@ -1,0 +1,365 @@
+Time : 14:02:44
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 14:01:44
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 10:03:19
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 10:03:10
+SQLSTATE[HY000]: General error: 9001 Max connect timeout reached while reaching hostgroup 1018 after 10000ms
+Raw SQL : SELECT * FROM tbl_menu WHERE menu_type = :menu_type ORDER BY menu_item_order ASC
+
+Time : 10:01:39
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 10:01:39
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 10:00:58
+SQLSTATE[HY000]: General error: 9001 Max connect timeout reached while reaching hostgroup 1018 after 10001ms
+Raw SQL : SELECT * FROM tbl_menu WHERE menu_type = :menu_type ORDER BY menu_item_order ASC
+
+Time : 08:54:03
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 08:07:10
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 08:06:10
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 08:05:10
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:51:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:50:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:50:05
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:49:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:49:05
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:48:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:47:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:46:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:45:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:44:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:43:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:43:05
+SQLSTATE[HY000]: General error: 9001 Max connect timeout reached while reaching hostgroup 1018 after 10001ms
+Raw SQL : SELECT * FROM tbl_menu WHERE menu_type = :menu_type ORDER BY menu_item_order ASC
+
+Time : 07:41:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:40:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:39:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:38:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:37:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:36:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:35:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:34:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:33:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:32:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:31:55
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:30:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:29:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:28:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:27:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:26:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:25:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:25:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:24:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:24:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:23:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:23:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:22:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:22:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:21:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:21:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:20:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:20:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:19:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:19:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:19:06
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:18:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:18:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:17:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:17:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:16:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:16:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:15:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:15:50
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:15:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:14:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:14:50
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:14:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:13:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:13:50
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:13:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:12:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:12:51
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:12:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:11:56
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:11:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:11:51
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:11:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:10:56
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:10:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:10:50
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:10:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:10:00
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:09:56
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:09:50
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:09:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:08:50
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:08:41
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:07:58
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:07:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:07:26
+SQLSTATE[HY000]: General error: 9001 Max connect timeout reached while reaching hostgroup 1018 after 10000ms
+Raw SQL : SELECT product_id, product_url, product_name, product_main_img, product_initial_price, product_current_price, product_bid_ends_on FROM tbl_product WHERE product_status = 1 AND product_bid_ends_on >= :currentdateandtime ORDER BY product_id DESC LIMIT 12
+
+Time : 07:07:09
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:06:29
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:06:24
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:05:35
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:04:32
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:03:30
+SQLSTATE[HY000]: General error: 9001 Max connect timeout reached while reaching hostgroup 1018 after 10001ms
+Raw SQL : SELECT product_id, product_url, product_name, product_main_img, product_initial_price, product_current_price, product_bid_ends_on FROM tbl_product WHERE product_status = 1 AND product_bid_ends_on >= :currentdateandtime ORDER BY product_id DESC LIMIT 12
+
+Time : 07:02:22
+SQLSTATE[HY000]: General error: 9001 Max connect timeout reached while reaching hostgroup 1018 after 10001ms
+Raw SQL : SELECT product_id, product_url, product_name, product_main_img, product_initial_price, product_current_price, product_bid_ends_on FROM tbl_product WHERE product_status = 1 AND product_bid_ends_on >= :currentdateandtime ORDER BY product_id DESC LIMIT 12
+
+Time : 07:00:54
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 07:00:00
+SQLSTATE[HY000]: General error: 9001 Max connect timeout reached while reaching hostgroup 1018 after 10002ms
+Raw SQL : SELECT product_id, product_url, product_name, product_main_img, product_initial_price, product_current_price, product_bid_ends_on FROM tbl_product WHERE product_status = 1 AND product_bid_ends_on >= :currentdateandtime ORDER BY product_id DESC LIMIT 12
+
+Time : 06:59:52
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:59:00
+SQLSTATE[HY000]: General error: 9001 Max connect timeout reached while reaching hostgroup 1018 after 10000ms
+Raw SQL : SELECT product_id, product_url, product_name, product_main_img, product_initial_price, product_current_price, product_bid_ends_on FROM tbl_product WHERE product_status = 1 AND product_bid_ends_on >= :currentdateandtime ORDER BY product_id DESC LIMIT 12
+
+Time : 06:58:52
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:57:52
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:57:50
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:57:19
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:56:52
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:56:50
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:56:29
+SQLSTATE[HY000]: General error: 9001 Max connect timeout reached while reaching hostgroup 1018 after 10001ms
+Raw SQL : SELECT product_id, product_url, product_name, product_main_img, product_initial_price, product_current_price, product_bid_ends_on FROM tbl_product WHERE product_status = 1 AND product_bid_ends_on >= :currentdateandtime ORDER BY product_id DESC LIMIT 12
+
+Time : 06:55:52
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:55:23
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:55:19
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:54:23
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:54:19
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:53:59
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:53:57
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:53:23
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:53:19
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:52:23
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:50:04
+SQLSTATE[HY000] [2006] MySQL server has gone away
+
+Time : 06:49:04
+SQLSTATE[HY000] [2006] MySQL server has gone away

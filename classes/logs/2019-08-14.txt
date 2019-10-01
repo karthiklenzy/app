@@ -1,0 +1,19 @@
+Time : 12:06:43
+SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '2019-08-14 12:06:43pm' for column `id10444080_db_vendesiya`.`tbl_bid`.`bid_date_and_time` at row 1
+Raw SQL : INSERT INTO tbl_bid (product_id, bid_amount, bid_user_id, bid_date_and_time) VALUES (:productid, :bidamount, :biduser, :bid_date_and_time)
+
+Time : 12:02:42
+SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '2019-08-14 12:02:42pm' for column `id10444080_db_vendesiya`.`tbl_bid`.`bid_date_and_time` at row 1
+Raw SQL : INSERT INTO tbl_bid (product_id, bid_amount, bid_user_id, bid_date_and_time) VALUES (:productid, :bidamount, :biduser, :bid_date_and_time)
+
+Time : 08:46:21
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO tbl_report_ad (report_ad_reson, report_ad_mail, report_ad_message, report_product_id) VALUES(:report_reason, :reporter_mail, :reporter_message, :report_product_id)
+
+Time : 08:45:57
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'report_ad_reason' in 'field list'
+Raw SQL : INSERT INTO tbl_report_ad (report_ad_reason, report_ad_mail, report_ad_message, report_product_id) VALUES(:report_reason, :reporter_mail, :reporter_message, :report_product_id)
+
+Time : 08:33:38
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO tbl_report_ad (report_ad_reson, report_ad_mail, report_ad_message, report_product_id) VALUES(:report_reson, :reporter_mail, :reporter_message, :report_product_id)

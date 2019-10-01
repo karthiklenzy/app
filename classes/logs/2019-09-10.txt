@@ -1,0 +1,7 @@
+Time : 11:49:01
+SQLSTATE[HY000]: General error: 1364 Field 'user_address_line_two' doesn't have a default value
+Raw SQL : INSERT INTO tbl_user (user_name, user_first_name, user_last_name, user_email, user_password, user_phone, user_address_line_one, user_city, user_province, user_postal_code, user_nic_number, user_sms_verification, user_verification_key, user_created_date, user_status) VALUES (:username, :userfirstname, :userlastname, :useremailaddress, :userpassword, :usermobilenumber, :useraddresslineone, :usercity, :userprovince, :userpostalcode, :usernicnumber, :usersmsverification, :userverificationkey, :usercreateddate, :userstatus)
+
+Time : 11:49:01
+SQLSTATE[HY000]: General error: 1364 Field 'user_address_line_two' doesn't have a default value
+Raw SQL : INSERT INTO tbl_user (user_name, user_first_name, user_last_name, user_email, user_password, user_phone, user_address_line_one, user_city, user_province, user_postal_code, user_nic_number, user_sms_verification, user_verification_key, user_created_date, user_status) VALUES (:username, :userfirstname, :userlastname, :useremailaddress, :userpassword, :usermobilenumber, :useraddresslineone, :usercity, :userprovince, :userpostalcode, :usernicnumber, :usersmsverification, :userverificationkey, :usercreateddate, :userstatus)

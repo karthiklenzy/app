@@ -1,0 +1,35 @@
+Time : 13:16:26
+SQLSTATE[HY000]: General error: 1364 Field 'product_approved_on' doesn't have a default value
+Raw SQL : INSERT INTO tbl_product (product_name, product_description, product_initial_price, product_current_price,  published_user_id, product_main_img, product_images, product_url, category_id, sub_category_id) VALUES (:item_name, :item_desc_tinymce, :item_price, :current_price, :published_user_id, :main_image_url, :multi_imag_path, :product_url, :cat_id, :sub_cat_id)
+
+Time : 10:11:20
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT count(product_id) FROM tbl_product WHERE published_user_id = :user_id ORDER BY product_id DESC
+
+Time : 10:11:01
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT count(product_id) FROM tbl_product WHERE published_user_id = :user_id ORDER BY product_id DESC
+
+Time : 10:05:23
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT count(product_id) FROM tbl_product WHERE published_user_id = :user_id ORDER BY product_id DESC
+
+Time : 10:04:59
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT count(product_id) FROM tbl_product WHERE published_user_id = :user_id ORDER BY product_id DESC
+
+Time : 10:02:36
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT product_id, product_url, product_name, product_main_img, product_initial_price FROM tbl_product WHERE published_user_id = :user_id ORDER BY product_id DESC
+
+Time : 10:01:50
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT product_id, product_url, product_name, product_main_img, product_initial_price FROM tbl_product WHERE published_user_id = :user_id ORDER BY product_id DESC
+
+Time : 09:45:03
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT count(product_id) FROM tbl_product WHERE published_user_id = :user_id ORDER BY product_id DESC
+
+Time : 07:12:23
+SQLSTATE[HY000]: General error: 1364 Field 'product_approved_on' doesn't have a default value
+Raw SQL : INSERT INTO tbl_product (product_name, product_description, product_initial_price, product_current_price,  published_user_id, product_main_img, product_images, product_url, category_id, sub_category_id) VALUES (:item_name, :item_desc_tinymce, :item_price, :current_price, :published_user_id, :main_image_url, :multi_imag_path, :product_url, :cat_id, :sub_cat_id)

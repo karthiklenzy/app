@@ -1,0 +1,35 @@
+Time : 12:17:41
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO tbl_user (user_name, user_first_name, user_last_name, user_email, user_password, user_phone, user_address_line_one, user_city, user_province, user_postal_code, user_nic_number, user_sms_verification, user_verification_key, user_created_date, user_status) VALUES (:username, :userfirstname, :userlastname, :useremailaddress, :userpassword, :useraddresslineone, :useraddresslineone, :usercity, :userprovince, :userpostalcode, :usernicnumber, :usersmsverification, :userverificationkey, :usercreateddate, :userstatus)
+
+Time : 12:12:17
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : INSERT INTO tbl_user (user_name, user_first_name, user_last_name, user_email, user_password, user_phone, user_address_line_one, user_address_line_two, user_city, user_province, user_postal_code, user_nic_number, user_sms_verification, user_verification_key, user_created_date, user_status) VALUES (:username, :userfirstname, :userlastname, :useremailaddress, :userpassword, :usermobilenumber, :useraddresslineone, :useraddresslineone, :usercity, :userprovince, :userpostalcode, :usernicnumber, :usersmsverification, :userverificationkey, :usercreateddate, :userstatus)
+
+Time : 12:09:57
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : INSERT INTO tbl_user (user_name, user_first_name, user_last_name, user_email, user_password, user_phone, user_address_line_one, user_address_line_two, user_city, user_province, user_postal_code, user_nic_number, user_sms_verification, user_verification_key, user_created_date, user_status) VALUES (:username, :userfirstname, :userlastname, :useremailaddress, :userpassword, :usermobilenumber, :useraddresslineone, :useraddresslineone, :usercity, :userprovince, :userpostalcode, :usernicnumber, :usersmsverification, :userverificationkey, :usercreateddate, :userstatus)
+
+Time : 12:03:03
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : INSERT INTO tbl_user (user_name, user_first_name, user_last_name, user_email, user_password, user_phone, user_address_line_one, user_address_line_two, user_city, user_province, user_postal_code, user_nic_number, user_sms_verification, user_verification_key, user_created_date, user_status) VALUES (:username, :userfirstname, :userlastname, :useremailaddress, :userpassword, :usermobilenumber, :useraddresslineone, :useraddresslineone, :usercity, :userprovince, :userpostalcode, :usernicnumber, :usersmsverification, :userverificationkey, :usercreateddate, :userstatus)
+
+Time : 10:09:27
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+
+Time : 10:09:19
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+
+Time : 10:09:15
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+
+Time : 10:09:10
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+
+Time : 10:09:05
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+

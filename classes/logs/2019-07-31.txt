@@ -1,0 +1,7 @@
+Time : 10:32:20
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT category_id, category_name, category_icon FROM tbl_category WHERE category_id = :cat_id
+
+Time : 06:30:38
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+

@@ -1,0 +1,15 @@
+Time : 07:44:40
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'product_id' cannot be null
+Raw SQL : INSERT INTO tbl_bid (product_id, bid_amount, bid_user_id, bid_date_and_time) VALUES (:productid, :bidamount, :biduser, :bid_date_and_time)
+
+Time : 07:43:17
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'product_id' cannot be null
+Raw SQL : INSERT INTO tbl_bid (product_id, bid_amount, bid_user_id, bid_date_and_time) VALUES (:productid, :bidamount, :biduser, :bid_date_and_time)
+
+Time : 07:42:37
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'product_id' cannot be null
+Raw SQL : INSERT INTO tbl_bid (product_id, bid_amount, bid_user_id, bid_date_and_time) VALUES (:productid, :bidamount, :biduser, :bid_date_and_time)
+
+Time : 07:39:25
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'product_id' cannot be null
+Raw SQL : INSERT INTO tbl_bid (product_id, bid_amount, bid_user_id, bid_date_and_time) VALUES (:productid, :bidamount, :biduser, :bid_date_and_time)

@@ -1,0 +1,7 @@
+Time : 06:50:03
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'expired_product_max_bidder_mail' cannot be null
+Raw SQL : INSERT INTO tbl_expired_product (expired_product_id, expired_product_name, expired_product_owner_mail, expired_product_max_bidder_mail, expired_product_mail_sent_status, expired_product_mail_sent_date) VALUES (:product_id, :product_name, :owner_mail, :max_bidder_mail, :status, :sent_date_time)
+
+Time : 06:47:32
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'expired_product_max_bidder_mail' cannot be null
+Raw SQL : INSERT INTO tbl_expired_product (expired_product_id, expired_product_name, expired_product_owner_mail, expired_product_max_bidder_mail, expired_product_mail_sent_status, expired_product_mail_sent_date) VALUES (:product_id, :product_name, :owner_mail, :max_bidder_mail, :status, :sent_date_time)

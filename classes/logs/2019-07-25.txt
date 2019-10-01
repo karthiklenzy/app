@@ -1,0 +1,7 @@
+Time : 14:11:34
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : SELECT count(product_id) FROM tbl_product WHERE product_name LIKE :productname AND product_status = :activestatus
+
+Time : 11:39:36
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT product_id, product_url, product_name, product_main_img, product_initial_price FROM tbl_product WHERE product_name LIKE product_name AND product_status = :activestatus

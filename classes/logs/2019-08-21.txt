@@ -1,0 +1,11 @@
+Time : 10:49:29
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT product_main_img, published_user_id FROM tbl_product WHERE product_id = :product_f_id
+
+Time : 06:58:20
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cms_user_id' cannot be null
+Raw SQL : UPDATE tbl_product SET product_approved_on = :approvedon, product_bid_ends_on = :biddingednson, product_status = :productstatus, cms_user_id = :approvedcmsuser WHERE product_id = :productid
+
+Time : 06:58:09
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cms_user_id' cannot be null
+Raw SQL : INSERT INTO tbl_disapprove (disapprove_reason, disapproved_on, product_id, cms_user_id) VALUES (:disapprovereason, :disapprovedon, :productid, :disapprovedcmsuser)

@@ -1,0 +1,27 @@
+Time : 13:38:25
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'district_status' in 'where clause'
+Raw SQL : SELECT * FROM tbl_districts WHERE district_status = '1'
+
+Time : 13:37:54
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'district_status' in 'where clause'
+Raw SQL : SELECT * FROM tbl_districts WHERE district_status = 1
+
+Time : 13:37:39
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'district_status' in 'where clause'
+Raw SQL : SELECT * FROM tbl_districts WHERE district_status = 1
+
+Time : 13:36:54
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'district_status' in 'where clause'
+Raw SQL : SELECT * FROM tbl_districts WHERE district_status = 1
+
+Time : 13:36:27
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'district_status' in 'where clause'
+Raw SQL : SELECT * FROM tbl_districts WHERE district_status = 1
+
+Time : 13:34:09
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'district_status' in 'where clause'
+Raw SQL : SELECT * FROM tbl_districts WHERE district_status = :status
+
+Time : 12:32:05
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : SELECT tbl_product.*, tbl_bid.*, MAX(tbl_bid.bid_amount) FROM tbl_product INNER JOIN tbl_bid WHERE tbl_product.product_id = tbl_bid.product_id AND tbl_bid.bid_user_id = :user_id GROUP BY tbl_bid.product_id ORDER BY tbl_bid.product_id DESC limit 0, 8

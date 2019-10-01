@@ -1,0 +1,11 @@
+Time : 11:26:51
+SQLSTATE[HY000]: General error: 1111 Invalid use of group function
+Raw SQL : SELECT count(product_id) FROM tbl_bid WHERE bid_user_id = :user_id AND bid_amount = MAX(bid_amount) GROUP BY product_id
+
+Time : 10:24:30
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+
+Time : 06:23:56
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+

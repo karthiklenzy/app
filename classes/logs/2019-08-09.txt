@@ -1,0 +1,11 @@
+Time : 10:56:00
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : SELECT * FROM tbl_product WHERE category_id = :cat_id AND product_status = :productactivestatus AND product_bid_ends_on >= :currentdateandtime LIMIT 6
+
+Time : 10:47:21
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+
+Time : 10:47:21
+SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
