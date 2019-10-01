@@ -51,7 +51,9 @@ if (isset($_SESSION['vendesiya_user_id'])) {
 
 }
 else{
-	echo 'error'; exit();
+	$suc_message = "Location not found.!";
+	setcookie("cookieSuccessMessage", $suc_message, time() + (5 * 1), "/");
+	header("Location:".HTTP_PATH."edit-profile");
 }
 // District dropdown
 $get_districts = $db->query("SELECT * FROM tbl_districts");

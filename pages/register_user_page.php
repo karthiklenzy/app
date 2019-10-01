@@ -50,67 +50,93 @@ function getdistrictid(id) {
 					    	<div class="col-md-6">
 						    	<div>
 							    	<span><label>First Name</label></span><span class="star"> *</span>
-							    	<span><input type="text" name="firstname" class="textbox" value="<?php if (isset($firstname)) { echo $firstname; } ?>" required></span>
+							    	<span><input type="text" name="firstname" class="textbox" value="<?php if (isset($firstname)) { echo $firstname; } ?>" autocomplete="off" required></span>
 							    </div>
 							</div>
 							<div class="col-md-6">
 							    
 							    <div>
 							    	<span><label>Last Name</label></span><span class="star"> *</span>
-							    	<span><input type="text" name="lastname" class="textbox" value="<?php if (isset($lastname)) { echo $lastname; } ?>" required></span>
+							    	<span><input type="text" name="lastname" class="textbox" value="<?php if (isset($lastname)) { echo $lastname; } ?>" autocomplete="off" required></span>
 							    </div>
 							</div>
 							<div class="col-md-6">
 						    	<div>
 							    	<span><label>User Name</label></span><span class="star"> *</span>
-							    	<span><input type="text" name="username" class="textbox" value="<?php if (isset($username)) { echo $username; } ?>" id="txtusername" required></span>
+							    	<span><input type="text" name="username" class="textbox" value="<?php if (isset($username)) { echo $username; } ?>" id="txtusername" autocomplete="off" required></span>
 							    </div>
 							</div>
 							<div class="col-md-6">
 							    <div>
 							    	<span><label>Mobile Number</label></span><span class="star"> *</span>
-							    	<span><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="10" name="mobile" class="textbox" value="<?php if (isset($mobile)) { echo $mobile; } ?>" required></span>
+							    	<span><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="10" name="mobile" class="textbox" value="<?php if (isset($mobile)) { echo $mobile; } ?>" autocomplete="off" required></span>
 							    </div>
 							</div>
 							<div class="col-md-6">
 						    	<div>
 							    	<span><label>Email</label></span><span class="star"> *</span>
-							    	<span><input type="email" name="mail" class="textbox" value="<?php if (isset($mail)) { echo $mail; } ?>" required></span>
+							    	<span><input type="email" name="mail" class="textbox" value="<?php if (isset($mail)) { echo $mail; } ?>" autocomplete="off" required></span>
 							    </div>
 							</div>
 							<div class="col-md-6">
 							    <div>
 							    	<span><label>NIC</label></span><span class="star"> *</span>
-							    	<span><input type="text" maxlength="12" name="nic" class="textbox" value="<?php if (isset($nic)) { echo $nic; } ?>" required></span>
+							    	<span><input type="text" maxlength="12" name="nic" class="textbox" value="<?php if (isset($nic)) { echo $nic; } ?>" autocomplete="off" required></span>
 							    </div>
 							</div>
 							<div class="col-md-6">
 								<div>
 							    	<span><label>Password</label></span><span class="star"> *</span>
-							    	<span><input type="password" name="password" class="textbox" required></span>
+							    	<span><input type="password" name="password" class="textbox" autocomplete="off" required></span>
 							    </div>
 						    	
 							</div>
 							<div class="col-md-6">
 							    <div>
 							    	<span><label>Re-type Password</label></span><span class="star"> *</span>
-							    	<span><input type="password" name="repassword" class="textbox" required></span>
+							    	<span><input type="password" name="repassword" class="textbox" autocomplete="off" required></span>
 							    </div>
 							</div>
 							<div class="col-md-6">
 						    	<div>
 							    	<span><label>Postal Code</label></span><span class="star"> *</span>
-							    	<span><input type="text" name="postcode" class="textbox" value="<?php if (isset($postcode)) { echo $postcode; } ?>" required></span>
+							    	<span><input type="text" name="postcode" class="textbox" value="<?php if (isset($postcode)) { echo $postcode; } ?>" autocomplete="off" required></span>
 							    </div>
 							</div>
 							<div class="col-md-6">
 						    	<div>
 							    	<span><label>Address</label></span><span class="star"> *</span>
-							    	<span><textarea name="textarea" class="textarea_hgt" rows="1" value="" required><?php if (isset($textarea)) { echo $textarea; } ?></textarea></span>
+							    	<span><textarea name="textarea" class="textarea_hgt" rows="1" value="" autocomplete="off" required><?php if (isset($textarea)) { echo $textarea; } ?></textarea></span>
 							    </div>
 							</div>
 						</div>
 						<div class="row">
+							<?php if ((isset($district)) && (isset($city))) {?>
+							<div class="col-md-6">
+								<span><label>District</label></span><span class="star"> *</span>
+								<select class="form-control" name="selectdistrict" required="required" onchange="getdistrictid(this.value)" style="margin-bottom: 10px;">
+									
+									<?php for ($i=0; $i < count($select_district_sql); $i++) { ?>
+									<option value="<?php echo $select_district_sql[$i]['district_id']; ?>" <?php if(isset($district)){ if($district == $select_district_sql[$i]['district_id']){ ?> selected="selected" <?php } } ?> ><i class="fa fa-shopping-cart"></i><?php echo $select_district_sql[$i]['district_name']; ?></option>
+									<?php } ?>
+								</select>
+							</div>
+							<div class="col-md-6" id="displaydistrictsubarea">
+							 	<span><label>City</label></span><span class="star"> *</span>
+								<?php if((isset($city)) && ($city != "")){ ?>
+								<select class="form-control" name="selectdistrictsub" required="required">
+									
+									<?php for ($e = 0; $e < count($select_city_sql); $e++) { ?>
+									<option value="<?php echo $select_city_sql[$e]['area_id']; ?>" <?php if(isset($city)){ if($city == $select_city_sql[$e]['area_id']){ ?> selected="selected" <?php } } ?> ><?php echo $select_city_sql[$e]['area_name']; ?></option>
+									<?php } ?>
+								</select>
+								<?php } else{?>
+								<select class="form-control" name="selectdistrictsub"  required="required">
+									<option value="">-- Select --</option>
+								</select>
+								<?php } ?>
+							</div>
+							<?php } else { ?>
 							<div class="col-md-6">
 								<span><label>District</label></span><span class="star"> *</span>
 								<select class="form-control" name="selectdistrict" required="required" onchange="getdistrictid(this.value)" style="margin-bottom: 10px;">
@@ -135,6 +161,7 @@ function getdistrictid(id) {
 								</select>
 								<?php } ?>
 							</div>
+							<?php } ?>
 						</div>	
 						  
 						    

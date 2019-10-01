@@ -131,6 +131,11 @@ if (isset($_POST['btn-sign'])) {
 		}
 	
 }
+if (isset($district)) {
+	$district_array = array('status' => "1");
+	$select_district_sql = $db->query("SELECT * FROM tbl_districts WHERE district_status = :status", $district_array);
+	$select_city_sql = $db->query("SELECT * FROM tbl_district_sub_area");
+}
 $area_data = $db->query("SELECT district_id, district_name FROM tbl_districts");
 $sub_area_data = $db->query("SELECT area_name, area_id FROM tbl_district_sub_area WHERE district_id = 1 ORDER BY area_id ASC");
 
