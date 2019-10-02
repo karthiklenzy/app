@@ -55,7 +55,7 @@
 						   	</div>
 							<div class="padd">
 							   <span><label>Product Additional Images (Max 4 images)<span class="star"> * (700px x 490px Recomended)</span></label></span>
-							   <input type="file" id="files" name="additionalfiles[]" multiple="multiple" accept="image/*" class="form-control" required="required" onchange="checkFiles(this.files)">
+							   <input type="file" id="files" name="additionalfiles[]" multiple="multiple" accept="image/*" class="form-control" onchange="checkFiles(this.files)">
 						   	</div>
 							<div class="padd">
 							   <span><label>Expected Price<span class="star"> *</span></label></span>
