@@ -38,16 +38,31 @@
 		   	<div class="clear"></div>
 		</div>
 		<!-- slide end -->
+		<?php if (isset($_GET['subid'])) { 
+			$sub_id = $_GET['subid'];  ?>
 		<!-- pagination start -->
 		<div class="content-pagenation" <?php if ($total_product < 1) { echo "style='display: none'";} ?>>
-				<li><a href="<?php echo HTTP_PATH ?>shop?currentpage=1">First</a></li>
+				<li><a href="<?php echo HTTP_PATH ?>shop?category=<?php echo $cat_id; ?>&subid=<?php echo $sub_id; ?>&currentpage=1">First</a></li>
 				<?php for ($x=1; $x <= $total_pages ; $x++) { if(($x <= $showmaxpagelimit) && ($x >= $showminpagelimit)){ ?>
-				<li <?php if($current_page_number == $x){ ?> class="active" <?php } ?>><a href="<?php echo HTTP_PATH ?>shop?category=<?php echo $cat_id; ?>&currentpage=<?php echo $x; ?>" ><?php echo $x ?></a></li>
+				<li <?php if($current_page_number == $x){ ?> class="active" <?php } ?>><a href="<?php echo HTTP_PATH ?>shop?category=<?php echo $cat_id; ?>&subid=<?php echo $sub_id; ?>&currentpage=<?php echo $x; ?>" ><?php echo $x ?></a></li>
 				<?php } } ?>
-				<li><a href="<?php echo HTTP_PATH ?>shop?currentpage=<?php echo $total_pages ?>">Last</a></li>
+				<li><a href="<?php echo HTTP_PATH ?>shop?category=<?php echo $cat_id; ?>&subid=<?php echo $sub_id; ?>&currentpage=<?php echo $total_pages ?>">Last</a></li>
 			<div class="clear"> </div>
 		</div>
 		<!-- pagination end -->
+			
+		<?php } else {?>
+		<!-- pagination start -->
+		<div class="content-pagenation" <?php if ($total_product < 1) { echo "style='display: none'";} ?>>
+				<li><a href="<?php echo HTTP_PATH ?>shop?category=<?php echo $cat_id; ?>&currentpage=1">First</a></li>
+				<?php for ($x=1; $x <= $total_pages ; $x++) { if(($x <= $showmaxpagelimit) && ($x >= $showminpagelimit)){ ?>
+				<li <?php if($current_page_number == $x){ ?> class="active" <?php } ?>><a href="<?php echo HTTP_PATH ?>shop?category=<?php echo $cat_id; ?>&currentpage=<?php echo $x; ?>" ><?php echo $x ?></a></li>
+				<?php } } ?>
+				<li><a href="<?php echo HTTP_PATH ?>shop?category=<?php echo $cat_id; ?>&currentpage=<?php echo $total_pages ?>">Last</a></li>
+			<div class="clear"> </div>
+		</div>
+		<!-- pagination end -->
+	<?php } ?>
 	</div>
  </div>
   <?php if ($total_product < 5 ) { ?>

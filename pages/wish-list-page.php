@@ -33,7 +33,7 @@
 					  		</div>
 					  		<?php } else { ?>
 					  		<div class="alert alert-success">
-					    		<i class="fas fa-check-circle fa-lg"></i>&emsp;Upload More to Get Vendesiya offers..!
+					    		<i class="fas fa-check-circle fa-lg"></i>&emsp;Upload more to get Vendesiya offers..!
 					  		</div>
 					  		<?php } ?>
 					  		<img src="<?php HTTP_PATH; ?>images/upload.png" style="width:18%;">

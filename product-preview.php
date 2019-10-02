@@ -48,6 +48,8 @@ $verify_count = 0;
 	  $selected_product_sql = $db->query("SELECT * FROM tbl_product WHERE product_url = :producturl AND product_status = :productactivestatus AND product_bid_ends_on >= :currentdateandtime", $getproductdetails_array);
 	  $product_id = $selected_product_sql[0]['product_id'];
 	  $product_img_link = $selected_product_sql[0]['product_main_img'];
+	  $product_catagory_id = $selected_product_sql[0]['category_id'];
+	  $catagory_name = getcategoryname($product_catagory_id);
 
 	  if ($selected_product_sql) {
 	  	// Adding wish list heart

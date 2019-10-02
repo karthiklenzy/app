@@ -3,6 +3,7 @@
 		<nav aria-label="breadcrumb">
 		  <ol class="breadcrumb">
 		    <li class="breadcrumb-item"><a href="<?php echo HTTP_PATH; ?>">Home</a></li>
+		    <li class="breadcrumb-item"><a href="<?php echo HTTP_PATH; ?>shop?category=<?= $product_catagory_id; ?>"><?php echo $catagory_name; ?></a></li>
 		    <li class="breadcrumb-item active" aria-current="page">Product Preview</li>
 		  </ol>
 		</nav>

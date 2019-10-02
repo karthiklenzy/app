@@ -58,7 +58,7 @@ $verify_data = $db->query("SELECT product_id, product_url, product_name, product
 		$total_pages = ceil($total_pages); //convert to highest full number
 
 		if ($verify_data) {
-			$cat_product_sql = $db->query("SELECT * FROM tbl_product WHERE published_user_id = :user_id ORDER BY product_id DESC limit $limit_from, $num_rec_per_page", $verify_array);
+			$cat_product_sql = $db->query("SELECT * FROM tbl_product WHERE published_user_id = :user_id ORDER BY product_id DESC limit 4", $verify_array);
 		}
 	// Bid items
 		$bid_array = array('user_id' => $_SESSION['vendesiya_user_id']);

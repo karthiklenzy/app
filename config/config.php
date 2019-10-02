@@ -23,7 +23,7 @@ define('COMPANY_PHONE', "+94 112 088 330");
 $CURRENT_PAGE = basename($_SERVER['PHP_SELF']);
 
 header("Cache-Control: no cache");
-session_cache_limiter("private_no_expire");
+// session_cache_limiter("private_no_expire");
 
 $current_date_time = date('Y-m-d h:i:s');
 $current_date = date('Y-m-d');
