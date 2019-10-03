@@ -4,7 +4,8 @@
 		  <ol class="breadcrumb">
 		    <li class="breadcrumb-item"><a href="<?php echo HTTP_PATH; ?>">Home</a></li>
 		    <li class="breadcrumb-item"><a href="<?php echo HTTP_PATH; ?>shop?category=<?= $product_catagory_id; ?>"><?php echo $catagory_name; ?></a></li>
-		    <li class="breadcrumb-item active" aria-current="page">Product Preview</li>
+		    <li class="breadcrumb-item"><a href="<?php echo HTTP_PATH; ?>shop?category=<?= $product_catagory_id; ?>&subid=<?php echo $product_sub_catagory_id; ?>"><?php echo $sub_catagory_name; ?></a></li>
+		    <li class="breadcrumb-item active" aria-current="page"><?php echo $product_name; ?></li>
 		  </ol>
 		</nav>
 		<?php if(isset($_COOKIE['SuccessMessage'])){ ?>
@@ -61,11 +62,14 @@
 										<p>
 											<span>Rs. <?php echo number_format($selected_product_sql[$x]['product_current_price']); ?>
 											</span>
+											<?php if ($product_count != "0") {
+											 	echo " (per unit)"; } ?>
 										</p>
 										<div class="col-md-6 nopadding-val">
 											<h5><i class="fa fa-sort-amount-up"></i>&emsp;Total Bids: <span><?php echo gettotalbids($selected_product_sql[$x]['product_id']); ?></span></h5>
-											<h5><i class="fa fa-list-ul"></i>&emsp;Product Code : <span><?php echo $selected_product_sql[$x]['product_id']; ?></span></h5>
+											<h5><i class="fa fa-tags"></i>&emsp;Product Code : <span><?php echo $selected_product_sql[$x]['product_id']; ?></span></h5>
 											<h5><i class="fa fa-stopwatch"></i>&emsp;End Time: <span><?php echo substr($selected_product_sql[$x]['product_bid_ends_on'], 10, 15); ?></span></h5>
+
 											<h5 class="mypro" style="margin: 25px 0;">
 												<span class="label label-large label-pink arrowed-right">Your Product</span>
 								    		</h5>
@@ -75,6 +79,9 @@
 											<h5><i class="fa fa-eye"></i>&emsp;Total Views: <span><?php echo $selected_product_sql[$x]['product_views']; ?></span></h5>
 											
 											<h5><i class="fa fa-calendar-times"></i>&emsp;End Date: <span><?php echo substr($selected_product_sql[$x]['product_bid_ends_on'], 0, 10); ?></span></h5>
+											<?php if ($product_count != "0") { ?>
+											<h5><i class="fa fa-list-ol"></i>&emsp;Unit counts: <span><?php echo $selected_product_sql[$x]['product_count']; ?></span></h5>
+											<?php } ?>
 										</div>
 										<div class="col-md-6 nopadding-val">
 											
@@ -85,7 +92,7 @@
 								<div class="bidding" style="margin-top: 12vh;">
 									<form method="post">
 										<div class="custom-qty">
-											<h5><i class="fa fa-hand-holding-usd fa-lg"></i>&emsp;Bid: (Rs.)</h5>
+											<h5 style="padding-top: 30px;"><i class="fa fa-hand-holding-usd fa-lg"></i>&emsp;Bid: (Rs.)</h5>
 												<input type="hidden" name="hiddencurrentprice" id="hiddencurrentprice" value="<?php echo $selected_product_sql[$x]['product_current_price']; ?>">
 												<input type="hidden" name="hiddenpricefloor" id="hiddenpricefloor" value="<?php echo $pricefloor; ?>">
 												<input type="hidden" name="hiddenbiddiff" id="hiddenbiddiff" value="<?php echo $bid_margin; ?>">

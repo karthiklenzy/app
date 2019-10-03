@@ -80,7 +80,7 @@
 			<div class="account_desc">
 				<ul class="bulk">
 					
-					<li><a href="<?php echo HTTP_PATH; ?>upload-item"><i class="fa fa-list-ul"></i>&emsp;Bulk list</a></li>
+					<li><a href="<?php echo HTTP_PATH; ?>upload-item?upload=bulk"><i class="fa fa-list-ul"></i>&emsp;Bulk list</a></li>
 					<li><a href="<?php echo HTTP_PATH; ?>upload-item"><i class="fa fa-bullhorn"></i>&emsp;Free bids</a></li>
 					
 					<!-- <li><a><i class="fas fa-shopping-cart"></i></a></li> -->
@@ -123,4 +123,6 @@
 	if (isset($_GET['category'])) {
 		$category_id_active = filter_var($_GET['category']);
 	}
+	
+
   ?>

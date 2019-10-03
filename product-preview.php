@@ -13,14 +13,15 @@ $verify_count = 0;
 	if (isset($_GET['product-url'])) {
 		$product_url = filter_var($_GET['product-url']);
 		$product_catagory_array = array('product_url' => $product_url);
-		$product_catagory_sql = $db->query("SELECT product_id, product_main_img, product_name, product_bid_ends_on, product_views, category_id FROM tbl_product WHERE product_url = :product_url", $product_catagory_array);
+		$product_catagory_sql = $db->query("SELECT product_id, product_main_img, product_name, product_bid_ends_on, product_views, category_id, product_count FROM tbl_product WHERE product_url = :product_url", $product_catagory_array);
 		$product_get_id = getproductcodeusingurl($product_url);
 		$product_published_user_id = getpublishuserid($product_get_id);
-		$product_name_mail = $product_catagory_sql[0]['product_name'];
+		$product_name = $product_catagory_sql[0]['product_name'];
 		$product_bidend_mail = $product_catagory_sql[0]['product_bid_ends_on'];
 		$product_view_mail = $product_catagory_sql[0]['product_views'];
 		$product_img_link = $product_catagory_sql[0]['product_main_img'];
 		$product_url_path = HTTP_PATH.'product-preview?product-url='.$product_url;
+		$product_count = $product_catagory_sql[0]['product_count'];
 		// Review Query
 		$review_array = array('pro_id' => $product_get_id, 'status' => "1");
 		$review_query = $db->query("SELECT * FROM tbl_product_review WHERE review_product_id = :pro_id AND review_status = :status ORDER BY review_id DESC LIMIT 10", $review_array);
@@ -50,6 +51,8 @@ $verify_count = 0;
 	  $product_img_link = $selected_product_sql[0]['product_main_img'];
 	  $product_catagory_id = $selected_product_sql[0]['category_id'];
 	  $catagory_name = getcategoryname($product_catagory_id);
+	  $product_sub_catagory_id = $selected_product_sql[0]['sub_category_id'];
+	  $sub_catagory_name = getsubcategoryname($product_sub_catagory_id);
 
 	  if ($selected_product_sql) {
 	  	// Adding wish list heart
@@ -188,7 +191,7 @@ $verify_count = 0;
                     	$the_message_to_be_sent .= $product_img_link;
                     	$the_message_to_be_sent .='"><br>';
                     	$the_message_to_be_sent .= 'Your bid amount to this <a href="'.$product_url_path.'">product</a> '.$productid.' was exeed by another bidder';
-                    	$the_message_to_be_sent .= '<br><br><b>Name :</b> '.$product_name_mail.'<br><b>Total views :</b> '.$product_view_mail.'<br><b>Bid end on :</b> '.$product_bidend_mail;
+                    	$the_message_to_be_sent .= '<br><br><b>Name :</b> '.$product_name.'<br><b>Total views :</b> '.$product_view_mail.'<br><b>Bid end on :</b> '.$product_bidend_mail;
                     	include DOC_ROOT.'includes/email_template.php';
 				 	    $sent =mailing::html_mail($to,$subject,$admin_template,$email);
 				 	     $the_message_to_be_sent = ""; 
@@ -199,7 +202,7 @@ $verify_count = 0;
                     	$the_message_to_be_sent .= $product_img_link;
                     	$the_message_to_be_sent .='" width="150"><br>';
                     	$the_message_to_be_sent .= 'Your bid amount to this <a href="'.$product_url_path.'">product</a> '.$productid.' was exeed by you';
-                    	$the_message_to_be_sent .= '<br><br><b>Name :</b> '.$product_name_mail.'<br><b>Total views :</b> '.$product_view_mail.'<br><b>Bid end on :</b> '.$product_bidend_mail;
+                    	$the_message_to_be_sent .= '<br><br><b>Name :</b> '.$product_name.'<br><b>Total views :</b> '.$product_view_mail.'<br><b>Bid end on :</b> '.$product_bidend_mail;
                     	include DOC_ROOT.'includes/email_template.php';
                     	
 				 	    $sent =mailing::html_mail($to,$subject,$admin_template,$email);
@@ -213,7 +216,7 @@ $verify_count = 0;
                 $the_message_to_be_sent .= $product_img_link;
                 $the_message_to_be_sent .='" width="150"><br>';
 				$the_message_to_be_sent .= 'Your bid amount to this <a href="'.$product_url_path.'">product</a> '.$productid.' is set for current product price bid amount '.$bidamount;
-				$the_message_to_be_sent .= '<br><br><b>Name :</b> '.$product_name_mail.'<br><b>Total views :</b> '.$product_view_mail.'<br><b>Bid end on :</b> '.$product_bidend_mail;
+				$the_message_to_be_sent .= '<br><br><b>Name :</b> '.$product_name.'<br><b>Total views :</b> '.$product_view_mail.'<br><b>Bid end on :</b> '.$product_bidend_mail;
 	      			// Mail to new bidder		
 					include DOC_ROOT.'includes/email_template.php';
 					$sent =mailing::html_mail($to,$subject,$admin_template,$email);

@@ -49,16 +49,22 @@
 						    <?php }
 									$_SESSION['additionalProducts'] = count($get_additional_specc_query); }
 							?>
+							<?php if (isset($_SESSION['bulk'])) { ?>
+							<div class="padd">
+							   <span><label>Bulk items count</label></span>
+							   <span><input type="text" name="item_count" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="5" class="textbox" id="count"></span>
+						   	</div>
+						    <?php } ?>
 						   	<div class="padd">
 							   <span><label>Product Main Image<span class="star"> * (700px x 490px Recomended)</span> </label></span>
 							   <input type="file" id="uploadImage" name="files" accept="image/*" class="form-control" required="required">
 						   	</div>
 							<div class="padd">
-							   <span><label>Product Additional Images (Max 4 images)<span class="star"> * (700px x 490px Recomended)</span></label></span>
+							   <span><label>Product Additional Images (Max 4 images)<span class="star"> (700px x 490px Recomended)</span></label></span>
 							   <input type="file" id="files" name="additionalfiles[]" multiple="multiple" accept="image/*" class="form-control" onchange="checkFiles(this.files)">
 						   	</div>
 							<div class="padd">
-							   <span><label>Expected Price<span class="star"> *</span></label></span>
+							   <span><label>Expected Price <?php if (isset($_SESSION['bulk'])) { ?> (for one unit)<?php } ?><span class="star"> *</span></label></span>
 							   <span><input type="text" name="item_price" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="5" class="textbox" id="price" required></span>
 						   	</div>  
 							<div class="padd">
@@ -114,6 +120,11 @@
 		}       
 	};
 	$('#price').keypress(function(evt) {
+	  if (evt.which == "0".charCodeAt(0) && $(this).val().trim() == "") {
+	  return false;
+	   }
+	});
+	$('#count').keypress(function(evt) {
 	  if (evt.which == "0".charCodeAt(0) && $(this).val().trim() == "") {
 	  return false;
 	   }

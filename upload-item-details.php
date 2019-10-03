@@ -35,6 +35,11 @@ if ((isset($_GET['selectproductcategory'])) && (isset($_GET['selectproductsubcat
 		$item_desc_tinymce = $_POST['item_desc_tinymce'];
 		$item_price = filter_var($_POST['item_price'],FILTER_SANITIZE_STRING);
 		$published_user_id = $_SESSION['vendesiya_user_id'];
+		$item_count = filter_var($_POST['item_count'],FILTER_SANITIZE_STRING);
+
+		if ($item_count == "") {
+			$item_count = "0";
+		}
 
 		if ($error_count == 0) {
 		/* ************ Making the URL ************* */
@@ -60,8 +65,8 @@ if ((isset($_GET['selectproductcategory'])) && (isset($_GET['selectproductsubcat
 
             	if ($uploadOk_for_multiple_for_multiple = 1) {
             		$start_price = $item_price / 2;
-            		$item_array = array('item_name' => $item_name, 'item_desc_tinymce' => $item_desc_tinymce, 'item_price' => $item_price, 'current_price' => $start_price, 'published_user_id' => $published_user_id, 'main_image_url' => $image_path_to_upload, 'multi_imag_path' => $image_path_to_attach_multiple_images_variable, 'product_url' => $url_for_product, 'cat_id' => $category_id, 'sub_cat_id' => $category_sub_id);
-						$item_sql = $db->query("INSERT INTO tbl_product (product_name, product_description, product_initial_price, product_current_price,  published_user_id, product_main_img, product_images, product_url, category_id, sub_category_id) VALUES (:item_name, :item_desc_tinymce, :item_price, :current_price, :published_user_id, :main_image_url, :multi_imag_path, :product_url, :cat_id, :sub_cat_id)",$item_array);
+            		$item_array = array('item_name' => $item_name, 'item_desc_tinymce' => $item_desc_tinymce, 'item_price' => $item_price, 'current_price' => $start_price, 'published_user_id' => $published_user_id, 'main_image_url' => $image_path_to_upload, 'multi_imag_path' => $image_path_to_attach_multiple_images_variable, 'product_url' => $url_for_product, 'item_count' => $item_count, 'cat_id' => $category_id, 'sub_cat_id' => $category_sub_id);
+						$item_sql = $db->query("INSERT INTO tbl_product (product_name, product_description, product_initial_price, product_current_price,  published_user_id, product_main_img, product_images, product_url, product_count, category_id, sub_category_id) VALUES (:item_name, :item_desc_tinymce, :item_price, :current_price, :published_user_id, :main_image_url, :multi_imag_path, :product_url, :item_count, :cat_id, :sub_cat_id)",$item_array);
 
 						if ($item_sql) {
 							$getlastproductid_array = array('vendesiyauser' => $_SESSION['vendesiya_user_id']);
