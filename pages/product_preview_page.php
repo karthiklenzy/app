@@ -12,14 +12,14 @@
 			<div class="alert alert-success alert-dismissible" style="margin: 10px 10px 0px 10px;">
 				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 				<i class="fa fa-check"></i>&emsp;
-				<?php echo $_COOKIE['SuccessMessage'] ?> 
+				<?php echo $_COOKIE['SuccessMessage']; ?> 
 			</div>
 			<?php } ?>
 			<?php if(isset($_COOKIE['ErrorMessage'])){ ?>
 			<div class="alert alert-danger alert-dismissible" style="margin: 10px 10px 0px 10px;">
 				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 				<i class="fa fa-exclamation-circle"></i>&emsp;
-				<?php echo $_COOKIE['ErrorMessage'] ?> 
+				<?php echo $_COOKIE['ErrorMessage']; ?> 
 			</div>
 		<?php } ?>
 		<?php include 'includes/category_menu.php'; ?>
@@ -65,6 +65,13 @@
 											<?php if ($product_count != "0") {
 											 	echo " (per unit)"; } ?>
 										</p>
+										<?php if ($product_count != "0") { ?>
+										<p>
+											<span>Rs. <?php echo number_format($selected_product_sql[$x]['product_current_price']*$selected_product_sql[$x]['product_count']); ?>
+											</span>
+											<?php echo " (total amount)"; ?>
+										</p>
+										<?php } ?>
 										<div class="col-md-6 nopadding-val">
 											<h5><i class="fa fa-sort-amount-up"></i>&emsp;Total Bids: <span><?php echo gettotalbids($selected_product_sql[$x]['product_id']); ?></span></h5>
 											<h5><i class="fa fa-tags"></i>&emsp;Product Code : <span><?php echo $selected_product_sql[$x]['product_id']; ?></span></h5>

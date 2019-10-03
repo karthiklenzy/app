@@ -129,5 +129,15 @@
 	  return false;
 	   }
 	});
+	$('#price').keydown(function(e) {
+	  if (e.keyCode === 190) {
+	    e.preventDefault();
+	  }
+	});
+	$('#count').keydown(function(e) {
+  if (e.keyCode === 190) {
+    e.preventDefault();
+  }
+});
 </script>
 
