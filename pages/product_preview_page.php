@@ -33,15 +33,17 @@
 					            <img src="<?php echo HTTP_PATH.$selected_product_sql[$i]['product_main_img']; ?>" />
 					        </li>
 
-					    <?php $myString = $selected_product_sql[$i]['product_images'];
+					    <?php 
+					    if ($selected_product_sql[$i]['product_images'] != "") {
+					     	$myString = $selected_product_sql[$i]['product_images'];
 								$myArray = explode(',', $myString);
 								foreach($myArray as $my_Array){ ?>
 								 
-								 <li data-thumb="<?php echo HTTP_PATH.$my_Array; ?>">
+							<li data-thumb="<?php echo HTTP_PATH.$my_Array; ?>">
 					            <img src="<?php echo HTTP_PATH.$my_Array; ?>" />
 					        </li>   
 								 
-					     <?php }}} ?>
+					     <?php }}}} ?>
 					        
 					    </ul>
 					</div>
@@ -72,7 +74,7 @@
 										<div class="col-md-6 nopadding-val">
 											<h5><i class="fa fa-eye"></i>&emsp;Total Views: <span><?php echo $selected_product_sql[$x]['product_views']; ?></span></h5>
 											
-											<h5><i class="fa fa-calendar-times"></i>&emsp;End Date: <span><?php echo substr($selected_product_sql[$x]['product_bid_ends_on'], 2, 8); ?></span></h5>
+											<h5><i class="fa fa-calendar-times"></i>&emsp;End Date: <span><?php echo substr($selected_product_sql[$x]['product_bid_ends_on'], 0, 10); ?></span></h5>
 										</div>
 										<div class="col-md-6 nopadding-val">
 											

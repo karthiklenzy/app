@@ -17,15 +17,17 @@
 						            <img src="<?php echo HTTP_PATH.$selected_product_sql[$i]['product_main_img']; ?>" />
 						        </li>
 
-						    <?php $myString = $selected_product_sql[$i]['product_images'];
+						    <?php 
+						    if ($selected_product_sql[$i]['product_images'] != "") {
+						     	$myString = $selected_product_sql[$i]['product_images'];
 									$myArray = explode(',', $myString);
 									foreach($myArray as $my_Array){ ?>
 									 
-									 <li data-thumb="<?php echo HTTP_PATH.$my_Array; ?>">
+								<li data-thumb="<?php echo HTTP_PATH.$my_Array; ?>">
 						            <img src="<?php echo HTTP_PATH.$my_Array; ?>" />
 						        </li>   
 									 
-						     <?php }}} ?>
+						     <?php }}}} ?>
 						        
 						    </ul>
 						</div>
@@ -46,7 +48,13 @@
 					for ($x=0; $x < count($selected_product_sql); $x++) { ?>
 
 					<h2><?php echo $selected_product_sql[$x]['product_name']; ?></h2>
-					
+					<div class="price">
+						<p>
+							<span>Rs. <?php echo number_format($selected_product_sql[$x]['product_initial_price']); ?>
+							</span>
+						</p>
+
+					</div>
 						<!-- Product Specification data -->
 						<ul class="product-bullet">
 						<?php if ($spec_data) { 
@@ -57,13 +65,7 @@
 						<?php }} ?>	
 						<!--End  Product Specification data -->
 						</ul>			
-					<div class="price">
-						<p>
-							<span>Rs. <?php echo number_format($selected_product_sql[$x]['product_initial_price']); ?>
-							</span>
-						</p>
-
-					</div>
+					
 					
 				<div class="share-desc">
 					

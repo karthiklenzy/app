@@ -105,6 +105,7 @@ if ((isset($_GET['selectproductcategory'])) && (isset($_GET['selectproductsubcat
 
 										if($prod_multi_images == ""){
 											$prod_multi_images = $filepath_for_images_without_doc_root."/".$mult_img_name;
+											$prod_multi_images = "";
 										}
 										else{
 											$prod_multi_images .= ",".$filepath_for_images_without_doc_root."/".$mult_img_name;
