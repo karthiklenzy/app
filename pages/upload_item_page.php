@@ -66,7 +66,10 @@ function getsubcategory(catid) {
 										<input type="hidden" name="upload" value="bulk">
 										<?php
 										}
+										if (isset($_GET['upload']) && $_GET['upload'] == 'freebid') {
 										?>
+										<input type="hidden" name="upload" value="freebid">
+									<?php } ?>
 										</td>
 									</tr>
 									<tr>

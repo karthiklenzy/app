@@ -79,9 +79,13 @@
 			</div>
 			<div class="account_desc">
 				<ul class="bulk">
-					
+					<?php if (isset($_SESSION['vendesiya_user_id'])) { ?>
 					<li><a href="<?php echo HTTP_PATH; ?>upload-item?upload=bulk"><i class="fa fa-list-ul"></i>&emsp;Bulk list</a></li>
-					<li><a href="<?php echo HTTP_PATH; ?>upload-item"><i class="fa fa-bullhorn"></i>&emsp;Free bids</a></li>
+					<li><a href="<?php echo HTTP_PATH; ?>upload-item?upload=freebid"><i class="fa fa-bullhorn"></i>&emsp;Free bids</a></li>
+				<?php } else { ?>
+					<li><a href="<?php echo HTTP_PATH; ?>login-user?redirect_url=<?php echo HTTP_PATH; ?>upload-item?upload=bulk"><i class="fa fa-list-ul"></i>&emsp;Bulk list</a></li>
+					<li><a href="<?php echo HTTP_PATH; ?>login-user?redirect_url=<?php echo HTTP_PATH; ?>upload-item?upload=freebid"><i class="fa fa-list-ul"></i>&emsp;Bulk list</a></li>
+				<?php } ?>
 					
 					<!-- <li><a><i class="fas fa-shopping-cart"></i></a></li> -->
 				</ul>

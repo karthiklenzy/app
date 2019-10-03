@@ -64,8 +64,8 @@
 							   <input type="file" id="files" name="additionalfiles[]" multiple="multiple" accept="image/*" class="form-control" onchange="checkFiles(this.files)">
 						   	</div>
 							<div class="padd">
-							   <span><label>Expected Price <?php if (isset($_SESSION['bulk'])) { ?> (for one unit)<?php } ?><span class="star"> *</span></label></span>
-							   <span><input type="text" name="item_price" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="5" class="textbox" id="price" required></span>
+							   <span><label>Expected Price <?php if (isset($_GET['upload']) && $_GET['upload'] == 'bulk') { ?> (Total)<?php } else if (isset($_GET['upload']) && $_GET['upload'] == 'freebid'){ ?>(Free Bid) <?php } ?><span class="star"> *</span></label></span>
+							   <span><input type="text" name="item_price" oninput="this.value=this.value.replace(/[^0-9]/g,'');" <?php if (isset($_GET['upload']) && $_GET['upload'] == 'freebid'){ ?>value="0" disabled <?php } ?> maxlength="5" class="textbox" id="price" required></span>
 						   	</div>  
 							<div class="padd">
 						   		<button type="submit" class="btn-style" name="btn-save">Send for approval</button>
