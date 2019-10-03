@@ -49,7 +49,7 @@
 						    <?php }
 									$_SESSION['additionalProducts'] = count($get_additional_specc_query); }
 							?>
-							<?php if (isset($_SESSION['bulk'])) { ?>
+							<?php if (isset($_GET['upload']) && $_GET['upload'] == 'bulk') { ?>
 							<div class="padd">
 							   <span><label>Bulk items count</label></span>
 							   <span><input type="text" name="item_count" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="5" class="textbox" id="count"></span>

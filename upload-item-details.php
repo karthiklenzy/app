@@ -100,7 +100,7 @@ if ((isset($_GET['selectproductcategory'])) && (isset($_GET['selectproductsubcat
 
 									$prod_multi_images = "";
 									$multipleImageArray = explode(',', $image_path_to_attach_multiple_images_variable);
-
+								if ($image_path_to_attach_multiple_images_variable != "") {
 									for ($x=0; $x < count($multipleImageArray); $x++) {
 										$mult_img_name = substr($multipleImageArray[$x], strrpos($multipleImageArray[$x], '/') + 1);
 
@@ -117,6 +117,9 @@ if ((isset($_GET['selectproductcategory'])) && (isset($_GET['selectproductsubcat
 										}
 
 									}
+								} else {
+									$prod_multi_images = "";
+								}
 						$updateImagePathArray = array('productid' => $productid_for_details, 'prod_multi_img' => $prod_multi_images);
 						$updateImagePathQuery = $db->query("UPDATE tbl_product SET product_images = :prod_multi_img WHERE product_id = :productid", $updateImagePathArray);
 

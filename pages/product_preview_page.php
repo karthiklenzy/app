@@ -62,16 +62,9 @@
 										<p>
 											<span>Rs. <?php echo number_format($selected_product_sql[$x]['product_current_price']); ?>
 											</span>
-											<?php if ($product_count != "0") {
-											 	echo " (per unit)"; } ?>
+											
 										</p>
-										<?php if ($product_count != "0") { ?>
-										<p>
-											<span>Rs. <?php echo number_format($selected_product_sql[$x]['product_current_price']*$selected_product_sql[$x]['product_count']); ?>
-											</span>
-											<?php echo " (total amount)"; ?>
-										</p>
-										<?php } ?>
+										
 										<div class="col-md-6 nopadding-val">
 											<h5><i class="fa fa-sort-amount-up"></i>&emsp;Total Bids: <span><?php echo gettotalbids($selected_product_sql[$x]['product_id']); ?></span></h5>
 											<h5><i class="fa fa-tags"></i>&emsp;Product Code : <span><?php echo $selected_product_sql[$x]['product_id']; ?></span></h5>
