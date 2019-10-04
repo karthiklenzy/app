@@ -150,7 +150,7 @@
 				<h3>Uploaded Products</h3>
 				</div>
 				<div class="see">
-					<p><a href="<?php echo HTTP_PATH; ?>user-profile">See all Products&emsp;<i class="fa fa-chevron-right"></i></a></p>
+					<p><a href="<?php echo HTTP_PATH; ?>uploaded-items">See all Products&emsp;<i class="fa fa-chevron-right"></i></a></p>
 				</div>
 				<div class="clear"></div>
 		    </div>

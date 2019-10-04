@@ -63,10 +63,10 @@ function getsublocation(catid) {
 						    </div>
 						    <div>
 						    	<span><label>NIC</label></span>
-						    	<span><input type="text" value="<?php echo $user_details[$i]['user_nic_number']; ?>" name="new_nic" id="space" class="textbox" required></span>
+						    	<span><input type="text" value="<?php echo $user_details[$i]['user_nic_number']; ?>" name="new_nic" id="space" class="textbox" required disabled></span>
 						    </div>
 						    <?php if (isset($user_details[$i]['user_province']) != "") {?>
-						    <div>
+						    <div style="display: none;">
 						    	<span><label>District</label></span>
 						    	<!-- <span><input type="text" value="<?php echo $district_name; ?>" name="district_name_new" class="textbox" disabled></span> -->
 						    	<select class="form-control" name="selectlocation" required="required" onchange="getsublocation(this.value)">
@@ -78,7 +78,7 @@ function getsublocation(catid) {
 										<?php } ?>
 									</select>
 						    </div>
-						    <div id="getsublocation">
+						    <div id="getsublocation" style="display: none;">
 						    	<span><label>City</label></span>
 						    	<?php if((isset($getsubarea_query_one)) && ($getsubarea_query_one != "")){ ?>
 										<select class="form-control" name="selectsubarea" required="required">

@@ -13,11 +13,11 @@ if (isset($_SESSION['vendesiya_user_id'])) {
 		$user_address_new = filter_var($_POST['new_address']);
 		$user_nic_new = filter_var($_POST['new_nic']);
 
-		$user_district_new = filter_var($_POST['selectlocation']);
-		$user_district_sub_area_new = filter_var($_POST['selectsubarea']);
+		// $user_district_new = filter_var($_POST['selectlocation']);
+		// $user_district_sub_area_new = filter_var($_POST['selectsubarea']);
 
-		$user_details = array('user_id' => $user_id_new, 'user_name' => $user_name_new, 'user_number' => $user_number_new, 'address' => $user_address_new, 'nic' => $user_nic_new, 'district' => $user_district_new, 'area' => $user_district_sub_area_new);
-		$user_details_query = $db->query("UPDATE tbl_user SET user_name = :user_name, user_phone = :user_number, user_address_line_one = :address, user_nic_number = :nic, user_province = :district, user_city = :area WHERE user_id = :user_id", $user_details);
+		$user_details = array('user_id' => $user_id_new, 'user_name' => $user_name_new, 'user_number' => $user_number_new, 'address' => $user_address_new, 'nic' => $user_nic_new);
+		$user_details_query = $db->query("UPDATE tbl_user SET user_name = :user_name, user_phone = :user_number, user_address_line_one = :address, user_nic_number = :nic WHERE user_id = :user_id", $user_details);
 
 			if ($user_details_query) {
 				$suc_message = "Successfully Updated.!";

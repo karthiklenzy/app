@@ -21,12 +21,12 @@ $verify_data = $db->query("SELECT product_id, product_url, product_name, product
 			rmrf($dir);
 			$success_message = "Successfully Deleted.!";
 			setcookie("SuccessMessage", $success_message, time() + (5 * 1), "/");
-			header("Location:".HTTP_PATH."user-profile");
+			header("Location:".HTTP_PATH."uploaded-items");
 		}
 		else {
 			$error_message = "Error in delete.!";
 			setcookie("SuccessMessage", $error_message, time() + (5 * 1), "/");
-			header("Location:".HTTP_PATH."user-profile-none");
+			header("Location:".HTTP_PATH."uploaded-items");
 		}
 
 	}

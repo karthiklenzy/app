@@ -5,6 +5,7 @@
     			<nav aria-label="breadcrumb">
 				  <ol class="breadcrumb" style="margin: 10px 10px 20px 10px!important;">
 				    <li class="breadcrumb-item"><a href="<?php echo HTTP_PATH; ?>user-profile">Dashboard</a></li>
+			    <li class="breadcrumb-item active" aria-current="page">Uploaded items</li>
 				    
 				  </ol>
 				</nav>
