@@ -52,7 +52,7 @@
 							<?php if (isset($_GET['upload']) && $_GET['upload'] == 'bulk') { ?>
 							<div class="padd">
 							   <span><label>Bulk items count</label></span>
-							   <span><input type="text" name="item_count" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="5" class="textbox" id="count"></span>
+							   <span><input type="text" name="item_count" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="5" class="textbox" id="count" required></span>
 						   	</div>
 						    <?php } ?>
 						   	<div class="padd">
