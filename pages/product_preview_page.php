@@ -60,9 +60,13 @@
 
 								<div class="price">
 										<p>
+										<?php if ($selected_product_sql[$x]['product_current_price'] != "-1") { ?>
 											<span>Rs. <?php echo number_format($selected_product_sql[$x]['product_current_price']); ?>
 											</span>
-											
+										<?php } else { ?>
+										<span>Rs. <?php echo "0"; ?>
+											</span>
+										<?php } ?>	
 										</p>
 										
 										<div class="col-md-6 nopadding-val">
@@ -93,11 +97,16 @@
 									<form method="post">
 										<div class="custom-qty">
 											<h5 style="padding-top: 30px;"><i class="fa fa-hand-holding-usd fa-lg"></i>&emsp;Bid: (Rs.)</h5>
+											<?php if ($selected_product_sql[$x]['product_current_price'] != "-1") {?>
 												<input type="hidden" name="hiddencurrentprice" id="hiddencurrentprice" value="<?php echo $selected_product_sql[$x]['product_current_price']; ?>">
 												<input type="hidden" name="hiddenpricefloor" id="hiddenpricefloor" value="<?php echo $pricefloor; ?>">
 												<input type="hidden" name="hiddenbiddiff" id="hiddenbiddiff" value="<?php echo $bid_margin; ?>">
 												<input type="hidden" name="hiddenresprice" id="hiddenresprice" value="<?php echo $selected_product_sql[$x]['product_initial_price']; ?>">
+											<?php } else { ?>
+												<input type="hidden" name="" id="" value="">
+											<?php } ?>
 											<div class="col-md-6 nopadding-val">
+												<?php if ($selected_product_sql[$x]['product_current_price'] != "-1") {?>
 												<input type="text" class="textbox-bid" name="thebid" id="thebid" maxlength="12" value="<?php echo $displaybidamount; ?>" title="Bid" class="input-text qty" readonly="readonly" />
 
 												<button  type="button" class="increase items" id="plustheprice" title="Increase the bid">
@@ -106,6 +115,9 @@
 												<button type="button" class="reduced items" id="minustheprice" title="Decrease the bid">
 													<i class="fa fa-minus"></i>
 												</button>
+											<?php } else {?>
+												<input type="text" class="textbox-bid" name="thebid" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="thebid" maxlength="8" value="" title="Bid" class="input-text qty" style="width: 85% !important;" required/>
+											<?php } ?>
 											</div>
 											
 											<div class="col-md-6 nopadding-val">
@@ -307,7 +319,12 @@
 									<h5><?php echo $related_products_sql[$r]['product_name']; ?></h5>
 									<div class="price-details">
 								        <div class="price-number">
-											<p><span class="rupees">Rs. <?php echo $related_products_sql[$r]['product_initial_price']; ?></span>
+											<p>
+											<?php if ($related_products_sql[$r]['product_initial_price'] != "-1") { ?>
+												<span class="rupees">Rs. <?php echo $related_products_sql[$r]['product_initial_price']; ?></span>
+											<?php } else { ?>
+												<span class="rupees">Rs. <?php echo "0"; ?></span>
+											<?php } ?>
 											</p>
 									    </div>
 							       		<div class="add-cart">

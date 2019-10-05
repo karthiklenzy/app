@@ -19,4 +19,17 @@
 	     	</div>
 	     	
 	     	<div class="clear"></div>
-	</div>	
+	</div>
+	<div class="topnav" id="myTopnav">
+		<?php
+			if (isset($getmainmenu)) {
+				for ($i=0; $i < count($getmainmenu); $i++) { 
+		?>
+		  <a href="<?php echo HTTP_PATH.$getmainmenu[$i]['menu_item_link']; ?>" ><?php echo $getmainmenu[$i]['menu_item']; ?></a>
+		 <?php }} ?>
+		 
+		  <a href="javascript:void(0);" class="icon" onclick="myFunctionmenu()">
+		    <i class="fa fa-bars"></i>
+		  </a>
+
+		</div>	

@@ -32,9 +32,15 @@
 			  <div class="price-details">
 				<div class="price-number">
 				  <p>
+				  	<?php if ($product_data[$x]['product_current_price'] != "-1") { ?>
 				    <span class="rupees">
 				      Rs. <?php echo number_format($product_data[$x]['product_current_price']); ?>
 				    </span>
+				<?php } else { ?>
+					<span class="rupees">
+				      Rs. <?php echo "0"; ?>
+				    </span>
+				<?php } ?>
 				  </p>
 				</div>
 			    <div class="add-cart">
@@ -80,7 +86,13 @@
 			<h5><?php echo $new_product_data[$r]['product_name']; ?></h5>
 			  <div class="price-details">
 				<div class="price-number">
-				  <p><span class="rupees">Rs. <?php echo number_format($new_product_data[$r]['product_current_price']); ?></span></p>
+				  <p>
+				  	<?php if ($new_product_data[$r]['product_current_price'] != "-1") { ?>
+				  	<span class="rupees">Rs. <?php echo number_format($new_product_data[$r]['product_current_price']); ?></span>
+				  <?php } else { ?>
+				  	<span class="rupees">Rs. <?php echo "0"; ?></span>
+				  <?php } ?>
+				  </p>
 				</div>
 				<div class="add-cart">								
 				  <h5><a href="<?php echo HTTP_PATH; ?>product-preview?product-url=<?php echo $new_product_data[$r]['product_url']; ?>">View</a></h5>
@@ -111,7 +123,13 @@
 			  <h5 class="mar"><?php echo $featured_product_data[$z]['product_name']; ?></h5>
 				<div class="price-details">
 				  <div class="price-number">
-				    <p><span class="rupees">Rs. <?php echo number_format($featured_product_data[$z]['product_current_price']); ?></span></p>
+				    <p>
+				    <?php if ($featured_product_data[$z]['product_current_price'] != "-1") { ?>
+				    	<span class="rupees">Rs. <?php echo number_format($featured_product_data[$z]['product_current_price']); ?></span>
+				    <?php } else { ?>
+				    	<span class="rupees">Rs. <?php echo "0"; ?></span>
+				    <?php } ?>
+				    </p>
 				  </div>
 				  <div class="add-cart">								
 					<h5><a href="<?php echo HTTP_PATH; ?>product-preview?product-url=<?php echo $featured_product_data[$z]['product_url']; ?>">View</a></h5>

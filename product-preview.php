@@ -164,6 +164,10 @@ $verify_count = 0;
 			$confirmbid_array = array('productid' => $productid, 'bidamount' => $bidamount, 'biduser' => $biduser, 'bid_date_and_time' => $current_date_time);
 			$confirmbid_query = $db->query("INSERT INTO tbl_bid (product_id, bid_amount, bid_user_id, bid_date_and_time) VALUES (:productid, :bidamount, :biduser, :bid_date_and_time)", $confirmbid_array);
 
+			if ($check_if_bid_exceeded_query[0]['product_current_price'] == "-1") {
+				$freebid_price_array = array('productid' => $productid, 'bidamount' => $bidamount);
+				$freebid_price_query = $db->query("UPDATE tbl_product SET  product_initial_price = :bidamount WHERE product_id = :productid", $freebid_price_array);
+			}
 			
 			$update_product_current_bid_array = array('productid' => $productid, 'bidamount' => $bidamount);
 			$update_product_current_bid_query = $db->query("UPDATE tbl_product SET product_current_price = :bidamount WHERE product_id = :productid", $update_product_current_bid_array);
@@ -222,18 +226,18 @@ $verify_count = 0;
 					$sent =mailing::html_mail($to,$subject,$admin_template,$email);
 
 				$successMessage = "Bid placed successfully.!";
-				setcookie("SuccessMessage", $successMessage, time() + (10 * 1), "/"); // 1 minute
+				setcookie("SuccessMessage", $successMessage, time() + (5 * 1), "/"); // 1 minute
 				header("Location:".HTTP_PATH."user-profile");
 			}
 			else {
 				$errorMessage = "Error in Bidding.!";
-				setcookie("ErrorMessage", $errorMessage, time() + (10 * 1), "/"); // 1 minute
+				setcookie("ErrorMessage", $errorMessage, time() + (5 * 1), "/"); // 1 minute
 				header("Location:".HTTP_PATH."user-profile");
 			}
 		}
 		else {
 			$errorMessage = "bid amount exceeded.!";
-			setcookie("ErrorMessage", $errorMessage, time() + (10 * 1), "/"); // 1 minute
+			setcookie("ErrorMessage", $errorMessage, time() + (5 * 1), "/"); // 1 minute
 			header("Location:".HTTP_PATH."user-profile");
 		}
 	}

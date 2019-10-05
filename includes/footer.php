@@ -113,7 +113,17 @@
     slideMargin: 0,
     thumbItem: 5
 });
-  </script>	
+  </script>
+<script>
+function myFunctionmenu() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>	
 
     <a href="#" id="toTop"><span id="toTopHover"> </span></a>
 </body>
