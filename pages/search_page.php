@@ -1,7 +1,7 @@
 <div class="header_slide">
   <div class="row" style="margin:0;">
 	<?php include 'includes/category_menu.php'; ?>
-	  <div class="col-md-9" style="padding-top: 20px;">					 
+	  <div class="col-md-9 search-page" style="padding-top: 20px;">					 
 		<div class="row"> 
 		<?php
 		  if ((isset($product_data)) && ($product_data)) {

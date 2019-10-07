@@ -68,22 +68,25 @@
   <?php if ($total_product < 5 ) { ?>
  <style>
  	.footer {
-	    position: relative;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   margin-top: 32vh;
-}
+	   position: relative;
+	   left: 0;
+	   bottom: 0;
+	   width: 100%;
+	   margin-top: 32vh;
+	}
+	
  </style>
  <?php } else if ($total_sub_catagory_count < 5) {?>
 <style>
  	.footer {
-	    position: relative;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   margin-top: 40vh;
-}
+	   position: relative;
+	   left: 0;
+	   bottom: 0;
+	   width: 100%;
+	   margin-top: 40vh;
+	}
+
  </style>
  <?php } ?>
+ 
 

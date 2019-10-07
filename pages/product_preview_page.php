@@ -1,6 +1,6 @@
 <?php ?>
 <div class="row" style="margin: 0;">
-		<nav aria-label="breadcrumb">
+		<nav aria-label="breadcrumb" class="bread-crumb">
 		  <ol class="breadcrumb">
 		    <li class="breadcrumb-item"><a href="<?php echo HTTP_PATH; ?>">Home</a></li>
 		    <li class="breadcrumb-item"><a href="<?php echo HTTP_PATH; ?>shop?category=<?= $product_catagory_id; ?>"><?php echo $catagory_name; ?></a></li>
@@ -92,8 +92,7 @@
 										</div>
 										
 								</div>
-								
-								<div class="bidding" style="margin-top: 12vh;">
+								<div class="bidding">
 									<form method="post">
 										<div class="custom-qty">
 											<h5 style="padding-top: 30px;"><i class="fa fa-hand-holding-usd fa-lg"></i>&emsp;Bid: (Rs.)</h5>
@@ -169,92 +168,63 @@
 			</div>
 			<div class="col-md-12">
 				<div id="horizontalTab">
-							<ul class="resp-tabs-list" style="margin-top: 25px !important;">
-								<li><i class="fa fa-camera"></i>&emsp;Product Details</li>
-								<!-- <li><i class="fa fa-tag"></i>&emsp;Product Tags</li> -->
-								<li><i class="fa fa-star"></i>&emsp;Product Reviews</li>
-								<div class="clear"></div>
+					<ul class="resp-tabs-list" style="margin-top: 25px !important;">
+						<li><i class="fa fa-camera"></i>&emsp;Product Details</li>
+						<li><i class="fa fa-star"></i>&emsp;Product Reviews</li>
+						<div class="clear"></div>
+					</ul>
+					<div class="resp-tabs-container">
+						<div class="product-desc" id="style-5">
+							<?php if ($selected_product_sql) {
+							 	for ($z=0; $z < count($selected_product_sql); $z++) { 
+							 	$product_catagory = $selected_product_sql[0]['category_id']; ?>
+							 	<?php echo $selected_product_sql[$z]['product_description']; ?>
+
+							<?php }} ?>
+							<!-- Product Specification data -->
+							<ul class="product-bullet">
+								<?php if ($spec_data) { 
+									for ($v=0; $v < count($spec_data); $v++) { ?>
+									<li>
+									<p><span><?php echo $spec_data[$v]['spec_type_name']." : ";?></span><?php echo $spec_data[$v]['spec_value'];?></p>	
+									</li>
+								<?php }} ?>	
 							</ul>
-							<div class="resp-tabs-container">
-								<div class="product-desc" id="style-5">
-									 <?php if ($selected_product_sql) {
-									 	for ($z=0; $z < count($selected_product_sql); $z++) { 
-									 	$product_catagory = $selected_product_sql[0]['category_id']; ?>
-
-										<?php echo $selected_product_sql[$z]['product_description']; ?>
-
-									  <?php }} ?>
-									  <!-- Product Specification data -->
-										<ul class="product-bullet">
-											<?php if ($spec_data) { 
-												for ($v=0; $v < count($spec_data); $v++) { ?>
-												<li>
-												<p><span><?php echo $spec_data[$v]['spec_type_name']." : ";?></span><?php echo $spec_data[$v]['spec_value'];?></p>	
-												</li>
-											<?php }} ?>	
-										</ul>
-										<!--End  Product Specification data -->					
-								</div>
-
-
-							 <!-- <div class="product-tags">
-									 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-								
-								<table class="data-table" id="product-attribute-specs-table">
-										<col width="25%" />
-										<col />
-										<tbody>
-										<?php
-										if ($getadditionaldetails_query) {
-											for ($o=0; $o < count($getadditionaldetails_query); $o++) { 
-										?>
-											<tr>
-												<th class="label"><?php echo getspecnamebyid($getadditionaldetails_query[$o]['spec_type_id']); ?></th>
-												<td class="data"><?php echo $getadditionaldetails_query[$o]['spec_value']; ?></td>
-											</tr>
-										<?php
-											}
-										}
-										?>
-										</tbody>
-									</table>
-						    </div> -->	
-						    
-
-							<div class="review" id="style-5">
-								
-							  <?php if ($review_query) {
-							  		  for ($q=0; $q < count($review_query); $q++){ ?>
-							  <div class="your-review">
+							<!--End  Product Specification data -->					
+						</div>
+						<div class="review" id="style-5">
+							<?php if ($review_query) {
+							  		for ($q=0; $q < count($review_query); $q++){ ?>
+							<div class="your-review">
 							  	 <!-- <h3>Rates for this product</h3> -->
-							  	 <div class="review-head"><i class="fa fa-user"></i><?= " ".$review_query[$q]['review_added_user_name']; ?>
+							  	<div class="review-head"><i class="fa fa-user"></i><?= " ".$review_query[$q]['review_added_user_name']; ?>
 							  	 &emsp;&emsp;<i class="fa fa-calendar-alt"></i><?= " ".$review_query[$q]['review_date']; ?>&emsp;&emsp;
 							  	 &emsp;&emsp;<i class="fa fa-clock"></i><?= " ".$review_query[$q]['review_time']; ?>
 							  	 </div>
 							  	 <?= $review_query[$q]['review_message']; ?>
 							  	  
-							  	  
-							  </div>
-							  <?php }} else { ?>
-							  <div class="alert alert-info alert-dismissible alert-coment" style="width: 100%;">
+							</div>
+							<?php }} else { ?>
+							<div class="alert alert-info alert-dismissible alert-coment" style="width: 100%;">
 								<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 								<i class="fa fa-exclamation-circle"></i>&emsp;No comments
 							</div>
 							<?php } ?>
 							<h4 class="tinymce-heading">Post your review to current product</h4>
-								<form method="post" class="review-comment">
+							<form method="post" class="review-comment">
 								<div>
-								 <textarea id='textarea1' class="tinymce mceEditor textarea1style" rows="5" name="review" required></textarea>
+									<textarea id='textarea1' class="tinymce mceEditor textarea1style" rows="5" name="review" required></textarea>
 								</div>
 								<div>
-								 <button type="submit" class="btn" name="btn-review">Submit</button>
+								 	<button type="submit" class="btn" name="btn-review">Submit</button>
 								 </div>
-								</form> 				
-							</div>
-							
+							</form> 				
 						</div>
-					 </div>
+							
+					</div>
+				</div>
 			</div>
+			
 		<div class="clear"></div>
 	</div>
 
@@ -287,7 +257,7 @@
 							        <form method="post">
 							        <div class="modal-footer">
 							          <input type="hidden" name="hiddenbidamount" value="<?php if (isset($bid_amount)) { echo $bid_amount; } ?>">
-							          <!-- <a type="button" class="btn btn-default" id="#" href="#" type="button" name="btnplaceorder">Yes</a> -->
+							          
 							          <button type="submit" class="btn btn-default" name="btnplaceorder" style="margin-top: 0;">Yes</button>
 							          <button type="button" class="btn btn-default" data-dismiss="modal" name="">No</button>
 							        </div>
@@ -340,15 +310,7 @@
 						</div>
 						<!-- section group end -->
         		</div>
-				<!-- <div class="rightsidebar span_3_of_1">
-					<h2>CATEGORIES</h2>
-					<ul class="side-w3ls">
-						<?php if ($catagory_list) {
-							for ($i=0; $i < count($catagory_list); $i++) { ?>
-					      <li><a href="#"><?php echo $catagory_list[$i]['category_name']; ?></a></li>
-					      <?php }} ?>
-    				</ul>
-    			</div> -->
+				
  			</div>
  		</div>
    	</div>
