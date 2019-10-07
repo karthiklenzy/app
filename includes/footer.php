@@ -123,9 +123,19 @@ function myFunctionmenu() {
     x.className = "topnav";
   }
 }
-</script>	
 
-    <a href="#" id="toTop"><span id="toTopHover"> </span></a>
+</script>
+<script>
+	function myCategorymenu() {
+	  var x = document.getElementById("myTopnavcat");
+	  if (x.className === "topnav") {
+	    x.className += " responsive";
+	  } else {
+	    x.className = "topnav";
+	  }
+	}
+</script>
+	<a href="#" id="toTop"><span id="toTopHover"> </span></a>
 </body>
 
 </html>

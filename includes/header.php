@@ -57,6 +57,7 @@
 			<!-- <div class="call">
 				 <p><span>Need help?</span> call us <span class="number">1-22-3456789</span></span></p>
 			</div> -->
+			<?php if(!isMobile()) { ?>
 			<div class="account_desc">
 				<ul>
 					<?php if (isset($_SESSION['vendesiya_user_id'])) {?>
@@ -71,12 +72,30 @@
 					<!-- <li><a><i class="fas fa-shopping-cart"></i></a></li> -->
 				</ul>
 			</div>
+			<?php } if(isMobile()) { ?>
+			<div class="dropdown">
+			    <a data-toggle="dropdown"><i class="fa fa-user-circle fa-2x"></i></a>
+			    <ul class="dropdown-menu dropdown-right">
+					<?php if (isset($_SESSION['vendesiya_user_id'])) {?>
+					<li><a href="<?php echo HTTP_PATH; ?>upload-item"><i class="fa fa-upload"></i>&emsp;Upload your item</a></li>
+					<?php } else {?>
+					<li><a href="<?php echo HTTP_PATH; ?>login-user"><i class="fa fa-upload"></i>&emsp;Upload your item</a></li>
+					<?php }?>
+					<?php if (isset($_SESSION['vendesiya_user_first_name'])) {?>
+					<li><a href="<?php echo HTTP_PATH; ?>user-profile"><i class="fa fa-user-tie"></i>&emsp;<?php echo $_SESSION['vendesiya_user_first_name']; ?></a></li>
+					<li><a href="<?php echo HTTP_PATH; ?>logout"><i class="fa fa-sign-out-alt"></i>&emsp;Logout</a></li>
+					<?php } ?>
+					
+				</ul>
+			</div>
+			<?php } ?>
 			<div class="clear"></div>
 		</div>
 		<div class="header_top">
 			<div class="logo">
 				<a href="<?= HTTP_PATH; ?>"><img src="images/logo1.png" alt="" style="" /></a>
 			</div>
+			<?php if(!isMobile())  { ?>
 			<div class="account_desc">
 				<ul class="bulk">
 					<?php if (isset($_SESSION['vendesiya_user_id'])) { ?>
@@ -87,9 +106,9 @@
 					<li><a href="<?php echo HTTP_PATH; ?>login-user?redirect_url=<?php echo HTTP_PATH; ?>upload-item?upload=freebid"><i class="fa fa-list-ul"></i>&emsp;Free Bids</a></li>
 				<?php } ?>
 					
-					<!-- <li><a><i class="fas fa-shopping-cart"></i></a></li> -->
 				</ul>
-			</div>  
+			</div>
+			<?php } ?>  
 			  <script type="text/javascript">
 			function DropDown(el) {
 				this.dd = el;

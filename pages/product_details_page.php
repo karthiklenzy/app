@@ -3,6 +3,7 @@
 			<nav aria-label="breadcrumb">
 			  <ol class="breadcrumb">
 			    <li class="breadcrumb-item"><a href="<?php echo HTTP_PATH; ?>user-profile">Dashboard</a></li>
+			    <li class="breadcrumb-item active" aria-current="page"><a href="<?php echo HTTP_PATH; ?>uploaded-items">Uploaded products</a></li>
 			    <li class="breadcrumb-item active" aria-current="page">Product Details</li>
 			  </ol>
 			</nav>
@@ -95,13 +96,13 @@
 							  <?php }} else { ?>
 							  <div class="alert alert-info alert-dismissible alert-coment" style="width: 100%;">
 								<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-								<i class="fa fa-exclamation-circle"></i>&emsp;No approved comments added yet
+								<i class="fa fa-exclamation-circle"></i>&emsp;No comments.!
 							</div>
 							<?php } ?>
 							
 					    </div>	
 
-						<div class="review">
+						<!-- <div class="review">
 							<h4>Lorem ipsum Review by <a href="#">Finibus Bonorum</a></h4>
 							 <ul>
 							 	<li>Price :<a href="#"><img src="images/price-rating.png" alt="" /></a></li>
@@ -114,7 +115,7 @@
 						  	  <p>Feedbacks</p>
 						  	  
 						  	</div>				
-						</div>
+						</div> -->
 					</div>
 				 </div>
 			 </div>
@@ -157,7 +158,7 @@
 		    <div class="section group">
 				<?php if ($verify_data) {
 					for ($z=0; $z < count($verify_data); $z++) {?>
-				<div class="col-md-2">
+				<div class="col-md-2 col-xs-6">
 					<div class="prostyle">
 						<a href="<?php echo HTTP_PATH; ?>product-details?prourl=<?php echo $verify_data[$z]['product_url']; ?>&product_id=<?php echo $verify_data[$z]['product_id']; ?>">
 						<img src="<?php echo HTTP_PATH.$verify_data[$z]['product_main_img']; ?>" alt="" with="160" height="130">

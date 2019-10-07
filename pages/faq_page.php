@@ -1,5 +1,5 @@
 <div class="main">
-    <div class="content" style="height: 56vh;">
+    <div class="content" style="height: auto;">
     	<div class="section group">
     		<div class="row">
     		 <div class="container">
@@ -73,6 +73,7 @@
 	  </div>
   	</div>
 </div>
+<div class="heightx1"></div>
 <!-- <script>
 function myFunction() {
   var x = document.getElementById("snackbar");

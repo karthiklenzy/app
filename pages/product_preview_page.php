@@ -23,9 +23,9 @@
 			</div>
 		<?php } ?>
 		<?php include 'includes/category_menu.php'; ?>
-		<div class="col-md-9">
+		<div class="col-md-9 col-xs-12">
 			<div class="product-details">
-				<div class="col-md-6">
+				<div class="col-md-6 col-xs-12">
 					<div class="demo">
 					    <ul id="lightSlider">
 					    <?php if ($selected_product_sql) {
@@ -49,7 +49,7 @@
 					    </ul>
 					</div>
 				</div>
-				<div class="col-md-6 pro-heading">
+				<div class="col-md-6 col-xs-12 pro-heading">
 					<div class="pro-div">
 						<?php if ($selected_product_sql) {
 							for ($x=0; $x < count($selected_product_sql); $x++) { 
@@ -138,7 +138,7 @@
 								</div>
 								
 								
-								<div class="col-md-6 nopadding-val">
+								<div class="col-md-6 col-xs-12 nopadding-val">
 								  <ul class="review">
 								  <?php if (isset($_SESSION['vendesiya_user_id']) && $_SESSION['vendesiya_user_id'] != $product_published_user_id) {?>
 									<li>
