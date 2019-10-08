@@ -78,6 +78,7 @@ ul.resp-tabs-list {
 }
 h2.resp-accordion {
   	display: block;
+  	margin: 0px 0;
 }
 .resp-vtabs .resp-tab-content {
   	border: 1px solid #C1C1C1;

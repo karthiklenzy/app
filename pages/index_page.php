@@ -23,7 +23,7 @@
 		  if ($product_data) {
 			for ($x=0; $x < count($product_data); $x++) {
 		?>
-		  <div class="col-md-3 col-xs-6">
+		  <div class="col-md-3 col-sm-3 col-xs-6">
 			<div class="prostyle">
 			  <a href="<?php echo HTTP_PATH; ?>product-preview?product-url=<?php echo $product_data[$x]['product_url']; ?>">
 			    <img src="<?php echo HTTP_PATH.$product_data[$x]['product_main_img']; ?>" alt="" with="160" height="130" />
@@ -78,7 +78,7 @@
 	  	if ($new_product_data) {
 	      for ($r=0; $r < count($new_product_data); $r++) {
 	  ?> 	 
-		<div class="col-md-2 col-xs-6">
+		<div class="col-md-2 col-sm-3 col-xs-6">
 		  <div class="prostyle">
 			<a href="<?php echo HTTP_PATH; ?>product-preview?product-url=<?php echo $new_product_data[$r]['product_url']; ?>">
 			  <img src="<?php echo HTTP_PATH.$new_product_data[$r]['product_main_img']; ?>" alt="" with="160" height="130" />
@@ -115,7 +115,7 @@
 	<div class="row">
 	  <?php if ($featured_product_data) {
 		for ($z=0; $z < count($featured_product_data); $z++) { ?> 	 
-		  <div class="col-md-2 col-xs-6">
+		  <div class="col-md-2 col-sm-3 col-xs-6">
 			<div class="prostyle">
 			  <a href="<?php echo HTTP_PATH; ?>product-preview?product-url=<?php echo $featured_product_data[$z]['product_url']; ?>">
 			  	<img src="<?php echo HTTP_PATH.$featured_product_data[$z]['product_main_img']; ?>" alt="" with="160" height="130" />

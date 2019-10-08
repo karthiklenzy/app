@@ -23,7 +23,7 @@
 			</div>
 		<?php } ?>
 		<?php include 'includes/category_menu.php'; ?>
-		<div class="col-md-9 col-xs-12">
+		<div class="col-md-9 col-sm-8 col-xs-12">
 			<div class="product-details">
 				<div class="col-md-6 col-xs-12">
 					<div class="demo">
@@ -49,7 +49,7 @@
 					    </ul>
 					</div>
 				</div>
-				<div class="col-md-6 col-xs-12 pro-heading">
+				<div class="col-md-6 col-sm-12 col-xs-12 pro-heading">
 					<div class="pro-div">
 						<?php if ($selected_product_sql) {
 							for ($x=0; $x < count($selected_product_sql); $x++) { 
@@ -69,7 +69,7 @@
 										<?php } ?>	
 										</p>
 										
-										<div class="col-md-6 nopadding-val">
+										<div class="col-md-6 col-sm-6 nopadding-val">
 											<h5><i class="fa fa-sort-amount-up"></i>&emsp;Total Bids: <span><?php echo gettotalbids($selected_product_sql[$x]['product_id']); ?></span></h5>
 											<h5><i class="fa fa-tags"></i>&emsp;Product Code : <span><?php echo $selected_product_sql[$x]['product_id']; ?></span></h5>
 											<h5><i class="fa fa-stopwatch"></i>&emsp;End Time: <span><?php echo substr($selected_product_sql[$x]['product_bid_ends_on'], 10, 15); ?></span></h5>
@@ -79,7 +79,7 @@
 								    		</h5>
 											
 										</div>
-										<div class="col-md-6 nopadding-val">
+										<div class="col-md-6 col-sm-6 nopadding-val">
 											<h5><i class="fa fa-eye"></i>&emsp;Total Views: <span><?php echo $selected_product_sql[$x]['product_views']; ?></span></h5>
 											
 											<h5><i class="fa fa-calendar-times"></i>&emsp;End Date: <span><?php echo substr($selected_product_sql[$x]['product_bid_ends_on'], 0, 10); ?></span></h5>
@@ -166,7 +166,7 @@
 				</div>
 
 			</div>
-			<div class="col-md-12">
+			<div class="col-md-12 col-sm-12">
 				<div id="horizontalTab">
 					<ul class="resp-tabs-list" style="margin-top: 25px !important;">
 						<li><i class="fa fa-camera"></i>&emsp;Product Details</li>
@@ -281,7 +281,7 @@
 					   <!-- DIV 4 START -->
 					   <?php if ($related_products_sql) {
 					   		for ($r=0; $r < count($related_products_sql); $r++) {?>
-							<div class="col-md-2 col-xs-6">
+							<div class="col-md-2 col-sm-3 col-xs-6">
 								<div class="prostyle">
 									<a href="<?php echo HTTP_PATH;?>product-preview?product-url=<?php echo $related_products_sql[$r]['product_url']; ?>">
 									 	<img src="<?php echo HTTP_PATH.$related_products_sql[$r]['product_main_img']; ?>" alt="" with="160" height="130">

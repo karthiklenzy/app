@@ -3085,6 +3085,15 @@ div.prostyle h5 {
 	.span_1_of_4 {
 		width: 50%;
 	}
+	.add-cart {
+	    float: right;
+	    width: 100%;
+	    text-align: center;
+	    display: inline-block;
+	}
+	.prostyle > h5 {
+	    font-size: 1.2rem;
+	}
 	/*.mobile-cat {
 		overflow: inherit;
 	    display: inline-block;
@@ -3125,7 +3134,10 @@ div.prostyle h5 {
 	}
 	.logo a img {
 		
-		margin-left: 0vh;
+		margin-left: 2vh;
+	}
+	.search_box {
+		width: 95%;
 	}
 	.account_desc li {
 	    background: aliceblue;
@@ -3192,6 +3204,15 @@ div.prostyle h5 {
 	.span_1_of_4 {
 		width: 50%;
 	}
+	.add-cart {
+	    float: right;
+	    width: 100%;
+	    text-align: center;
+	    display: inline-block;
+	}
+	.prostyle > h5 {
+	    font-size: 1.2rem;
+	}
 	/*.mobile-cat {
 		overflow: inherit;
 	    display: inline-block;
@@ -3219,10 +3240,11 @@ div.prostyle h5 {
 		width: 80%;
 	}
 	.content {
-		height: 67vh;
+		height: auto;
 	}
 	.share-desc .btn-primary {
     	margin: 0 0 0 0;
+    	width: 45%;
 	}
 	.heightx2 {
 		padding: 20px 0;
@@ -3248,7 +3270,7 @@ div.prostyle h5 {
 	    margin: 25px 0 0 0;
 	}
 	.bidding {
-		margin-top: 8vh;
+		margin-top: -2vh;
 	}
 	.resp-tabs-container {
 	    padding: 0px 0px;
@@ -3256,20 +3278,52 @@ div.prostyle h5 {
 	.bread-crumb {
 	    margin-top: 0px;
 	}
-	.topnav a {
+	.col-sm-4 .topnav a {
 	    float: left;
 	    display: block;
 	    color: #f2f2f2;
-	    text-align: center;
+	    text-align: left;
 	    padding: 14px 16px;
 	    text-decoration: none;
-	    font-size: 17px;
+	    font-size: 14px;
+	    width: 100%;
+	}
+	.fa-list {
+		display: none !important;
+	}
+	.product-details {
+	    margin: 0px 0;
 	}
 	.h3, h3 {
 	    font-size: 24px;
 	}
 	.span_1_of_4 {
 		width: 50%;
+	}
+	.add-cart {
+	    float: right;
+	    width: 100%;
+	    text-align: center;
+	    display: inline-block;
+	}
+	.prostyle > h5 {
+	    font-size: 1.2rem;
+	}
+	.see {
+	    float: right;
+	    padding-top: 3px;
+	}
+	h2.resp-accordion {
+	    margin: 0px 0;
+	}
+	.search_box {
+	    width: 27%;
+	    margin-top: 10px;
+    	margin-right: 11px;
+	}
+	#thebid {
+	    width: 35% !important;
+	    margin-bottom: 7px;
 	}
 }
 
@@ -3339,6 +3393,31 @@ div.prostyle h5 {
 	}
 	.span_1_of_4 {
 		width: 50%;
+	}
+	.add-cart {
+	    float: right;
+	    width: 100%;
+	    text-align: center;
+	    display: inline-block;
+	}
+	.prostyle > h5 {
+	    font-size: 1.2rem;
+	}
+	.see {
+	    float: right;
+	    padding-top: 3px;
+	}
+	h2.resp-accordion {
+	    margin: 0px 0;
+	}
+	.search_box {
+	    width: 27%;
+	    margin-top: 10px;
+    	margin-right: 11px;
+	}
+	#thebid {
+	    width: 35% !important;
+	    margin-bottom: 7px;
 	}
 }
 
@@ -3424,6 +3503,18 @@ div.prostyle h5 {
 	.span_1_of_4 {
 		width: 20%;
 	}
+	.search_box {
+	    width: 30%;
+	}
+	.add-cart {
+	    float: right;
+	    width: 40%;
+	    text-align: center;
+	    display: inline-block;
+	}
+	.prostyle > h5 {
+	    font-size: 1.4rem;
+	}
 }
 /* Xtra Large Devices, Wide Screens */
 @media only screen and (min-width : 1920px) {
@@ -3504,7 +3595,20 @@ div.prostyle h5 {
 	.span_1_of_4 {
 		width: 20%;
 	}
+	.search_box {
+	    width: 30%;
+	}
+	.add-cart {
+	    float: right;
+	    width: 40%;
+	    text-align: center;
+	    display: inline-block;
+	}
+	.prostyle > h5 {
+	    font-size: 1.4rem;
+	}
 }
+
 /*NAFLIN CSS END*/
 h2.resp-accordion:hover {
     color: #000000 !important;
@@ -3636,7 +3740,7 @@ h2.resp-accordion:hover {
 	padding-right: 15px;
 }
 .dropdown-right {
-	right: 0 !important;
+	right: 5px !important;
 	left: unset !important;
 	font-size: 17px !important;
 	padding: 5px 10px 5px 0px !important;
@@ -3680,5 +3784,9 @@ h2.resp-accordion:hover {
 .sub-cat-style {
 	color: #085443 !important;
 }
-
+@media (max-width: 1024px) and (min-width: 768px) {
+  .main-navigation ul li:hover > ul.sub-menu {
+    display: block;
+  }
+} 
 

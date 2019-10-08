@@ -24,6 +24,7 @@
 </div>
 <!-- Mobile view -->
 	<?php } if(isMobile()) { ?>
+		<div class="col-md-3 col-sm-4 col-xs-12">
 	<div class="topnav" id="myTopnavcat" style="overflow: inherit;display: inline-block;width: 100%;">
 		<a href="#">Categories</a>
 		<?php
@@ -39,5 +40,6 @@
 	  	</a>
 
 	</div>
+</div>
 	<?php } ?>
 <!--End Mobile view -->	
