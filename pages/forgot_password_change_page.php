@@ -1,5 +1,5 @@
 <div class="main">
-    <div class="content" style="height: 56vh;">
+    <div class="content" style="height: auto;">
     	<div class="section group">
     		<div class="row">
     		 <div class="container">
@@ -85,7 +85,8 @@
   				<!-- <div class="col-md-4"></div> -->
   				 </div>
 			  </div>
-		  </div>		
+		  </div>
+		  <div class="heightx1"></div>		
       </div> 
   </div>
   <div id="snackbar"><i class="fa fa-times-circle"></i>&emsp;Some text some message..</div>
