@@ -1,11 +1,12 @@
 <div class="main">
-    <div class="content" style="height: 56vh;">
+    <div class="content" style="height: auto;">
     	<div class="section group">
     		<div class="row">
     		 <div class="container">
     			<nav aria-label="breadcrumb">
 				  <ol class="breadcrumb">
-				    <li class="breadcrumb-item"><a href="<?php echo HTTP_PATH; ?>login-user">Verification</a></li>
+				    <li class="breadcrumb-item"><a href="<?php echo HTTP_PATH; ?>register-user">Registration</a></li>
+				    <li class="breadcrumb-item active" aria-current="page">verification</li>
 				    
 				  </ol>
 				</nav>
@@ -60,7 +61,8 @@
   				<!-- <div class="col-md-4"></div> -->
   				 </div>
 			  </div>
-		  </div>		
+		  </div>
+		  <div class="heightx1"></div>		
       </div> 
   </div>
   <div id="snackbar"><i class="fa fa-times-circle"></i>&emsp;Some text some message..</div>

@@ -1,42 +1,42 @@
-		<!-- slide start -->
-		<div class="header_slide">
-			<div class="row" style="margin:0;">
-			<?php include 'includes/sub_category_menu.php'; ?>
-				<div class="col-md-9" style="padding-top: 20px;">					 
-					<div class="row">
-					<?php if (count($cat_product_sql) == 0) {?>
-					<div class="alert alert-info alert-dismissible" style="width: 75%;">
-						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-						<i class="fa fa-exclamation-circle"></i>&emsp;No products added yet
+	<!-- slide start -->
+	<div class="header_slide">
+		<div class="row" style="margin:0;">
+		<?php include 'includes/sub_category_menu.php'; ?>
+			<div class="col-md-9" style="padding-top: 20px;">					 
+				<div class="row">
+				<?php if (count($cat_product_sql) == 0) {?>
+				<div class="alert alert-info alert-dismissible" style="width: 75%;">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<i class="fa fa-exclamation-circle"></i>&emsp;No products added yet
+				</div>
+				<?php } ?> 
+				<?php if ($cat_product_sql) {
+					for ($z=0; $z < count($cat_product_sql); $z++) {?>	 
+		  			<div class="col-md-3 col-xs-6">
+		  	 			<div class="prostyle">
+				 			<a href="<?php echo HTTP_PATH; ?>product-preview?product-url=<?php echo $cat_product_sql[$z]['product_url']; ?>">
+				 				<img src="<?php echo HTTP_PATH.$cat_product_sql[$z]['product_main_img']; ?>" alt="" with="160" height="130" />
+				 			</a>
+				 			<h5>
+				 				<?php echo $cat_product_sql[$z]['product_name']; ?>
+				 			</h5>
+							<div class="price-details">
+			       				<div class="price-number">
+									<p><span class="rupees">Rs. <?php echo number_format($cat_product_sql[$z]['product_current_price']); ?></span></p>
+				    			</div>
+				       			<div class="add-cart">								
+									<h5><a href="<?php echo HTTP_PATH; ?>product-preview?product-url=<?php echo $cat_product_sql[$z]['product_url']; ?>">View</a></h5>
+						     	</div>
+						 		<div class="clear"></div>
+							</div>
+			  			</div> 
 					</div>
-					<?php } ?> 
-					<?php if ($cat_product_sql) {
-						for ($z=0; $z < count($cat_product_sql); $z++) {?>	 
-			  			<div class="col-md-3 col-xs-6">
-			  	 			<div class="prostyle">
-					 			<a href="<?php echo HTTP_PATH; ?>product-preview?product-url=<?php echo $cat_product_sql[$z]['product_url']; ?>">
-					 				<img src="<?php echo HTTP_PATH.$cat_product_sql[$z]['product_main_img']; ?>" alt="" with="160" height="130" />
-					 			</a>
-					 			<h5>
-					 				<?php echo $cat_product_sql[$z]['product_name']; ?>
-					 			</h5>
-								<div class="price-details">
-				       				<div class="price-number">
-										<p><span class="rupees">Rs. <?php echo number_format($cat_product_sql[$z]['product_current_price']); ?></span></p>
-					    			</div>
-					       			<div class="add-cart">								
-										<h5><a href="<?php echo HTTP_PATH; ?>product-preview?product-url=<?php echo $cat_product_sql[$z]['product_url']; ?>">View</a></h5>
-							     	</div>
-							 		<div class="clear"></div>
-								</div>
-				  			</div> 
-						</div>
-					<?php }} ?>
-					</div>
-		      	</div>	
-		    </div>
-		   	<div class="clear"></div>
-		</div>
+				<?php }} ?>
+				</div>
+	      	</div>	
+	    </div>
+	   	<div class="clear"></div>
+	</div>
 		<!-- slide end -->
 		<?php if (isset($_GET['subid'])) { 
 			$sub_id = $_GET['subid'];  ?>

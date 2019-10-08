@@ -24,7 +24,7 @@
 </div>
 <!-- Mobile view -->
 	<?php } if(isMobile()) { ?>
-	<div class="topnav" id="myTopnavcat" style="overflow: inherit;">
+	<div class="topnav" id="myTopnavcat" style="overflow: inherit;display: inline-block;width: 100%;">
 		<a href="#">Categories</a>
 		<?php
 			if (isset($catagory_list)) {
@@ -40,4 +40,4 @@
 
 	</div>
 	<?php } ?>
-	<!--End Mobile view -->	
+<!--End Mobile view -->	

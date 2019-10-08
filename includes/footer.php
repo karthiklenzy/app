@@ -4,7 +4,7 @@
    <div class="footer">
    	  <div class="container">	
 	     <div class="section group">
-				<div class="col_1_of_4 span_1_of_4">
+				<div class="col_1_of_4 span_1_of_4 col-md-3 col-xs-6">
 					<h4>Quick links</h4>
 					  <ul>
 						<?php 
@@ -22,13 +22,13 @@
 						?>
 					  </ul>
 				</div>
-				<div class="col_1_of_4 span_1_of_4">
+				<div class="col_1_of_4 span_1_of_4 col-md-3 col-xs-6">
 					<h4>Why buy from us</h4>
 						<ul>
 							<li>Vendesiya is a leading live auction marketplace, which connects sellers of fine art, antiques and collectibles with buyers.</li>
 						</ul>
 				</div>
-				<div class="col_1_of_4 span_1_of_4">
+				<div class="col_1_of_4 span_1_of_4 col-md-3 col-xs-6">
 					<h4>My account</h4>
 						<ul>
 							<li><a href="<?php echo HTTP_PATH; if (isset($_SESSION['vendesiya_user_id'])) { echo "user-profile";} else { echo "login-user";}?>">Sign In</a></li>
@@ -39,7 +39,7 @@
 							<!-- <li><a href="contact">Help</a></li> -->
 						</ul>
 				</div>
-				<div class="col_1_of_4 span_1_of_4 social">
+				<div class="col_1_of_4 span_1_of_4 social col-md-3 col-xs-6">
 					
 							<h4>Follow Us</h4>
 					   		  <ul>
@@ -82,7 +82,7 @@
     var url = window.location.href; 
 
     // passes on every "a" tag 
-    $("#sub-header a").each(function() {
+    $(".menu a").each(function() {
             // checks if its the same on the address bar
         if(url == (this.href)) { 
             $(this).closest("li").addClass("active");
@@ -128,6 +128,16 @@ function myFunctionmenu() {
 <script>
 	function myCategorymenu() {
 	  var x = document.getElementById("myTopnavcat");
+	  if (x.className === "topnav") {
+	    x.className += " responsive";
+	  } else {
+	    x.className = "topnav";
+	  }
+	}
+</script>
+<script>
+	function mysubCategorymenu() {
+	  var x = document.getElementById("myTopnavsubcat");
 	  if (x.className === "topnav") {
 	    x.className += " responsive";
 	  } else {
