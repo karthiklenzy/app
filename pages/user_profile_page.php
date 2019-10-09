@@ -8,7 +8,7 @@
 				    
 				  </ol>
 				</nav>
-				<div class="col-md-8">
+				<div class="col-md-8 col-sm-8">
 				  	<div class="dashboard-user">
 				  		<?php if(isset($_COOKIE['SuccessMessage'])){ ?>
 						<div class="alert alert-success alert-dismissible">
@@ -54,7 +54,7 @@
 				<!-- Category Card -->
 				<?php if (isset($cat_product_sql)) {
 				for ($z=0; $z < count($cat_product_sql); $z++) {?>
-				<div class="col-md-3 col-xs-6">
+				<div class="col-md-3 col-sm-3 col-xs-6">
 					<div class="card rounded">
 					    <div class="card-image">
 					    	<span class="card-notify-year"><?php if ($cat_product_sql[$z]['product_status'] == 0) {
@@ -108,7 +108,7 @@
 				<!-- Category Card -->
 				<?php if (isset($cat_bid_product_sql)) {
 				for ($s=0; $s < count($cat_bid_product_sql); $s++) {?>
-				<div class="col-md-3 col-xs-6">
+				<div class="col-md-3 col-sm-3 col-xs-6">
 					<div class="card rounded">
 					    <div class="card-image">
 					    	<span class="card-notify-year-bid">Bidded</span>

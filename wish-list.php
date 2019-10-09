@@ -42,8 +42,9 @@ include_once DOC_ROOT.'functions.php';
 		$total_pages = ceil($total_pages); //convert to highest full number
 
 		if ($wish_data) {
-
-			$cat_product_sql = $db->query("SELECT tbl_product.* FROM tbl_product INNER JOIN tbl_wish_list WHERE tbl_product.product_id = tbl_wish_list.product_id AND tbl_wish_list.user_id = :user_id limit $limit_from, $num_rec_per_page", $wish_array);
+			$current_date_time = date('Y-m-d h:i:s');
+			$wish_list_array = array('user_id' => $_SESSION['vendesiya_user_id'], 'cur_date_time' => $current_date_time);
+			$cat_product_sql = $db->query("SELECT tbl_product.* FROM tbl_product INNER JOIN tbl_wish_list WHERE tbl_product.product_id = tbl_wish_list.product_id AND tbl_wish_list.user_id = :user_id AND tbl_product.product_bid_ends_on >= :cur_date_time limit $limit_from, $num_rec_per_page", $wish_list_array);
 		}
 	// Remove from favourite
 	if (isset($_GET['deleteid'])) {

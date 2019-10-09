@@ -2,7 +2,7 @@
 	<div class="header_slide">
 		<div class="row" style="margin:0;">
 		<?php include 'includes/sub_category_menu.php'; ?>
-			<div class="col-md-9" style="padding-top: 20px;">					 
+			<div class="col-md-9 col-sm-8" style="padding-top: 20px;">					 
 				<div class="row">
 				<?php if (count($cat_product_sql) == 0) {?>
 				<div class="alert alert-info alert-dismissible" style="width: 75%;">
@@ -12,7 +12,7 @@
 				<?php } ?> 
 				<?php if ($cat_product_sql) {
 					for ($z=0; $z < count($cat_product_sql); $z++) {?>	 
-		  			<div class="col-md-3 col-xs-6">
+		  			<div class="col-md-3 col-sm-4 col-xs-6">
 		  	 			<div class="prostyle">
 				 			<a href="<?php echo HTTP_PATH; ?>product-preview?product-url=<?php echo $cat_product_sql[$z]['product_url']; ?>">
 				 				<img src="<?php echo HTTP_PATH.$cat_product_sql[$z]['product_main_img']; ?>" alt="" with="160" height="130" />

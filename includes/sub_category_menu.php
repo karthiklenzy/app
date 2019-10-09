@@ -1,5 +1,5 @@
 <?php if(!isMobile())  { ?>
-<div class="col-md-3">				
+<div class="col-md-3 col-sm-4 col-xs-12">				
   <div class="categories">
 	  <ul>
 	  	<h3><i class="fa fa-list"></i><a href="<?php echo HTTP_PATH; ?>" style="color: white">&emsp;Categories</a></h3>
@@ -26,6 +26,7 @@
 </div>
 <!-- Mobile view -->
 	<?php } if(isMobile()) { ?>
+	<div class="col-md-3 col-sm-4 col-xs-12">
 	<div class="topnav" id="myTopnavsubcat" style="overflow: inherit;display: inline-block;width: 100%;">
 		<a href="#"><b>Categories</b></a>
 		<?php if ($cat_sql) {
@@ -45,5 +46,6 @@
 	  	</a>
 
 	</div>
+</div>
 	<?php } ?>
 <!--End Mobile view -->	

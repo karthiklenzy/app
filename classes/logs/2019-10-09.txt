@@ -1,0 +1,27 @@
+Time : 07:45:17
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : SELECT tbl_product.* FROM tbl_product INNER JOIN tbl_wish_list WHERE tbl_product.product_id = tbl_wish_list.product_id AND tbl_wish_list.user_id = :user_id AND tbl_product.product_bid_ends_on >= :cur_date_time limit 0, 8
+
+Time : 07:45:02
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ': limit 0, 8' at line 1
+Raw SQL : SELECT tbl_product.* FROM tbl_product INNER JOIN tbl_wish_list WHERE tbl_product.product_id = tbl_wish_list.product_id AND tbl_wish_list.user_id = :user_id AND tbl_product.product_bid_ends_on >= : limit 0, 8
+
+Time : 07:40:01
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT count(wish_list_id) FROM tbl_wish_list WHERE user_id = :user_id
+
+Time : 07:39:59
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT count(wish_list_id) FROM tbl_wish_list WHERE user_id = :user_id
+
+Time : 07:39:40
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT count(wish_list_id) FROM tbl_wish_list WHERE user_id = :user_id
+
+Time : 07:35:46
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT product_id, product_url, product_name, product_main_img, product_initial_price FROM tbl_product WHERE published_user_id = :user_id ORDER BY product_id DESC
+
+Time : 07:31:38
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT product_id, product_url, product_name, product_main_img, product_initial_price FROM tbl_product WHERE published_user_id = :user_id ORDER BY product_id DESC

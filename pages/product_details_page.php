@@ -158,7 +158,7 @@
 		    <div class="section group">
 				<?php if ($verify_data) {
 					for ($z=0; $z < count($verify_data); $z++) {?>
-				<div class="col-md-2 col-xs-6">
+				<div class="col-md-2 col-sm-4 col-xs-6">
 					<div class="prostyle">
 						<a href="<?php echo HTTP_PATH; ?>product-details?prourl=<?php echo $verify_data[$z]['product_url']; ?>&product_id=<?php echo $verify_data[$z]['product_id']; ?>">
 						<img src="<?php echo HTTP_PATH.$verify_data[$z]['product_main_img']; ?>" alt="" with="160" height="130">

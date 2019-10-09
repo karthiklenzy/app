@@ -95,7 +95,7 @@
 								<div class="bidding">
 									<form method="post">
 										<div class="custom-qty">
-											<h5 style="padding-top: 30px;"><i class="fa fa-hand-holding-usd fa-lg"></i>&emsp;Bid: (Rs.)</h5>
+											<h5 class="bid-padding"><i class="fa fa-hand-holding-usd fa-lg"></i>&emsp;Bid: (Rs.)</h5>
 											<?php if ($selected_product_sql[$x]['product_current_price'] != "-1") {?>
 												<input type="hidden" name="hiddencurrentprice" id="hiddencurrentprice" value="<?php echo $selected_product_sql[$x]['product_current_price']; ?>">
 												<input type="hidden" name="hiddenpricefloor" id="hiddenpricefloor" value="<?php echo $pricefloor; ?>">
@@ -104,7 +104,7 @@
 											<?php } else { ?>
 												<input type="hidden" name="" id="" value="">
 											<?php } ?>
-											<div class="col-md-6 nopadding-val">
+											<div class="col-md-6 col-sm-6 nopadding-val">
 												<?php if ($selected_product_sql[$x]['product_current_price'] != "-1") {?>
 												<input type="text" class="textbox-bid" name="thebid" id="thebid" maxlength="12" value="<?php echo $displaybidamount; ?>" title="Bid" class="input-text qty" readonly="readonly" />
 
@@ -119,7 +119,7 @@
 											<?php } ?>
 											</div>
 											
-											<div class="col-md-6 nopadding-val">
+											<div class="col-md-6 col-sm-6 nopadding-val">
 												<div class="share-desc">
 													<?php if (isset($_SESSION['vendesiya_user_id'])) {?>
 														<button type="submit" name="btnplaceabid" title="Place a bid" class="btn btn-primary" value="Place A Bid"><i class="fas fa-cart-plus"></i>&emsp;Place A Bid</button>

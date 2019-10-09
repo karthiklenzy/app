@@ -273,17 +273,17 @@ body {
 	text-transform:uppercase;
 	font-family: 'ambleregular';	
 }
-.categories li a{
+/*.categories li a{
 	display:inline-block;
 	font-size:0.95em;
 	padding:8px 15px;
     color: #383636;
     font-family: 'ambleregular';
-    /*margin:0 20px;*/
+    margin:0 20px;
     background:url(../images/drop_arrow.png) no-repeat 0;
-    /*border-bottom: 1px solid #0f8c53;*/
-    text-transform:uppercase;	
-}
+    
+    text-transform: uppercase;	
+}*/
 .categories li:last-child a{
 	border:none;
 }
@@ -2277,7 +2277,7 @@ font-size: 14px;
 
 }
 
-#ads .card-notify-year {
+/*#ads .card-notify-year {
 position: absolute;
 right: -10px;
 top: -20px;
@@ -2289,9 +2289,7 @@ font-size: 14px;
 width: 50px;
 height: 50px;    
 padding: 15px 0 0 0;
-}
-
-
+}*/
 #ads .card-detail-badge {      
     background: #ffffff;
     text-align: center;
@@ -2367,10 +2365,10 @@ display: block;
 	box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
 }
 
-#ads .ad-title h5 {
+/*#ads .ad-title h5 {
 	text-transform: uppercase;
 	font-size: 18px;
-}
+}*/
 .col-md-8 .contact-form .alert {
 	padding: 8px 35px 8px 10px;
 	font-weight: 700;
@@ -3099,6 +3097,70 @@ div.prostyle h5 {
 	    display: inline-block;
 	    width: 100%;
 	}*/
+	.product-menu {
+		padding-top: 20px;
+	}
+	.categories li a {
+	    display: inline-block;
+	    font-size: 0.95em;
+	    padding: 8px 15px;
+	    color: #383636;
+	    font-family: 'ambleregular';
+	    /* margin: 0 20px; */
+	    background: url(../images/drop_arrow.png) no-repeat 0;
+	    /* border-bottom: 1px solid #0f8c53; */
+	    text-transform: uppercase;
+	}
+	.bid-padding {
+		padding-top: 30px;
+	}
+	#ads .ad-title h5 {
+	    text-transform: uppercase;
+	    font-size: 18px;
+	}
+	#ads .ad-btn {
+	    text-transform: uppercase;
+	    width: 150px;
+	    height: 40px;
+	    border-radius: 80px;
+	    font-size: 16px;
+	    line-height: 35px;
+	    text-align: center;
+	    border: 1px solid #c3c3c3;
+	    display: block;
+	    text-decoration: none;
+	    margin: 20px auto 10px auto;
+	    color: #000;
+	    overflow: hidden;
+	    position: relative;
+	    background-color: #ffffff;
+	}
+	#ads .card-notify-year {
+		position: absolute;
+		right: -10px;
+		top: -20px;
+		background: #1cdeb3;
+		border-radius: 50%;
+		text-align: center;
+		color: #fff;      
+		font-size: 14px;      
+		width: 50px;
+		height: 50px;    
+		padding: 15px 0 0 0;
+	}
+	#ads .card-notify-year-bid {
+	    position: absolute;
+	    right: -10px;
+	    top: -20px;
+	    background: #000000;
+	    border-radius: 50%;
+	    text-align: center;
+	    color: #fff;
+	    font-size: 14px;
+	    width: 50px;
+	    height: 50px;
+	    padding: 15px 0 0 0;
+	}
 }
 
 /* Extra Small Devices, Phones */ 
@@ -3218,6 +3280,70 @@ div.prostyle h5 {
 	    display: inline-block;
 	    width: 100%;
 	}*/
+	.product-menu {
+		padding-top: 20px;
+	}
+	.categories li a {
+	    display: inline-block;
+	    font-size: 0.95em;
+	    padding: 8px 15px;
+	    color: #383636;
+	    font-family: 'ambleregular';
+	    /* margin: 0 20px; */
+	    background: url(../images/drop_arrow.png) no-repeat 0;
+	    /* border-bottom: 1px solid #0f8c53; */
+	    text-transform: uppercase;
+	}
+	.bid-padding {
+		padding-top: 30px;
+	}
+	#ads .ad-title h5 {
+	    text-transform: uppercase;
+	    font-size: 18px;
+	}
+	#ads .ad-btn {
+	    text-transform: uppercase;
+	    width: 150px;
+	    height: 40px;
+	    border-radius: 80px;
+	    font-size: 16px;
+	    line-height: 35px;
+	    text-align: center;
+	    border: 1px solid #c3c3c3;
+	    display: block;
+	    text-decoration: none;
+	    margin: 20px auto 10px auto;
+	    color: #000;
+	    overflow: hidden;
+	    position: relative;
+	    background-color: #ffffff;
+	}
+	#ads .card-notify-year {
+		position: absolute;
+		right: -10px;
+		top: -20px;
+		background: #1cdeb3;
+		border-radius: 50%;
+		text-align: center;
+		color: #fff;      
+		font-size: 14px;      
+		width: 50px;
+		height: 50px;    
+		padding: 15px 0 0 0;
+	}
+	#ads .card-notify-year-bid {
+	    position: absolute;
+	    right: -10px;
+	    top: -20px;
+	    background: #000000;
+	    border-radius: 50%;
+	    text-align: center;
+	    color: #fff;
+	    font-size: 14px;
+	    width: 50px;
+	    height: 50px;
+	    padding: 15px 0 0 0;
+	}
 }
 
 /* Small Devices, Tablets */
@@ -3228,6 +3354,7 @@ div.prostyle h5 {
 	    border-top: 5px solid #1cdeb3;
 	    margin: 15px auto 0 auto;
 	    width: 100%;
+	    margin-top: 10vh;
     
 	}
 	.contact-form input[type="password"] {
@@ -3244,7 +3371,7 @@ div.prostyle h5 {
 	}
 	.share-desc .btn-primary {
     	margin: 0 0 0 0;
-    	width: 45%;
+    	width: 87%;
 	}
 	.heightx2 {
 		padding: 20px 0;
@@ -3267,16 +3394,17 @@ div.prostyle h5 {
 	    margin: 0px 2px;
 	}
 	.categories {
-	    margin: 25px 0 0 0;
+	    margin: 0 0 0 0;
 	}
 	.bidding {
 		margin-top: -2vh;
 	}
 	.resp-tabs-container {
 	    padding: 0px 0px;
+	    margin-top: 5px;
 	}
 	.bread-crumb {
-	    margin-top: 0px;
+	    margin-top: 52px;
 	}
 	.col-sm-4 .topnav a {
 	    float: left;
@@ -3288,8 +3416,8 @@ div.prostyle h5 {
 	    font-size: 14px;
 	    width: 100%;
 	}
-	.fa-list {
-		display: none !important;
+	.icon .fa-list {
+		display: none;
 	}
 	.product-details {
 	    margin: 0px 0;
@@ -3317,13 +3445,81 @@ div.prostyle h5 {
 	    margin: 0px 0;
 	}
 	.search_box {
-	    width: 27%;
+		width: 97%;
+	    margin-bottom: 10px;
 	    margin-top: 10px;
-    	margin-right: 11px;
+	    margin-right: 11px;
 	}
 	#thebid {
-	    width: 35% !important;
+	    width: 60% !important;
 	    margin-bottom: 7px;
+	}
+	.product-menu {
+		padding-top: 0px;
+	}
+	.categories li a {
+	    display: inline-block;
+	    font-size: 0.95em;
+	    padding: 6px 15px;
+	    color: #383636;
+	    font-family: 'ambleregular';
+	    /* margin: 0 20px; */
+	    background: url(../images/drop_arrow.png) no-repeat 0;
+	    /* border-bottom: 1px solid #0f8c53; */
+	    text-transform: uppercase;
+	}
+	.bid-padding {
+		padding-top: 100px;
+	}#ads .ad-title h5 {
+	    text-transform: uppercase;
+	    font-size: 12px;
+	}
+	#ads .ad-btn {
+	    text-transform: uppercase;
+	    width: 100px;
+	    height: 30px;
+	    border-radius: 80px;
+	    font-size: 13px;
+	    line-height: 30px;
+	    text-align: center;
+	    border: 1px solid #c3c3c3;
+	    display: block;
+	    text-decoration: none;
+	    margin: 20px auto 10px auto;
+	    color: #000;
+	    overflow: hidden;
+	    position: relative;
+	    background-color: #ffffff;
+	}
+	#ads .card-notify-year {
+	    position: absolute;
+	    right: 0px;
+	    top: -12px;
+	    background: #1cdeb3;
+	    border-radius: 50%;
+	    text-align: center;
+	    color: #fff;
+	    font-size: 9px;
+	    width: 30px;
+	    height: 30px;
+	    padding: 10px 0 0 0;
+	}
+	#ads .card-notify-year-bid {
+	    position: absolute;
+	    right: 0px;
+	    top: -12px;
+	    background: #000000;
+	    border-radius: 50%;
+	    text-align: center;
+	    color: #fff;
+	    font-size: 8px;
+	    width: 30px;
+	    height: 30px;
+	    padding: 10px 0 0 0;
+	}
+	.invisible {
+	    visibility: hidden;
+	    display: none;
 	}
 }
 
@@ -3335,10 +3531,11 @@ div.prostyle h5 {
 	    border-top: 5px solid #1cdeb3;
 	    margin: 15px auto 0 auto;
 	    width: 100%;
-    	
+	    margin-top: 4vh;
+    
 	}
 	.content {
-		height: 67vh;
+		height: auto;
 	}
 	.share-desc .btn-primary {
     	margin: 0 0 0 0;
@@ -3411,13 +3608,64 @@ div.prostyle h5 {
 	    margin: 0px 0;
 	}
 	.search_box {
-	    width: 27%;
+	    width: 97%;
 	    margin-top: 10px;
     	margin-right: 11px;
 	}
 	#thebid {
-	    width: 35% !important;
+	    width: 65% !important;
 	    margin-bottom: 7px;
+	}
+	.product-menu {
+		padding-top: 20px;
+	}
+	.categories li a {
+	    display: inline-block;
+	    font-size: 0.95em;
+	    padding: 6px 15px;
+	    color: #383636;
+	    font-family: 'ambleregular';
+	    /* margin: 0 20px; */
+	    background: url(../images/drop_arrow.png) no-repeat 0;
+	    /* border-bottom: 1px solid #0f8c53; */
+	    text-transform: uppercase;
+	}
+	.bid-padding {
+		padding-top: 30px;
+	}
+	#ads .ad-title h5 {
+	    text-transform: uppercase;
+	    font-size: 18px;
+	}
+	#ads .card-notify-year {
+	    position: absolute;
+	    right: 0px;
+	    top: -12px;
+	    background: #1cdeb3;
+	    border-radius: 50%;
+	    text-align: center;
+	    color: #fff;
+	    font-size: 9px;
+	    width: 30px;
+	    height: 30px;
+	    padding: 10px 0 0 0;
+	}
+	#ads .card-notify-year-bid {
+	    position: absolute;
+	    right: 0px;
+	    top: -12px;
+	    background: #000000;
+	    border-radius: 50%;
+	    text-align: center;
+	    color: #fff;
+	    font-size: 8px;
+	    width: 30px;
+	    height: 30px;
+	    padding: 10px 0 0 0;
+	}
+	.invisible {
+	    visibility: hidden;
+	    display: none;
 	}
 }
 
@@ -3429,7 +3677,7 @@ div.prostyle h5 {
 	    border-top: 5px solid #1cdeb3;
 	    margin: 15px auto 0 auto;
 	    width: 100%;
-    	/*bottom: 0;*/
+    	margin-top: 4vh;
 	}
 	.contact-form input[type="password"] {
 		width: 85%;
@@ -3505,6 +3753,7 @@ div.prostyle h5 {
 	}
 	.search_box {
 	    width: 30%;
+	    margin-top: 5px;
 	}
 	.add-cart {
 	    float: right;
@@ -3515,6 +3764,70 @@ div.prostyle h5 {
 	.prostyle > h5 {
 	    font-size: 1.4rem;
 	}
+	.product-menu {
+		padding-top: 20px;
+	}
+	.categories li a {
+	    display: inline-block;
+	    font-size: 0.95em;
+	    padding: 8px 15px;
+	    color: #383636;
+	    font-family: 'ambleregular';
+	    /* margin: 0 20px; */
+	    background: url(../images/drop_arrow.png) no-repeat 0;
+	    /* border-bottom: 1px solid #0f8c53; */
+	    text-transform: uppercase;
+	}
+	.bid-padding {
+		padding-top: 30px;
+	}
+	#ads .ad-title h5 {
+	    text-transform: uppercase;
+	    font-size: 17px;
+	}
+	#ads .ad-btn {
+	    text-transform: uppercase;
+	    width: 150px;
+	    height: 40px;
+	    border-radius: 80px;
+	    font-size: 16px;
+	    line-height: 35px;
+	    text-align: center;
+	    border: 1px solid #c3c3c3;
+	    display: block;
+	    text-decoration: none;
+	    margin: 20px auto 10px auto;
+	    color: #000;
+	    overflow: hidden;
+	    position: relative;
+	    background-color: #ffffff;
+	}
+	#ads .card-notify-year {
+		position: absolute;
+		right: -10px;
+		top: -20px;
+		background: #1cdeb3;
+		border-radius: 50%;
+		text-align: center;
+		color: #fff;      
+		font-size: 14px;      
+		width: 50px;
+		height: 50px;    
+		padding: 15px 0 0 0;
+	}
+	#ads .card-notify-year-bid {
+	    position: absolute;
+	    right: -10px;
+	    top: -20px;
+	    background: #000000;
+	    border-radius: 50%;
+	    text-align: center;
+	    color: #fff;
+	    font-size: 14px;
+	    width: 50px;
+	    height: 50px;
+	    padding: 15px 0 0 0;
+	}
 }
 /* Xtra Large Devices, Wide Screens */
 @media only screen and (min-width : 1920px) {
@@ -3524,7 +3837,7 @@ div.prostyle h5 {
 	    border-top: 5px solid #1cdeb3;
 	    margin: 15px auto 0 auto;
 	    width: 100%;
-    	/*bottom: 0;*/
+    	margin-top: 4vh;
 	}
 	.contact-form input[type="password"] {
 		width: 85%;
@@ -3606,6 +3919,70 @@ div.prostyle h5 {
 	}
 	.prostyle > h5 {
 	    font-size: 1.4rem;
+	}
+	.product-menu {
+		padding-top: 20px;
+	}
+	.categories li a {
+	    display: inline-block;
+	    font-size: 0.95em;
+	    padding: 8px 15px;
+	    color: #383636;
+	    font-family: 'ambleregular';
+	    /* margin: 0 20px; */
+	    background: url(../images/drop_arrow.png) no-repeat 0;
+	    /* border-bottom: 1px solid #0f8c53; */
+	    text-transform: uppercase;
+	}
+	.bid-padding {
+		padding-top: 30px;
+	}
+	#ads .ad-title h5 {
+	    text-transform: uppercase;
+	    font-size: 18px;
+	}
+	#ads .ad-btn {
+	    text-transform: uppercase;
+	    width: 150px;
+	    height: 40px;
+	    border-radius: 80px;
+	    font-size: 16px;
+	    line-height: 35px;
+	    text-align: center;
+	    border: 1px solid #c3c3c3;
+	    display: block;
+	    text-decoration: none;
+	    margin: 20px auto 10px auto;
+	    color: #000;
+	    overflow: hidden;
+	    position: relative;
+	    background-color: #ffffff;
+	}
+	#ads .card-notify-year {
+		position: absolute;
+		right: -10px;
+		top: -20px;
+		background: #1cdeb3;
+		border-radius: 50%;
+		text-align: center;
+		color: #fff;      
+		font-size: 14px;      
+		width: 50px;
+		height: 50px;    
+		padding: 15px 0 0 0;
+	}
+	#ads .card-notify-year-bid {
+	    position: absolute;
+	    right: -10px;
+	    top: -20px;
+	    background: #000000;
+	    border-radius: 50%;
+	    text-align: center;
+	    color: #fff;
+	    font-size: 14px;
+	    width: 50px;
+	    height: 50px;
+	    padding: 15px 0 0 0;
 	}
 }
 
@@ -3754,7 +4131,7 @@ h2.resp-accordion:hover {
    line-height: 1.02 !important;
 }
 .dropdown-right li {
-	    padding: 3px 0px !important;
+	padding: 3px 0px !important;
 }
 /*.headertop_desc .dropdown .dropdown-menu {
     position: absolute;
@@ -3784,9 +4161,10 @@ h2.resp-accordion:hover {
 .sub-cat-style {
 	color: #085443 !important;
 }
-@media (max-width: 1024px) and (min-width: 768px) {
+/*@media (max-width: 1024px) and (min-width: 768px) {
   .main-navigation ul li:hover > ul.sub-menu {
     display: block;
   }
-} 
+} */
+
 

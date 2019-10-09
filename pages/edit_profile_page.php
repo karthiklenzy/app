@@ -23,7 +23,7 @@ function getsublocation(catid) {
 					    <li class="breadcrumb-item active" aria-current="page">Edit Profile</li>
 					  </ol>
 				</nav>
-		    	  <div class="col-md-8">
+		    	  <div class="col-md-8 col-sm-8">
 				    <div class="contact-form" style="margin: 0px;">
 				  	  <h2>User Details</h2>
 						<?php if(isset($_COOKIE['cookieSuccessMessage'])){ ?>
@@ -55,15 +55,16 @@ function getsublocation(catid) {
 						    </div>
 						    <div>
 						    	<span><label>Contact Number</label></span>
-						    	<span><input type="text" value="<?php echo $user_details[$i]['user_phone']; ?>" name="new_number" class="textbox" maxlength="10" id="space" required></span>
+						    	<span><input type="text" value="<?php echo $user_details[$i]['user_phone']; ?>" name="new_number" class="textbox" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="10" id="space" required></span>
 						    </div>
 						    <div>
 						    	<span><label>Address</label></span>
 						    	<span><input type="text" value="<?php echo $user_details[$i]['user_address_line_one']; ?>" name="new_address" class="textbox" required></span>
 						    </div>
+
 						    <div>
 						    	<span><label>NIC</label></span>
-						    	<span><input type="text" value="<?php echo $user_details[$i]['user_nic_number']; ?>" name="new_nic" id="space" class="textbox" required disabled></span>
+						    	<span><input type="text" value="<?php echo $user_details[$i]['user_nic_number']; ?>" name="new_nic" id="space" class="textbox" disabled></span>
 						    </div>
 						    <?php if (isset($user_details[$i]['user_province']) != "") {?>
 						    <div style="display: none;">

@@ -1,13 +1,13 @@
 <div class="header_slide">
   <div class="row" style="margin:0;">
 	<?php include 'includes/category_menu.php'; ?>
-	  <div class="col-md-9 search-page" style="padding-top: 20px;">					 
+	  <div class="col-md-9 col-sm-8 search-page" style="padding-top: 20px;">					 
 		<div class="row"> 
 		<?php
 		  if ((isset($product_data)) && ($product_data)) {
 			for ($x=0; $x < count($product_data); $x++) {
 		?>
-		  <div class="col-md-3 col-xs-6">
+		  <div class="col-md-3 col-sm-4 col-xs-6">
 			<div class="prostyle">
 			  <a href="<?php echo HTTP_PATH; ?>product-preview?product-url=<?php echo $product_data[$x]['product_url']; ?>">
 			    <img src="<?php echo HTTP_PATH.$product_data[$x]['product_main_img']; ?>" alt="" with="160" height="130" />
