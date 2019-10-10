@@ -47,7 +47,7 @@
 					for ($c=0; $c < count($product_data_suggest); $c++) { ?>
 				<div class="col-md-3 col-xs-6">
 					<div class="prostyle">
-					  <a href="<?php echo HTTP_PATH; ?>product-preview?product-url=<?php echo $product_data[$c]['product_url']; ?>">
+					  <a href="<?php echo HTTP_PATH; ?>product-preview?product-url=<?php echo $product_data_suggest[$c]['product_url']; ?>">
 					    <img src="<?php echo HTTP_PATH.$product_data_suggest[$c]['product_main_img']; ?>" alt="" with="160" height="130" />
 					  </a>
 					  <h5><?php echo $product_data_suggest[$c]['product_name']; ?></h5>

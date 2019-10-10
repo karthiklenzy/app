@@ -29,11 +29,11 @@ include 'classes/db_connection.php';
 		}
 		
 		else {
-		   	$product_data_array = array('productname' => '%'.$searchtearm.'%', 'activestatus' => "1");
-		   	$product_data = $db->query("SELECT product_id, product_url, product_name, product_main_img, product_initial_price FROM tbl_product WHERE product_name LIKE :productname AND product_status = :activestatus limit $limit_from, $num_rec_per_page", $product_data_array);
+		   	$product_data_array = array('productname' => '%'.$searchtearm.'%', 'activestatus' => "1", 'currentdateandtime' => $current_date_time);
+		   	$product_data = $db->query("SELECT product_id, product_url, product_name, product_main_img, product_initial_price, product_bid_ends_on FROM tbl_product WHERE product_name LIKE :productname AND product_status = :activestatus AND product_bid_ends_on >= :currentdateandtime limit $limit_from, $num_rec_per_page", $product_data_array);
 
 		   	if ($product_data) {
-		   			$product_data_pagination = $db->query("SELECT count(product_id) FROM tbl_product WHERE product_name LIKE :productname AND product_status = :activestatus", $product_data_array);
+		   			$product_data_pagination = $db->query("SELECT count(product_id), product_bid_ends_on FROM tbl_product WHERE product_name LIKE :productname AND product_status = :activestatus AND product_bid_ends_on >= :currentdateandtime", $product_data_array);
 
 		   			$total_product = $product_data_pagination[0]['count(product_id)'];
 					$total_pages = $total_product / $num_rec_per_page;
@@ -43,18 +43,18 @@ include 'classes/db_connection.php';
 		   	 	 
 		   		$suggested_keyword = substr($searchtearm, 0, 1);
 		   		
-		   		$product_array = array('productname' => $suggested_keyword.'%', 'activestatus' => "1");
-		   		$product_data_suggest = $db->query("SELECT product_id, product_url, product_name, product_main_img, product_initial_price FROM tbl_product WHERE product_name LIKE :productname AND product_status = :activestatus LIMIT 6", $product_array);
+		   		$product_array = array('productname' => $suggested_keyword.'%', 'activestatus' => "1", 'currentdateandtime' => $current_date_time);
+		   		$product_data_suggest = $db->query("SELECT product_id, product_url, product_name, product_main_img, product_initial_price, product_bid_ends_on FROM tbl_product WHERE product_name LIKE :productname AND product_status = :activestatus AND product_bid_ends_on >= :currentdateandtime LIMIT 6", $product_array);
 		   		
 		   		// if not a product name start with firl sug keyword
 		   		if (!$product_data_suggest) {
-		   			$product_array = array('productname' => '%'.$suggested_keyword.'%', 'activestatus' => "1");
-		   			$product_data_suggest = $db->query("SELECT product_id, product_url, product_name, product_main_img, product_initial_price FROM tbl_product WHERE product_name LIKE :productname AND product_status = :activestatus LIMIT 6", $product_array);
+		   			$product_array = array('productname' => '%'.$suggested_keyword.'%', 'activestatus' => "1", 'currentdateandtime' => $current_date_time);
+		   			$product_data_suggest = $db->query("SELECT product_id, product_url, product_name, product_main_img, product_initial_price, product_bid_ends_on FROM tbl_product WHERE product_name LIKE :productname AND product_status = :activestatus AND product_bid_ends_on >= :currentdateandtime LIMIT 6", $product_array);
 		   			// second character
 		   			if (!$product_data_suggest) {
 		   				$suggested_keyword = substr($searchtearm, 1, 2);
-		   				$product_array = array('productname' => '%'.$suggested_keyword.'%', 'activestatus' => "1");
-		   				$product_data_suggest = $db->query("SELECT product_id, product_url, product_name, product_main_img, product_initial_price FROM tbl_product WHERE product_name LIKE :productname AND product_status = :activestatus LIMIT 6", $product_array);
+		   				$product_array = array('productname' => '%'.$suggested_keyword.'%', 'activestatus' => "1", 'currentdateandtime' => $current_date_time);
+		   				$product_data_suggest = $db->query("SELECT product_id, product_url, product_name, product_main_img, product_initial_price, product_bid_ends_on FROM tbl_product WHERE product_name LIKE :productname AND product_status = :activestatus AND product_bid_ends_on >= :currentdateandtime LIMIT 6", $product_array);
 		   			}
 		   		}
 		   		
