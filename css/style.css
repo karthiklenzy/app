@@ -3401,7 +3401,7 @@ div.prostyle h5 {
 	}
 	.resp-tabs-container {
 	    padding: 0px 0px;
-	    margin-top: 5px;
+	    margin-top: 12px;
 	}
 	.bread-crumb {
 	    margin-top: 52px;
@@ -3522,7 +3522,7 @@ div.prostyle h5 {
 	    display: none;
 	}
 	#ads .card {
-	    height: 31vh;
+	    height: 28vh;
 	}
 }
 
@@ -3620,7 +3620,7 @@ div.prostyle h5 {
 	    margin-bottom: 7px;
 	}
 	.product-menu {
-		padding-top: 20px;
+		padding-top: 0px;
 	}
 	.categories li a {
 	    display: inline-block;
@@ -3671,7 +3671,7 @@ div.prostyle h5 {
 	    display: none;
 	}
 	#ads .card {
-	    height: 29vh;
+	    height: 38.5vh;
 	}
 }
 
@@ -3759,7 +3759,7 @@ div.prostyle h5 {
 		width: 20%;
 	}
 	.search_box {
-	    width: 30%;
+	    width: 98%;
 	    margin-top: 7px;
 	}
 	.add-cart {
@@ -3772,11 +3772,11 @@ div.prostyle h5 {
 	    font-size: 1.4rem;
 	}
 	.product-menu {
-		padding-top: 20px;
+		padding-top: 0px;
 	}
 	.categories li a {
 	    display: inline-block;
-	    font-size: 0.95em;
+	    font-size: 0.93em;
 	    padding: 8px 15px;
 	    color: #383636;
 	    font-family: 'ambleregular';
@@ -3940,7 +3940,18 @@ div.prostyle h5 {
 	}
 	.categories li a {
 	    display: inline-block;
-	    font-size: 0.95em;
+	    font-size: 0.93em;
+	    padding: 8px 15px;
+	    color: #383636;
+	    font-family: 'ambleregular';
+	    /* margin: 0 20px; */
+	    background: url(../images/drop_arrow.png) no-repeat 0;
+	    /* border-bottom: 1px solid #0f8c53; */
+	    text-transform: uppercase;
+	}
+	.categories li.sub-cat a {
+	    display: inline-block;
+	    font-size: 0.7em;
 	    padding: 8px 15px;
 	    color: #383636;
 	    font-family: 'ambleregular';

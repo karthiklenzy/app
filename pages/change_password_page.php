@@ -1,4 +1,4 @@
-<div class="main" style="padding-bottom: 35vh">
+<div class="main" style="">
     <div class="content">
     	<div class="section group">
     		<div class="row">
@@ -9,7 +9,7 @@
 				    
 				  </ol>
 				</nav>
-				<div class="col-md-8">
+				<div class="col-md-8 col-sm-8">
 				  	<div class="contact-form" style="margin: 0">
 				  		<?php if(isset($_COOKIE['cookieSuccessMessage'])){ ?>
 							<div class="alert alert-success alert-dismissible">
@@ -56,3 +56,5 @@
 		</div>		
     </div> 
 </div>
+<div class="heightx2"></div>
+<div class="heightx2"></div>
