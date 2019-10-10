@@ -3841,6 +3841,10 @@ div.prostyle h5 {
 	#ads .card {
 	    height: 31vh;
 	}
+	.see {
+	    float: right;
+	    padding-top: 15px;
+	}
 }
 /* Xtra Large Devices, Wide Screens */
 @media only screen and (min-width : 1920px) {
@@ -4015,6 +4019,10 @@ div.prostyle h5 {
 	}
 	#ads .card {
 	    height: 32vh;
+	}
+	.see {
+	    float: right;
+	    padding-top: 16px;
 	}
 }
 
