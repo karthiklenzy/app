@@ -5,7 +5,13 @@
     			<nav aria-label="breadcrumb">
 				  <ol class="breadcrumb" style="margin: 10px 10px 20px 10px!important;">
 				    <li class="breadcrumb-item"><a href="<?php echo HTTP_PATH; ?>user-profile">Dashboard</a></li>
+				    <?php if (isset($_GET['upload']) && $_GET['upload'] == "bulk") { ?>
+				    	<li class="breadcrumb-item" aria-current="page"><a href="<?php echo HTTP_PATH; ?>upload-item?upload=bulk">Upload item</a></li>
+				    <?php } else if (isset($_GET['upload']) && $_GET['upload'] == "freebid") { ?>
+				    <li class="breadcrumb-item" aria-current="page"><a href="<?php echo HTTP_PATH; ?>upload-item?upload=freebid">Upload item</a></li>
+				    <?php } else {?>
 				    <li class="breadcrumb-item" aria-current="page"><a href="<?php echo HTTP_PATH; ?>upload-item">Upload item</a></li>
+				    <?php } ?>
 				    <li class="breadcrumb-item active" aria-current="page">Upload item details</li>
 				  </ol>
 				</nav>

@@ -2,7 +2,7 @@
 	<div class="header_slide">
 		<div class="row" style="margin:0;">
 		<?php include 'includes/sub_category_menu.php'; ?>
-			<div class="col-md-9 col-sm-8 product-menu" style="">					 
+			<div class="col-md-9 col-sm-8 col-xs-12 product-menu" style="">					 
 				<div class="row">
 				<?php if (count($cat_product_sql) == 0) {?>
 				<div class="alert alert-info alert-dismissible" style="width: 75%;">

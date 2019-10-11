@@ -26,7 +26,7 @@
 </div>
 <!-- Mobile view -->
 	<?php } if(isMobile()) { ?>
-	<div class="col-md-3 col-sm-4 col-xs-12">
+	<div class="col-md-3 col-sm-4 col-xs-12" style="z-index: +1">
 	<div class="topnav" id="myTopnavsubcat" style="overflow: inherit;display: inline-block;width: 100%;">
 		<a href="#"><b>Categories</b></a>
 		<?php if ($cat_sql) {
@@ -46,6 +46,8 @@
 	  	</a>
 
 	</div>
+	<div class="heightx1"></div>
 </div>
+
 	<?php } ?>
 <!--End Mobile view -->	

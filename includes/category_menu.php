@@ -41,5 +41,6 @@
 
 		</div>
 	</div>
+	
 <?php } ?>
 <!--End Mobile view -->	

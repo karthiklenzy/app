@@ -77,12 +77,20 @@
 			    <a data-toggle="dropdown"><i class="fa fa-user-circle fa-2x"></i></a>
 			    <ul class="dropdown-menu dropdown-right">
 					<?php if (isset($_SESSION['vendesiya_user_id'])) {?>
+					<li><a href="<?php echo HTTP_PATH; ?>user-profile"><i class="fa fa-user-tie"></i>&emsp;<?php echo $_SESSION['vendesiya_user_first_name']; ?></a></li>
 					<li><a href="<?php echo HTTP_PATH; ?>upload-item"><i class="fa fa-upload"></i>&emsp;Upload your item</a></li>
 					<?php } else {?>
 					<li><a href="<?php echo HTTP_PATH; ?>login-user"><i class="fa fa-upload"></i>&emsp;Upload your item</a></li>
 					<?php }?>
+					<?php if (isset($_SESSION['vendesiya_user_id'])) { ?>
+					<li><a href="<?php echo HTTP_PATH; ?>upload-item?upload=bulk"><i class="fa fa-list-ul"></i>&emsp;Bulk list</a></li>
+					<li><a href="<?php echo HTTP_PATH; ?>upload-item?upload=freebid"><i class="fa fa-bullhorn"></i>&emsp;Free Bids</a></li>
+					<?php } else { ?>
+						<li><a href="<?php echo HTTP_PATH; ?>login-user?redirect_url=<?php echo HTTP_PATH; ?>upload-item?upload=bulk"><i class="fa fa-list-ul"></i>&emsp;Bulk list</a></li>
+						<li><a href="<?php echo HTTP_PATH; ?>login-user?redirect_url=<?php echo HTTP_PATH; ?>upload-item?upload=freebid"><i class="fa fa-list-ul"></i>&emsp;Free Bids</a></li>
+					<?php } ?>
 					<?php if (isset($_SESSION['vendesiya_user_first_name'])) {?>
-					<li><a href="<?php echo HTTP_PATH; ?>user-profile"><i class="fa fa-user-tie"></i>&emsp;<?php echo $_SESSION['vendesiya_user_first_name']; ?></a></li>
+					
 					<li><a href="<?php echo HTTP_PATH; ?>logout"><i class="fa fa-sign-out-alt"></i>&emsp;Logout</a></li>
 					<?php } ?>
 					
