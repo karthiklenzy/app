@@ -31,17 +31,20 @@ if ((isset($_GET['selectproductcategory'])) && (isset($_GET['selectproductsubcat
 	 if (isset($_POST['btn-save'])) {
 	 	$error_count = 0;
 		$error_message = "";
-		$item_count = 0;
+		// $item_count = 0;
 		$item_name = filter_var($_POST['item_name'],FILTER_SANITIZE_STRING);
 		$item_desc_tinymce = $_POST['item_desc_tinymce'];
 		$item_price = filter_var($_POST['item_price'],FILTER_SANITIZE_STRING);
 		$published_user_id = $_SESSION['vendesiya_user_id'];
 		$item_count = filter_var($_POST['item_count'],FILTER_SANITIZE_STRING);
 		$item_count_type = "Normal"; 
-		$item_count_type = "";
+		// $item_count_type = "";
         if (isset($_GET['upload']) && $_GET['upload'] == 'freebid') {
             $item_price = 0;
             $item_count_type = "Freebid";
+            $start_price = -1;
+            $item_price = -1;
+            $item_count = 1;
         }
 		
 		if ($item_price != 0 && $item_count != 0) {
@@ -87,7 +90,7 @@ if ((isset($_GET['selectproductcategory'])) && (isset($_GET['selectproductsubcat
 						$item_sql = $db->query("INSERT INTO tbl_product (product_name, product_description, product_initial_price, product_current_price, published_user_id, product_main_img, product_images, product_url, product_count, product_count_type, category_id, sub_category_id) VALUES (:item_name, :item_desc_tinymce, :item_price, :current_price, :published_user_id, :main_image_url, :multi_imag_path, :product_url, :item_count, :item_count_type, :cat_id, :sub_cat_id)",$item_array);
                         
 						if ($item_sql) {
-							$getlastproductid_array = array('vendesiyauser' => $_SESSION['vendesiya_user_id']);
+							$getlastproductid_array = array('vendesiyauser' => $_SESSION['user_id']);
 		      				$getlastproductid = $db->query("SELECT product_id FROM tbl_product WHERE published_user_id = :vendesiyauser ORDER BY product_id DESC LIMIT 1", $getlastproductid_array);
 
 		      				$productid_for_details = $getlastproductid[0]['product_id'];
@@ -118,7 +121,7 @@ if ((isset($_GET['selectproductcategory'])) && (isset($_GET['selectproductsubcat
 
 									$prod_multi_images = "";
 									$multipleImageArray = explode(',', $image_path_to_attach_multiple_images_variable);
-								
+
 									for ($x=0; $x < count($multipleImageArray); $x++) {
 										$mult_img_name = substr($multipleImageArray[$x], strrpos($multipleImageArray[$x], '/') + 1);
 
@@ -128,14 +131,12 @@ if ((isset($_GET['selectproductcategory'])) && (isset($_GET['selectproductsubcat
 
 										if($prod_multi_images == ""){
 											$prod_multi_images = $filepath_for_images_without_doc_root."/".$mult_img_name;
-											// $prod_multi_images = "";
 										}
 										else{
 											$prod_multi_images .= ",".$filepath_for_images_without_doc_root."/".$mult_img_name;
 										}
 
 									}
-								
 						$updateImagePathArray = array('productid' => $productid_for_details, 'prod_multi_img' => $prod_multi_images);
 						$updateImagePathQuery = $db->query("UPDATE tbl_product SET product_images = :prod_multi_img WHERE product_id = :productid", $updateImagePathArray);
 

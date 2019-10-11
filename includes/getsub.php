@@ -10,7 +10,7 @@ if (isset($_GET['q'])) {
 	$getsubcategory_query = $db->query("SELECT * FROM tbl_sub_category WHERE category_id = :cat_id", $getsubcategory_array);
 }
 ?>
-<td>Product Sub-category</td>
+<td>Sub category :</td>
 
 <td>
 	<select class="form-control" name="selectproductsubcategory" required="required">

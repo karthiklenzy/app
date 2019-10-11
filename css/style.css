@@ -3161,6 +3161,12 @@ div.prostyle h5 {
 	    height: 28px;
 	    padding: 8px 0 0 0;
 	}
+	.grid-style {
+		display: grid;
+	}
+	/*.contact-form {
+		padding: 5px 0px 5px 0px;
+	}*/
 }
 
 /* Extra Small Devices, Phones */ 
@@ -3344,6 +3350,12 @@ div.prostyle h5 {
 	    height: 28px;
 	    padding: 8px 0 0 0;
 	}
+	.grid-style {
+		display: grid;
+	}
+	/*.contact-form {
+		padding: 5px 0px 5px 0px;
+	}*/
 }
 
 /* Small Devices, Tablets */
@@ -3524,6 +3536,9 @@ div.prostyle h5 {
 	#ads .card {
 	    height: 28vh;
 	}
+	/*.contact-form {
+		padding: 25px 15px 15px 15px;
+	}*/
 }
 
 /* Medium Devices, Desktops */
@@ -3673,6 +3688,9 @@ div.prostyle h5 {
 	#ads .card {
 	    height: 38.5vh;
 	}
+	/*.contact-form {
+		padding: 25px 15px 15px 15px;
+	}*/
 }
 
 /* Large Devices, Wide Screens */
@@ -3845,6 +3863,9 @@ div.prostyle h5 {
 	    float: right;
 	    padding-top: 15px;
 	}
+	/*.contact-form {
+		padding: 25px 15px 15px 15px;
+	}*/
 }
 /* Xtra Large Devices, Wide Screens */
 @media only screen and (min-width : 1920px) {
@@ -4024,6 +4045,9 @@ div.prostyle h5 {
 	    float: right;
 	    padding-top: 16px;
 	}
+	/*.contact-form {
+		padding: 25px 15px 15px 15px;
+	}*/
 }
 
 /*NAFLIN CSS END*/

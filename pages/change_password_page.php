@@ -15,8 +15,8 @@
   				<?php 
   				}
   				?>
-				<div class="col-md-8 col-sm-8">
-				  	<div class="contact-form" style="margin: 0">
+				<div class="col-md-8 col-sm-8 col-xs-12">
+				  	<div class="contact-form grid-style" style="margin: 0">
 				  		<?php if(isset($_COOKIE['cookieSuccessMessage'])){ ?>
 							<div class="alert alert-success alert-dismissible">
 							    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -33,7 +33,7 @@
 						<?php } ?>
 				  	<h2>Password Change</h2>
 					    <form method="post">
-					      <div style="width: 50%;">
+					      <div class="col-md-6 col-xs-12" style="">
 					    	<div>
 						    	<span><label>Old Password</label></span>
 						    	<span><input type="password" name="password" value="" class="textbox" id="" required></span>

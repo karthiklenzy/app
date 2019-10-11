@@ -87,7 +87,7 @@
 					<li><a href="<?php echo HTTP_PATH; ?>upload-item?upload=freebid"><i class="fa fa-bullhorn"></i>&emsp;Free Bids</a></li>
 					<?php } else { ?>
 						<li><a href="<?php echo HTTP_PATH; ?>login-user?redirect_url=<?php echo HTTP_PATH; ?>upload-item?upload=bulk"><i class="fa fa-list-ul"></i>&emsp;Bulk list</a></li>
-						<li><a href="<?php echo HTTP_PATH; ?>login-user?redirect_url=<?php echo HTTP_PATH; ?>upload-item?upload=freebid"><i class="fa fa-list-ul"></i>&emsp;Free Bids</a></li>
+						<li><a href="<?php echo HTTP_PATH; ?>login-user?redirect_url=<?php echo HTTP_PATH; ?>upload-item?upload=freebid"><i class="fa fa-bullhorn"></i>&emsp;Free Bids</a></li>
 					<?php } ?>
 					<?php if (isset($_SESSION['vendesiya_user_first_name'])) {?>
 					
@@ -111,7 +111,7 @@
 					<li><a href="<?php echo HTTP_PATH; ?>upload-item?upload=freebid"><i class="fa fa-bullhorn"></i>&emsp;Free Bids</a></li>
 				<?php } else { ?>
 					<li><a href="<?php echo HTTP_PATH; ?>login-user?redirect_url=<?php echo HTTP_PATH; ?>upload-item?upload=bulk"><i class="fa fa-list-ul"></i>&emsp;Bulk list</a></li>
-					<li><a href="<?php echo HTTP_PATH; ?>login-user?redirect_url=<?php echo HTTP_PATH; ?>upload-item?upload=freebid"><i class="fa fa-list-ul"></i>&emsp;Free Bids</a></li>
+					<li><a href="<?php echo HTTP_PATH; ?>login-user?redirect_url=<?php echo HTTP_PATH; ?>upload-item?upload=freebid"><i class="fa fa-bullhorn"></i>&emsp;Free Bids</a></li>
 				<?php } ?>
 					
 				</ul>

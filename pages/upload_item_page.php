@@ -35,7 +35,7 @@ function getsubcategory(catid) {
 							<table class="tableClassFsd col-md-12">
 								<tbody>
 									<tr>
-										<td width="50%">Product Category : </td>
+										<td width="50%">Category : </td>
 										<td width="50%">
 											<select class="form-control" name="selectproductcategory" required="required" onchange="getsubcategory(this.value)" style="margin-bottom: 10px;">
 												<option value="" disabled="disabled" selected="selected">-- Select --</option>
@@ -47,7 +47,7 @@ function getsubcategory(catid) {
 										<td>&nbsp;</td>
 									</tr>
 									<tr id="displayproductsubcategory">
-										<td>Product Sub-category : </td>
+										<td>Sub category : </td>
 										<td>
 										<?php if((isset($selectproductcategory)) && ($selectproductcategory != "")){ ?>
 											<select class="form-control" name="selectproductsubcategory" required="required">

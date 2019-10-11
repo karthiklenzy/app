@@ -23,8 +23,14 @@ function getsublocation(catid) {
 					    <li class="breadcrumb-item active" aria-current="page">Edit Profile</li>
 					  </ol>
 				</nav>
-		    	  <div class="col-md-8 col-sm-8">
-				    <div class="contact-form" style="margin: 0px;">
+				<?php if(isMobile())  { 
+  					include DOC_ROOT.'includes/profile_menu.php'; ?>
+  					<div class="heightx1"></div>
+  				<?php 
+  				}
+  				?>
+		    	  <div class="col-md-8 col-sm-8 col-xs-12">
+				    <div class="contact-form grid-style" style="margin: 0px;">
 				  	  <h2>User Details</h2>
 						<?php if(isset($_COOKIE['cookieSuccessMessage'])){ ?>
 						<div class="alert alert-success alert-dismissible">
@@ -40,7 +46,7 @@ function getsublocation(catid) {
 						<?php } ?>
 
 					    <form method="post">
-					     <div style="width: 50%;">
+					     <div class="col-md-6 col-xs-12 col-sm-10" style="">
 					      <?php
 					    	if ($user_details) {
 					    	for ($i=0; $i < count($user_details); $i++) { 
@@ -144,9 +150,10 @@ function getsublocation(catid) {
 				  	</div>
   				</div>
   				
-  				<?php
-  				include_once DOC_ROOT.'includes/profile_menu.php';
-  				 ?>
+  				<?php if(!isMobile())  { 
+  					include DOC_ROOT.'includes/profile_menu.php';
+  				}
+  				?>
   				
 			</div>
 		</div>		
