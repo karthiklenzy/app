@@ -9,6 +9,13 @@
 				    
 				  </ol>
 				</nav>
+
+				<?php if(isMobile())  { 
+  					include DOC_ROOT.'includes/profile_menu.php'; ?>
+  					<div class="heightx1"></div>
+  				<?php 
+  				}
+  				?>
 				<div class="col-md-8 col-sm-8">
 				  	<div class="dashboard-user">
 				  		<?php if(isset($_COOKIE['SuccessMessage'])){ ?>
@@ -45,8 +52,9 @@
 					  	</div>
 					</div>
   				</div>
-				<?php
-  				include DOC_ROOT.'includes/profile_menu.php';
+				<?php if(!isMobile())  { 
+  					include DOC_ROOT.'includes/profile_menu.php';
+  				}
   				?>
 			</div>
 			<!-- product list -->
@@ -89,7 +97,7 @@
 							    <p>Are you sure to delete this item?</p>
 							</div>
 							<div class="modal-footer">
-							    <a type="button" class="btn btn-default" id="<?php echo $cat_product_sql[$z]['product_id']; ?>" href="<?php HTTP_PATH ?>user-profile?deleteid=<?php echo $cat_product_sql[$z]['product_id']?>" type="button">Yes</a>
+							    <a type="button" class="btn btn-default" id="<?php echo $cat_product_sql[$z]['product_id']; ?>" href="<?php HTTP_PATH ?>uploaded-items?deleteid=<?php echo $cat_product_sql[$z]['product_id']?>" type="button">Yes</a>
 							    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
 							</div>
 						</div>

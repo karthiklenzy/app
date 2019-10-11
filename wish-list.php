@@ -5,13 +5,13 @@ include_once DOC_ROOT.'includes/auth_user.php';
 include_once DOC_ROOT.'functions.php';
 
 	$verify_count = 0;
-	$wish_array = array('user_id' => $_SESSION['vendesiya_user_id']);
-	$wish_data = $db->query("SELECT tbl_product.* FROM tbl_product INNER JOIN tbl_wish_list WHERE tbl_product.product_id = tbl_wish_list.product_id AND tbl_wish_list.user_id = :user_id", $wish_array);
+	$wish_array = array('user_id' => $_SESSION['vendesiya_user_id'], 'product_status' => 1);
+	$wish_data = $db->query("SELECT tbl_product.* FROM tbl_product INNER JOIN tbl_wish_list WHERE tbl_product.product_id = tbl_wish_list.product_id AND tbl_wish_list.user_id = :user_id AND tbl_product.product_status = :product_status", $wish_array);
 
-	$verify_data = $db->query("SELECT product_id, product_url, product_name, product_main_img, product_initial_price FROM tbl_product WHERE published_user_id = :user_id ORDER BY product_id DESC", $wish_array);
+	$verify_data = $db->query("SELECT product_id, product_url, product_name, product_main_img, product_initial_price FROM tbl_product WHERE published_user_id = :user_id AND product_status = :product_status ORDER BY product_id DESC", $wish_array);
 
 	if (!$verify_data) {
-				$verify_count++;
+		$verify_count++;
 	}
 	
 	/*  Pagination Settings  */
@@ -33,13 +33,15 @@ include_once DOC_ROOT.'functions.php';
 		}
 	/*  //Pagination Settings  */
 	if (isset($wish_data)) {
-		$product_count = $db->query("SELECT count(wish_list_id) FROM tbl_wish_list WHERE user_id = :user_id", $wish_array);
+		$wish_array_count = array('user_id' => $_SESSION['vendesiya_user_id']);
+		$product_count = $db->query("SELECT count(wish_list_id) FROM tbl_wish_list WHERE user_id = :user_id", $wish_array_count);
 	}
 
 
 		$total_product = $product_count[0]['count(wish_list_id)'];
 		$total_pages = $total_product / $num_rec_per_page;
 		$total_pages = ceil($total_pages); //convert to highest full number
+		
 
 		if ($wish_data) {
 			$current_date_time = date('Y-m-d h:i:s');
@@ -54,6 +56,8 @@ include_once DOC_ROOT.'functions.php';
 		$delete_sql = $db->query("DELETE FROM tbl_wish_list WHERE product_id = :delete_id AND user_id = :user_id", $delete_array);
 
 		if ($delete_sql) {
+			$success_message = "Successfully Removed.!";
+			setcookie("SuccessMessage", $success_message, time() + (5 * 1), "/");
 			header("Location:".HTTP_PATH."wish-list");
 		}
 		

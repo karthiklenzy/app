@@ -22,6 +22,12 @@ function getsubcategory(catid) {
 				    <li class="breadcrumb-item active" aria-current="page">Upload item</li>
 				  </ol>
 				</nav>
+				<?php if(isMobile())  { 
+  					include DOC_ROOT.'includes/profile_menu.php'; ?>
+  					<div class="heightx1"></div>
+  				<?php 
+  				}
+  				?>
 				<div class="col-md-6">
 				  	<div class="contact-form" style="border:0">
 				  	<h2>Upload item</h2>
@@ -29,7 +35,7 @@ function getsubcategory(catid) {
 							<table class="tableClassFsd col-md-12">
 								<tbody>
 									<tr>
-										<td width="40%">Product Category : </td>
+										<td width="50%">Product Category : </td>
 										<td width="50%">
 											<select class="form-control" name="selectproductcategory" required="required" onchange="getsubcategory(this.value)" style="margin-bottom: 10px;">
 												<option value="" disabled="disabled" selected="selected">-- Select --</option>
@@ -83,9 +89,10 @@ function getsubcategory(catid) {
 				  	</div>
   				</div>
   				<div class="col-md-2"></div>
-					<?php
-  						include_once DOC_ROOT.'includes/profile_menu.php';
-  				 	?>
+				<?php if(!isMobile())  { 
+  					include DOC_ROOT.'includes/profile_menu.php';
+  				}
+  				?>
   				
 			</div>
 		</div>		

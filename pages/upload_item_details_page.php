@@ -9,6 +9,12 @@
 				    <li class="breadcrumb-item active" aria-current="page">Upload item details</li>
 				  </ol>
 				</nav>
+				<?php if(isMobile())  { 
+  					include DOC_ROOT.'includes/profile_menu.php'; ?>
+  					<div class="heightx1"></div>
+  				<?php 
+  				}
+  				?>
 				<div class="col-md-6">
 				  	<div class="contact-form">
 				  	<h2>Add Product Details</h2>
@@ -94,9 +100,10 @@
 				  	</div>
   				</div>
   				<div class="col-md-2"></div>
-					<?php
-	  				include_once DOC_ROOT.'includes/profile_menu.php';
-	  				?>
+				<?php if(!isMobile())  { 
+  					include DOC_ROOT.'includes/profile_menu.php';
+  				}
+  				?>
   			</div>
 		</div>		
     </div> 

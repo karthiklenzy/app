@@ -9,6 +9,12 @@
 				    
 				  </ol>
 				</nav>
+				<?php if(isMobile())  { 
+  					include DOC_ROOT.'includes/profile_menu.php'; ?>
+  					<div class="heightx1"></div>
+  				<?php 
+  				}
+  				?>
 				<div class="col-md-8 col-sm-8">
 				  	<div class="contact-form" style="margin: 0">
 				  		<?php if(isset($_COOKIE['cookieSuccessMessage'])){ ?>
@@ -48,9 +54,10 @@
 				  	</div>
   				</div>
   				
-  				<?php
-  				include_once DOC_ROOT.'includes/profile_menu.php';
-  				 ?>
+  				<?php if(!isMobile())  {
+  					include DOC_ROOT.'includes/profile_menu.php';
+  				}
+  				?>
   				
 			</div>
 		</div>		

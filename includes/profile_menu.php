@@ -1,3 +1,4 @@
+<?php if(!isMobile())  { ?>
 <div class="col-md-4 col-sm-4">
   <div class="categories user">
   	
@@ -12,3 +13,26 @@
   	</ul>
   </div>
 </div>
+
+<?php } if(isMobile()) { ?>
+        <div class="row">
+          <div class="col-md-3 col-sm-4 col-xs-12">
+              <div class="topnav" id="myTopnavcat" style="overflow: inherit;display: inline-block;width: 100%;">
+                <a href="#"><b>Manage Account</b></a>
+                
+                  
+                  <a href="<?php echo HTTP_PATH; ?>user-profile"><i class="fa fa-caret-right"></i>&emsp;Dashboard</a>
+                  <a href="<?php echo HTTP_PATH; ?>uploaded-items"><i class="fa fa-caret-right"></i>&emsp;Uploaded Items</a>
+                  <a href="<?php echo HTTP_PATH; ?>wish-list"><i class="fa fa-caret-right"></i>&emsp;Favourite</a>
+                  <a href="<?php echo HTTP_PATH; ?>bid-list"><i class="fa fa-caret-right"></i>&emsp;Bid Items</a>
+                  <a href="<?php echo HTTP_PATH; ?>edit-profile"><i class="fa fa-caret-right"></i>&emsp;Edit Profile</a>
+                  <a href="<?php echo HTTP_PATH; ?>change-password"><i class="fa fa-caret-right"></i>&emsp;Change Password</a>
+                
+                  <a href="javascript:void(0);" class="icon" onclick="myCategorymenu()">
+                    <i class="fa fa-list"></i>
+                  </a>
+
+              </div>
+            </div>
+          </div>
+        <?php } ?>

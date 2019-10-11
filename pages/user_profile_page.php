@@ -8,6 +8,12 @@
 				    
 				  </ol>
 				</nav>
+				<?php if(isMobile())  { 
+  					include DOC_ROOT.'includes/profile_menu.php'; ?>
+  					<div class="heightx1"></div>
+  				<?php 
+  				}
+  				?>
 				<div class="col-md-8 col-sm-8">
 				  	<div class="dashboard-user">
 				  		<?php if(isset($_COOKIE['SuccessMessage'])){ ?>
@@ -44,8 +50,9 @@
 					  	</div>
 					</div>
   				</div>
-				<?php
-  				include DOC_ROOT.'includes/profile_menu.php';
+				<?php if(!isMobile())  {
+  					include DOC_ROOT.'includes/profile_menu.php';
+  				}
   				?>
 			</div>
 			<!-- product list -->

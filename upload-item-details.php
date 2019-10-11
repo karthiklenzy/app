@@ -47,7 +47,9 @@ if ((isset($_GET['selectproductcategory'])) && (isset($_GET['selectproductsubcat
 		if ($item_price != 0 && $item_count != 0) {
 			$item_count_type = "Bulk";
 		}
-		
+		if (!isset($item_count)) {
+			$item_count = 1;
+		}
 // 		echo $item_count_type." ".$item_price." ".$item_count;exit();
  
 		if ($error_count == 0) {
