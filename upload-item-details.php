@@ -165,7 +165,7 @@ if ((isset($_GET['selectproductcategory'])) && (isset($_GET['selectproductsubcat
 							$product_img_link = $image_path_to_upload;
 							$the_message_to_be_sent .= '<img src="';
                     		$the_message_to_be_sent .= HTTP_PATH;
-                    		$the_message_to_be_sent .= $prod_main_img;
+                    		$the_message_to_be_sent .= $image_path_to_upload;
                     		$the_message_to_be_sent .='" width="150"><br><br>';
 							$the_message_to_be_sent .= '<h3><b>Your product successfully uploaded & sent for aproval.</b><br>within 24 hours your product will be active on Vendesiya after reviewing that product.</h3>';
 							include DOC_ROOT.'includes/email_template.php';

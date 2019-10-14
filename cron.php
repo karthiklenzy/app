@@ -4,16 +4,16 @@
 	include_once DOC_ROOT.'classes/mailing.class.php';
 	include_once DOC_ROOT.'functions.php';
 
-
 	// $current_date_time
 	$select_array = array('status' => "1", 'current_date_time' => $current_date_time);
-	$select_product_expire_date = $db->query("SELECT product_name, product_bid_ends_on, product_id, product_status FROM tbl_product WHERE product_status = :status AND product_bid_ends_on < :current_date_time", $select_array);
+	$select_product_expire_date = $db->query("SELECT product_name, product_bid_ends_on, product_id, product_status, product_initial_price FROM tbl_product WHERE product_status = :status AND product_bid_ends_on < :current_date_time", $select_array);
 
 		if ($select_product_expire_date) {
 			for ($x=0; $x < count($select_product_expire_date); $x++) {
 				$product_name = $select_product_expire_date[$x]['product_name'];
 				$bid_end_date_time = $select_product_expire_date[$x]['product_bid_ends_on'];
 				$product_id = $select_product_expire_date[$x]['product_id'];
+				$product_initial_price = $select_product_expire_date[$x]['product_initial_price'];
 
 				$checking_bid_table_array = array('product_id' => $product_id);
 				$checking_bid_table_sql = $db->query("SELECT product_id FROM tbl_bid WHERE product_id = :product_id", $checking_bid_table_array);
@@ -56,10 +56,21 @@
 	                    	$the_message_to_be_sent .='" width="150"><br>';
 
 	                    	if ($z == 0) {
-	                    		$the_message_to_be_sent .= 'Hi '.$expired_product_owner_name.'<br>Your Product is Expired.<br>The Max bidder of this product will own your product.<br>We will contact you soon.';
+	                    		if ($product_initial_price > $expired_product_max_value) {
+	                    			$the_message_to_be_sent .= 'Hi '.$expired_product_owner_name.'<br>Your Product is Expired.<br>The Max bidder of this product value is not higher than your initial price.';
+	                    		} 
+	                    		else{
+	                    			$the_message_to_be_sent .= 'Hi '.$expired_product_owner_name.'<br>Your Product is Expired.<br>The Max bidder of this product will own your product.<br>We will contact you soon.';
+	                    		}
+	                    		
 	                    	}
 	                    	else {
-	                    		$the_message_to_be_sent .= 'Hi '.$expired_product_max_bidder_name.'<br>Your are the max bidder of this product.<br>You can claim your product now.<br>We will contact you soon.';
+	                    		if ($product_initial_price > $expired_product_max_value) {
+	                    			$the_message_to_be_sent .= 'Hi '.$expired_product_max_bidder_name.'<br>Your are the max bidder of this product.<br>Your max bidded amout is less then initial price.';
+	                    		}
+	                    		else {
+	                    			$the_message_to_be_sent .= 'Hi '.$expired_product_max_bidder_name.'<br>Your are the max bidder of this product.<br>You can claim your product now.<br>We will contact you soon.';
+	                    		}
 	                    	}
 							
 						    include DOC_ROOT.'includes/email_template.php';

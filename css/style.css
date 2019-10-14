@@ -1382,7 +1382,7 @@ body {
 }
 @media only screen and (max-width: 1080px) {
 	.price-details p span.rupees {
-		font-size: 1.5em;
+		font-size: 1.1em;
 	}
 	.add-cart h4 a {
 		padding: 10px 7px;
@@ -4049,7 +4049,16 @@ div.prostyle h5 {
 		padding: 25px 15px 15px 15px;
 	}*/
 }
-
+/*Responsive Landscape*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+	.share-desc .btn-primary {
+	    width: 100%;
+	}
+	.h5, h5 {
+	    font-size: 13px !important;
+	}
+}
+/* End Responsive Landscape*/
 /*NAFLIN CSS END*/
 h2.resp-accordion:hover {
     color: #000000 !important;

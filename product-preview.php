@@ -113,7 +113,6 @@ $verify_count = 0;
 					}
 				  }
 			  $displaybidamount = ($bid_margin / 100) * $reservationprice + $currentamount;
-			  $displaybidamount = $displaybidamount / 2;
 			  $pricefloor = $displaybidamount; 
 			}
 	  	}
