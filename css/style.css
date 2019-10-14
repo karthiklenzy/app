@@ -738,9 +738,9 @@ body {
 	line-height: 1.8em;
 	font-family: verdana, arial, helvetica, helve, sans-serif;
 }
-.product-desc p span{
+/*.product-desc p span{
 	font-weight:bold;
-}
+}*/
 .product-tags h4 {
 	padding: 10px 0;
 	font-size: 0.9em;
@@ -4039,7 +4039,7 @@ div.prostyle h5 {
 	    margin: 20px 0;
 	}
 	#ads .card {
-	    height: 28vh;
+	    height: 31vh;
 	}
 	.see {
 	    float: right;

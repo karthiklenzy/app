@@ -48,7 +48,7 @@
 							 <?php if ($selected_product_sql) {
 					for ($x=0; $x < count($selected_product_sql); $x++) { ?>
 
-					<h2><?php echo $selected_product_sql[$x]['product_name']; ?></h2>
+					<h3><?php echo $selected_product_sql[$x]['product_name']; ?></h3>
 					<div class="price">
 						<p>
 							<span>Rs. <?php echo number_format($selected_product_sql[$x]['product_initial_price']); ?>
