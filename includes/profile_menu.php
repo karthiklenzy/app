@@ -15,7 +15,7 @@
 </div>
 
 <?php } if(isMobile()) { ?>
-        <div class="row">
+        
           <div class="col-md-3 col-sm-4 col-xs-12">
               <div class="topnav" id="myTopnavcat" style="overflow: inherit;display: inline-block;width: 100%;">
                 <a href="#"><b>Manage Account</b></a>
@@ -34,5 +34,5 @@
 
               </div>
             </div>
-          </div>
+          
         <?php } ?>

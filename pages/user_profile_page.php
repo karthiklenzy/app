@@ -78,7 +78,7 @@
 					        </div>
 					            <a class="ad-btn" href="<?php echo HTTP_PATH; ?>product-details?prourl=<?php echo $cat_product_sql[$z]['product_url']; ?>&product_id=<?php echo $cat_product_sql[$z]['product_id']; ?>">View
 					            </a>
-					            <a href="#myModal<?= $z; ?>" data-target="#myModal<?= $z; ?>" data-toggle="modal"><i class="fa fa-trash-alt"></i></a>
+					            <!-- <a href="#myModal<?= $z; ?>" data-target="#myModal<?= $z; ?>" data-toggle="modal"><i class="fa fa-trash-alt"></i></a> -->
 					    </div>
 					</div>
 				</div>

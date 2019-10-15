@@ -8,11 +8,12 @@
 	  		for ($i=0; $i < count($catagory_list); $i++) { 
 	  			
 	  	?>
-	      <li class="<?php if ($catagory_list[$i]['category_id'] == $category_id_active) {echo "cat-active"; } ?>"><img src="<?php echo HTTP_PATH."PxIgNm/".$catagory_list[$i]['category_icon']; ?>" width="30"><a href="<?php echo HTTP_PATH; ?>shop?category=<?php echo $catagory_list[$i]['category_id']; ?>">
+	  	<a href="<?php echo HTTP_PATH; ?>shop?category=<?php echo $catagory_list[$i]['category_id']; ?>">
+	      <li class="<?php if ($catagory_list[$i]['category_id'] == $product_catagory_id) {echo "cat-active"; } ?>"><img src="<?php echo HTTP_PATH."PxIgNm/".$catagory_list[$i]['category_icon']; ?>" width="30">
 
 	      <?php echo $catagory_list[$i]['category_name']; ?>
 	      	
-	      </a></li>
+	      </li></a>
 
 	    <?php 
 	    	}

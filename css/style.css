@@ -2391,6 +2391,7 @@ a:focus, a:hover {
 }
 .categories ul li {
 	padding: 10px 5px;
+	color: black;
 }
 .user ul li {
     padding: 5px 5px !important;
@@ -3686,7 +3687,7 @@ div.prostyle h5 {
 	    display: none;
 	}
 	#ads .card {
-	    height: 38.5vh;
+	    height: 20.5vh;
 	}
 	/*.contact-form {
 		padding: 25px 15px 15px 15px;
@@ -3994,16 +3995,16 @@ div.prostyle h5 {
 	}
 	#ads .ad-btn {
 	    text-transform: uppercase;
-	    width: 150px;
-	    height: 40px;
+	    width: 125px;
+	    height: 30px;
 	    border-radius: 80px;
-	    font-size: 16px;
-	    line-height: 35px;
+	    font-size: 12px;
+	    line-height: 29px;
 	    text-align: center;
 	    border: 1px solid #c3c3c3;
 	    display: block;
 	    text-decoration: none;
-	    margin: 20px auto 10px auto;
+	    margin: 10px auto 10px auto;
 	    color: #000;
 	    overflow: hidden;
 	    position: relative;
@@ -4039,7 +4040,7 @@ div.prostyle h5 {
 	    margin: 20px 0;
 	}
 	#ads .card {
-	    height: 31vh;
+	    height: 29vh;
 	}
 	.see {
 	    float: right;
@@ -4236,6 +4237,9 @@ h2.resp-accordion:hover {
 }
 .fa-caret-right {
 	color: #1bdeb3;
+}
+#myTopnavcat {
+	margin-bottom: 5px;
 }
 /*@media (max-width: 1024px) and (min-width: 768px) {
   .main-navigation ul li:hover > ul.sub-menu {

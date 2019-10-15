@@ -25,7 +25,7 @@ function getsublocation(catid) {
 				</nav>
 				<?php if(isMobile())  { 
   					include DOC_ROOT.'includes/profile_menu.php'; ?>
-  					<div class="heightx1"></div>
+  					<!-- <div class="heightx1"></div> -->
   				<?php 
   				}
   				?>
