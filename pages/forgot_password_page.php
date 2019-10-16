@@ -52,7 +52,7 @@
 							    
 							    
 							   	<div>
-							   		<button type="submit" class="btn" name="btn-submit"><i class="fa fa-at"></i>&emsp;Submit</button>
+							   		<button type="submit" class="btn" name="btn-submit">Submit</button>
 							  	</div>
 							  
 								

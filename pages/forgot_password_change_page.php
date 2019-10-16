@@ -102,8 +102,8 @@
 	    </div>
 	    <div class="modal-body">
 	    	<ul>
-	          <?php if (isset($error_message)) {
-	          	echo $error_message;
+	          <?php if (isset($error_message_verify)) {
+	          	echo $error_message_verify;
 	          } ?>
 	      	</ul>
 	    </div>

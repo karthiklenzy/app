@@ -17,10 +17,21 @@ if (isset($_POST['btnlog'])) {
 
 	$txtusername = trim($txtusername);
 	$md5password = md5($txtpassword);
-
 	$loginattemptArray = array('username' => $txtusername, 'userpassword' => $md5password);
-	$loginattemptQuery = $db->query("SELECT user_id, user_name, user_status, user_email FROM tbl_user WHERE user_name = :username AND user_password = :userpassword", $loginattemptArray);
+	$sql_getdata = "SELECT user_id, user_name, user_status, user_email, user_phone FROM tbl_user WHERE user_password = :userpassword";
+	// Check user login with email or username or number
+	if(filter_var($_POST['valid_username'], FILTER_VALIDATE_EMAIL)) {
+		$sql_getdata .= " AND user_email = :username";
+    }
+    else if(is_numeric($txtusername)) {
+    	$sql_getdata .= " AND user_phone = :username";
+    }
+    else {
+    	$sql_getdata .= " AND user_name = :username";
+    }
 
+    $loginattemptQuery = $db->query($sql_getdata, $loginattemptArray);
+	// End Check user login with email or username or number
 	if ($loginattemptQuery) {
 		if ($loginattemptQuery[0]['user_status'] != 1) {
 			$error_message = "User Not active. verifiy account by Email link.!";
@@ -35,6 +46,7 @@ if (isset($_POST['btnlog'])) {
 				$_SESSION['vendesiya_user_name'] = $loginattemptQuery[$i]['user_name'];
 				$username = $loginattemptQuery[$i]['user_name'];
 				$_SESSION['user_email'] = $loginattemptQuery[$i]['user_email'];
+				$_SESSION['user_phone'] = $loginattemptQuery[$i]['user_phone'];
 
 				/*
 				$_SESSION['username'] = $loginattemptQuery[$i]['user_name'];
@@ -62,7 +74,7 @@ if (isset($_POST['btnlog'])) {
 		}
 	}
 	else{
-		$error_message = "User or password not matching.!";
+		$error_message = "Username or password not matching.!";
 		setcookie("cookieErrorLogMessage", $error_message, time() + (10 * 1), "/");
 		
 		header("Location:".HTTP_PATH."login-user");

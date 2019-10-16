@@ -1,0 +1,3 @@
+Time : 08:19:17
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ELECT user_id, user_name, user_status, user_email, user_phone FROM tbl_user WHER' at line 1
+Raw SQL : ELECT user_id, user_name, user_status, user_email, user_phone FROM tbl_user WHERE user_password = :userpassword AND user_name = :username

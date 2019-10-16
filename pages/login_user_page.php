@@ -46,10 +46,10 @@
 					  		<h5>Already Registed? Please login below.</h5>
 						    <form method="post">
 						    	<div>
-							    	<span><label>Username</label></span><span class="star"> *</span>
+							    	<span><label>Username or Email or Number</label></span><span class="star"> *</span>
 							    	<span><input type="text" name="valid_username" class="textbox" value="<?php if (isset($txtusername)) {
 							    		echo $txtusername;
-							    	} ?>" required></span>
+							    	} ?>" placeholder="" required></span>
 							    </div>
 							    <div>
 							    	<span><label>Password</label></span><span class="star"> *</span>
@@ -108,6 +108,17 @@
 	  </div>
   	</div>
 </div>
+<script>
+		$("input.textbox").on({
+  keydown: function(e) {
+    if (e.which === 32)
+      return false;
+  },
+  change: function() {
+    this.value = this.value.replace(/\s/g, "");
+  }
+});
+	</script>
 <!-- Modal end -->
 <!-- <script>
 function myFunction() {

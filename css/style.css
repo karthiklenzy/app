@@ -3076,7 +3076,7 @@ div.prostyle h5 {
 	}
 	.search-page {
 		overflow: auto;
-    	display: inline-block;
+    	display: grid;
 	}
 	.responsive a img {
 		margin-top: -7px;
@@ -3116,7 +3116,7 @@ div.prostyle h5 {
 		padding-top: 30px;
 	}
 	#ads .ad-title h5 {
-	    text-transform: uppercase;
+	    text-transform: capitalize;
 	    font-size: 12px;
 	}
 	#ads .ad-btn {
@@ -3167,6 +3167,9 @@ div.prostyle h5 {
 	}
 	/*.contact-form {
 		padding: 5px 0px 5px 0px;
+	}*/
+	/*.footer .col-xs-6 {
+		width: 45%;
 	}*/
 }
 
@@ -3265,7 +3268,7 @@ div.prostyle h5 {
 	}
 	.search-page {
 		overflow: auto;
-    	display: inline-block;
+    	display: grid;
 	}
 	.responsive a img {
 		margin-top: -7px;
@@ -3305,7 +3308,7 @@ div.prostyle h5 {
 		padding-top: 30px;
 	}
 	#ads .ad-title h5 {
-	    text-transform: uppercase;
+	    text-transform: capitalize;
 	    font-size: 18px;
 	}
 	#ads .ad-btn {
@@ -3356,6 +3359,9 @@ div.prostyle h5 {
 	}
 	/*.contact-form {
 		padding: 5px 0px 5px 0px;
+	}*/
+	/*.footer .col-xs-6 {
+		width: 45%;
 	}*/
 }
 
@@ -3484,7 +3490,7 @@ div.prostyle h5 {
 	.bid-padding {
 		padding-top: 100px;
 	}#ads .ad-title h5 {
-	    text-transform: uppercase;
+	    text-transform: capitalize;
 	    font-size: 12px;
 	}
 	#ads .ad-btn {
@@ -3653,7 +3659,7 @@ div.prostyle h5 {
 		padding-top: 30px;
 	}
 	#ads .ad-title h5 {
-	    text-transform: uppercase;
+	    text-transform: capitalize;
 	    font-size: 18px;
 	}
 	#ads .card-notify-year {
@@ -3808,7 +3814,7 @@ div.prostyle h5 {
 		padding-top: 30px;
 	}
 	#ads .ad-title h5 {
-	    text-transform: uppercase;
+	    text-transform: capitalize;
 	    font-size: 17px;
 	}
 	#ads .ad-btn {
@@ -3858,7 +3864,7 @@ div.prostyle h5 {
 	    margin: 20px 0;
 	}
 	#ads .card {
-	    height: 31vh;
+	    height: 25vh;
 	}
 	.see {
 	    float: right;
@@ -3990,7 +3996,7 @@ div.prostyle h5 {
 		padding-top: 30px;
 	}
 	#ads .ad-title h5 {
-	    text-transform: uppercase;
+	    text-transform: capitalize;
 	    font-size: 18px;
 	}
 	#ads .ad-btn {
@@ -4040,7 +4046,7 @@ div.prostyle h5 {
 	    margin: 20px 0;
 	}
 	#ads .card {
-	    height: 29vh;
+	    height: 24vh;
 	}
 	.see {
 	    float: right;
