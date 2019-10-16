@@ -64,12 +64,12 @@
 							<?php if (isset($_GET['upload']) && $_GET['upload'] == 'bulk') { ?>
 							<div class="padd">
 							   <span><label>Bulk items count<span class="star"> *</span></label></span>
-							   <span><input type="text" name="item_count" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="5" class="textbox" id="count" required></span>
+							   <span><input type="text" name="item_count" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="5" class="textbox" onpaste="return false;" id="count" required></span>
 						   	</div>
 						    <?php } ?>
 						   	<div class="padd">
 							   <span><label>Product Main Image<span class="star"> * (700px x 490px Recomended)</span> </label></span>
-							   <input type="file" id="uploadImage" name="files" accept="image/*" class="form-control" required="required">
+							   <input type="file" id="uploadImage" name="files" accept="image/*" class="form-control" required>
 						   	</div>
 							<div class="padd">
 							   <span><label>Product Additional Images (Max 4 images)<span class="star"> (700px x 490px Recomended)</span></label></span>
@@ -77,7 +77,7 @@
 						   	</div>
 							<div class="padd">
 							   <span><label>Expected Price <?php if (isset($_GET['upload']) && $_GET['upload'] == 'bulk') { ?> (Total)<?php } else if (isset($_GET['upload']) && $_GET['upload'] == 'freebid'){ ?>(Free Bid) <?php } ?><span class="star"> *</span></label></span>
-							   <span><input type="text" name="item_price" oninput="this.value=this.value.replace(/[^0-9]/g,'');" <?php if (isset($_GET['upload']) && $_GET['upload'] == 'freebid'){ ?>value="0" disabled <?php } ?> maxlength="5" class="textbox" id="price" required></span>
+							   <span><input type="text" name="item_price" oninput="this.value=this.value.replace(/[^0-9]/g,'');" <?php if (isset($_GET['upload']) && $_GET['upload'] == 'freebid'){ ?>value="0" disabled <?php } ?> maxlength="5" class="textbox" id="price" onpaste="return false;" required></span>
 						   	</div>  
 							<div class="padd">
 						   		<button type="submit" class="btn-style" name="btn-save">Send for approval</button>

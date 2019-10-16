@@ -60,7 +60,7 @@
 				<!-- Category Card -->
 				<?php if (isset($cat_product_sql)) {
 				for ($z=0; $z < count($cat_product_sql); $z++) {?>
-				<div class="col-md-3 col-sm-4 col-xs-6">
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 					<div class="card rounded">
 					    <div class="card-image">
 					    	<span class="card-notify-year"><i class="far fa-heart fa-lg"></i></span>
@@ -104,11 +104,11 @@
 			</div>
 					  <!-- product list end-->
 			<div class="content-pagenation" <?php if ($total_product < 1) { echo "style='display: none'";} ?>>
-					<li><a href="<?php echo HTTP_PATH ?>user-profile?currentpage=1">First</a></li>
+					<li><a href="<?php echo HTTP_PATH ?>wish-list?currentpage=1">First</a></li>
 					<?php for ($x=1; $x <= $total_pages ; $x++) { if(($x <= $showmaxpagelimit) && ($x >= $showminpagelimit)){ ?>
-					<li <?php if($current_page_number == $x){ ?> class="active" <?php } ?>><a href="<?php echo HTTP_PATH ?>user-profile?currentpage=<?php echo $x; ?>" ><?php echo $x; ?></a></li>
+					<li <?php if($current_page_number == $x){ ?> class="active" <?php } ?>><a href="<?php echo HTTP_PATH ?>wish-list?currentpage=<?php echo $x; ?>" ><?php echo $x; ?></a></li>
 						<?php } } ?>
-					<li><a href="<?php echo HTTP_PATH ?>user-profile?currentpage=<?php echo $total_pages ?>">Last</a></li>
+					<li><a href="<?php echo HTTP_PATH ?>wish-list?currentpage=<?php echo $total_pages ?>">Last</a></li>
 				<div class="clear"></div>
 			</div>
 		</div>		

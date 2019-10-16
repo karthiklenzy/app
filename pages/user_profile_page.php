@@ -61,7 +61,7 @@
 				<!-- Category Card -->
 				<?php if (isset($cat_product_sql)) {
 				for ($z=0; $z < count($cat_product_sql); $z++) {?>
-				<div class="col-md-3 col-sm-3 col-xs-6">
+				<div class="col-lg-2 col-md-3 col-sm-3 col-xs-6">
 					<div class="card rounded">
 					    <div class="card-image">
 					    	<span class="card-notify-year"><?php if ($cat_product_sql[$z]['product_status'] == 0) {
@@ -115,10 +115,10 @@
 				<!-- Category Card -->
 				<?php if (isset($cat_bid_product_sql)) {
 				for ($s=0; $s < count($cat_bid_product_sql); $s++) {?>
-				<div class="col-md-3 col-sm-3 col-xs-6">
+				<div class="col-lg-2 col-md-3 col-sm-3 col-xs-6">
 					<div class="card rounded">
 					    <div class="card-image">
-					    	<span class="card-notify-year-bid">Bidded</span>
+					    	<span class="card-notify-year-bid"><i class="fa fa-gavel"></i></span>
 					    	<a href="<?php echo HTTP_PATH; ?>product-preview?product-url=<?php echo $cat_bid_product_sql[$s]['product_url']; ?>">
 					        <img class="img-fluid wd" src="<?php echo HTTP_PATH.$cat_bid_product_sql[$s]['product_main_img']; ?>" alt="Alternate Text" width="180" height="150" />
 					        </a>

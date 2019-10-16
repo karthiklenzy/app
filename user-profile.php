@@ -58,11 +58,11 @@ $verify_data = $db->query("SELECT product_id, product_url, product_name, product
 		$total_pages = ceil($total_pages); //convert to highest full number
 
 		if ($verify_data) {
-			$cat_product_sql = $db->query("SELECT * FROM tbl_product WHERE published_user_id = :user_id ORDER BY product_id DESC limit 4", $verify_array);
+			$cat_product_sql = $db->query("SELECT * FROM tbl_product WHERE published_user_id = :user_id ORDER BY product_id DESC limit 6", $verify_array);
 		}
 	// Bid items
 		$bid_array = array('user_id' => $_SESSION['vendesiya_user_id']);
-		$cat_bid_product_sql = $db->query("SELECT tbl_product.*, tbl_bid.*, MAX(tbl_bid.bid_amount) FROM tbl_product INNER JOIN tbl_bid WHERE tbl_product.product_id = tbl_bid.product_id AND tbl_bid.bid_user_id = :user_id GROUP BY tbl_bid.product_id ORDER BY tbl_bid.product_id DESC limit 4", $bid_array);
+		$cat_bid_product_sql = $db->query("SELECT tbl_product.*, tbl_bid.*, MAX(tbl_bid.bid_amount) FROM tbl_product INNER JOIN tbl_bid WHERE tbl_product.product_id = tbl_bid.product_id AND tbl_bid.bid_user_id = :user_id GROUP BY tbl_bid.product_id ORDER BY tbl_bid.product_id DESC limit 6", $bid_array);
 
 $include_file = 'pages/user_profile_page.php';
 include 'template.php';

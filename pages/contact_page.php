@@ -62,6 +62,7 @@
 		</div>		
     </div> 
 </div>
+<div class="heightx1"></div>
 
 <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">

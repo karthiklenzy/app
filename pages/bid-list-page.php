@@ -60,13 +60,13 @@
 				<!-- Category Card -->
 				<?php if (isset($cat_product_sql)) {
 				for ($z=0; $z < count($cat_product_sql); $z++) {?>
-				<div class="col-md-3 col-sm-4 col-xs-6">
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 					<div class="card rounded">
 					    <div class="card-image">
-					    	<span class="card-notify-year-bid">Bidded</span>
+					    	<span class="card-notify-year-bid"><i class="fa fa-gavel"></i></span>
 					        <img class="img-fluid wd" src="<?php echo HTTP_PATH.$cat_product_sql[$z]['product_main_img']; ?>" alt="Alternate Text" width="180" height="150" />
 					    </div>
-					    <div class="card-body text-center">
+					    <div class="card-body text-center bidder">
 					        <div class="ad-title m-auto">
 					            <h5><?php echo substr($cat_product_sql[$z]['product_name'],0, 7); ?><br>
 					            </h5>
@@ -79,7 +79,7 @@
 					            
 					            <?php 
 					        	} else { ?>
-					        		<p>BIDDED Amount Rs.<?php echo $cat_product_sql[$z]['MAX(tbl_bid.bid_amount)']; ?></p>
+					        		<p>Bidded Rs.<?php echo $cat_product_sql[$z]['MAX(tbl_bid.bid_amount)']; ?></p>
 					        		<p class="invisible">bid exeed</p>		
 					        	
 					        	<?php }

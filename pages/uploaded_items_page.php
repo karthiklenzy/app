@@ -63,7 +63,7 @@
 				<!-- Category Card -->
 				<?php if (isset($cat_product_sql)) {
 				for ($z=0; $z < count($cat_product_sql); $z++) {?>
-				<div class="col-md-3 col-sm-4 col-xs-6">
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 					<div class="card rounded">
 					    <div class="card-image">
 					    	<span class="card-notify-year"><?php if ($cat_product_sql[$z]['product_status'] == 0) {
@@ -77,6 +77,7 @@
 					    <div class="card-body text-center">
 					        <div class="ad-title m-auto">
 					            <h5><?php echo substr($cat_product_sql[$z]['product_name'],0, 12); ?></h5>
+					            
 					        </div>
 					            <a class="ad-btn" href="<?php echo HTTP_PATH; ?>product-details?prourl=<?php echo $cat_product_sql[$z]['product_url']; ?>&product_id=<?php echo $cat_product_sql[$z]['product_id']; ?>">View
 					            </a>

@@ -15,7 +15,7 @@ include_once DOC_ROOT.'functions.php';
 	}
 	
 	/*  Pagination Settings  */
-	$num_rec_per_page = 8;
+	$num_rec_per_page = 12;
 	$limit_from = 0;
 	$showmaxpagelimit = 5;
 	$showminpagelimit = 0;

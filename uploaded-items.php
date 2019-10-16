@@ -31,7 +31,7 @@ $verify_data = $db->query("SELECT product_id, product_url, product_name, product
 
 	}
 	/*  Pagination Settings  */
-	$num_rec_per_page = 8;
+	$num_rec_per_page = 12;
 	$limit_from = 0;
 	$showmaxpagelimit = 5;
 	$showminpagelimit = 0;
