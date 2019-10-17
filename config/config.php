@@ -30,3 +30,4 @@ $current_date = date('Y-m-d');
 $current_time = date("H:i:s");
 /* Admin e-mails */
 $mailArray = array("farshad@esol.lk", "shifaz@esol.lk");
+// echo '<pre>'; var_dump($_SERVER); exit();

@@ -1,0 +1,3 @@
+Time : 11:44:25
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT count(product_id) FROM tbl_product WHERE product_status = :status AND product_count_type = :product_type

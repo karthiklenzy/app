@@ -5,7 +5,11 @@
 	  	<h3><i class="fa fa-list"></i>&emsp;Categories</h3>
 	  	<?php 
 	  	if ($catagory_list) {
-	  		for ($i=0; $i < count($catagory_list); $i++) { 
+	  		for ($i=0; $i < count($catagory_list); $i++) {
+	  		if (isset($_GET['category'])) {
+	  			$product_catagory_id = filter_var($_GET['category']);
+	  		}	
+	  		 
 	  			
 	  	?>
 	  	<a href="<?php echo HTTP_PATH; ?><?php if($CURRENT_PAGE == 'index.php'){ ?>shop<?php } else { ?>bulk<?php } ?>?category=<?php echo $catagory_list[$i]['category_id']; ?>">

@@ -53,6 +53,7 @@ $verify_count = 0;
 	  $catagory_name = getcategoryname($product_catagory_id);
 	  $product_sub_catagory_id = $selected_product_sql[0]['sub_category_id'];
 	  $sub_catagory_name = getsubcategoryname($product_sub_catagory_id);
+	  $product_count_number = $selected_product_sql[0]['product_count'];
 
 	  if ($selected_product_sql) {
 	  	// Adding wish list heart

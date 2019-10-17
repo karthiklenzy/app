@@ -2,12 +2,21 @@
 	<div class="header_slide">
 		<div class="row" style="margin:0;">
 		<?php include 'includes/category_menu.php'; ?>
-			<div class="col-md-9 col-sm-8 col-xs-12 product-menu" style="">					 
+			<div class="col-md-9 col-sm-8 col-xs-12 product-menu" style="">
+			<div class="content_bottom">
+		      <div class="heading">
+		    	<h3>Bulk Items</h3>
+		      </div>
+		      <div class="see">
+		    	
+		      </div>
+		  	<div class="clear"></div>
+	    </div>						 
 				<div class="row">
 				<?php if (count($cat_product_sql) == 0) {?>
-				<div class="alert alert-info alert-dismissible" style="width: 75%;">
+				<div class="alert alert-info alert-dismissible" style="width: 75%;margin-left: 15px;">
 					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-					<i class="fa fa-exclamation-circle"></i>&emsp;No bulk products added yet
+					<i class="fa fa-exclamation-circle"></i>&emsp;No bulk products added yet in this category
 				</div>
 				<?php } ?> 
 				<?php if ($cat_product_sql) {

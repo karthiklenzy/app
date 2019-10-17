@@ -50,7 +50,11 @@
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-12 col-xs-12 pro-heading">
+				<?php if ($product_count_number != "0") { ?>
+				<p class="bulk-tag">Bulk item</p>
+				<?php } ?>
 					<div class="pro-div">
+
 						<?php if ($selected_product_sql) {
 							for ($x=0; $x < count($selected_product_sql); $x++) { 
 								$product_code = $selected_product_sql[$x]['product_id']; ?>
@@ -135,8 +139,6 @@
 										</div>
 									</form>
 								</div>
-								
-								
 								<div class="col-md-6 col-xs-12 nopadding-val">
 								  <ul class="review">
 								  <?php if (isset($_SESSION['vendesiya_user_id']) && $_SESSION['vendesiya_user_id'] != $product_published_user_id) {?>
