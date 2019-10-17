@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /app/PxIgNm/
+RewriteBase /vendesiya/app/PxIgNm/
 
 # ####### Remove the last forward slash 
 RewriteCond %{REQUEST_FILENAME} !-d

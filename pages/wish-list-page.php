@@ -56,7 +56,7 @@
 			</div>
 			<!-- product list -->
 			<div class="row" id="ads">
-				<h3 class="product-head">Favourite Items</h3>
+				<h3 class="product-head">Wish list</h3>
 				<!-- Category Card -->
 				<?php if (isset($cat_product_sql)) {
 				for ($z=0; $z < count($cat_product_sql); $z++) {?>

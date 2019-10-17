@@ -8,7 +8,7 @@
 	  		for ($i=0; $i < count($catagory_list); $i++) { 
 	  			
 	  	?>
-	  	<a href="<?php echo HTTP_PATH; ?>shop?category=<?php echo $catagory_list[$i]['category_id']; ?>">
+	  	<a href="<?php echo HTTP_PATH; ?><?php if($CURRENT_PAGE == 'index.php'){ ?>shop<?php } else { ?>bulk<?php } ?>?category=<?php echo $catagory_list[$i]['category_id']; ?>">
 	      <li class="<?php if ($catagory_list[$i]['category_id'] == $product_catagory_id) {echo "cat-active"; } ?>"><img src="<?php echo HTTP_PATH."PxIgNm/".$catagory_list[$i]['category_icon']; ?>" width="30">
 
 	      <?php echo $catagory_list[$i]['category_name']; ?>
@@ -33,7 +33,7 @@
 					for ($i=0; $i < count($catagory_list); $i++) { 
 			?>
 				
-			  <a href="<?php echo HTTP_PATH; ?>shop?category=<?php echo $catagory_list[$i]['category_id']; ?>" ><img src="<?php echo HTTP_PATH."PxIgNm/".$catagory_list[$i]['category_icon']; ?>" width="20"><?php echo " ".$catagory_list[$i]['category_name']; ?></a>
+			  <a href="<?php echo HTTP_PATH; ?><?php if($CURRENT_PAGE == 'index.php'){ ?>shop<?php } else { ?>bulk<?php } ?>?category=<?php echo $catagory_list[$i]['category_id']; ?>" ><img src="<?php echo HTTP_PATH."PxIgNm/".$catagory_list[$i]['category_icon']; ?>" width="20"><?php echo " ".$catagory_list[$i]['category_name']; ?></a>
 			 <?php }} ?>
 			
 		  	<a href="javascript:void(0);" class="icon" onclick="myCategorymenu()">
