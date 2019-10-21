@@ -154,6 +154,7 @@
 	$getmainmenu_array = array('menu_type' => "1"); /* Menu type 1 is main menu */
 	$getmainmenu = $db->query("SELECT * FROM tbl_menu WHERE menu_type = :menu_type ORDER BY menu_item_order ASC", $getmainmenu_array);
 	$catagory_list = $db->query("SELECT category_id, category_name, category_icon FROM tbl_category");
+	$product_name = $db->query("SELECT product_name, product_url FROM tbl_product");
 	if (isset($_GET['category'])) {
 		$category_id_active = filter_var($_GET['category']);
 	}

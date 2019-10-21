@@ -5,6 +5,7 @@ include_once DOC_ROOT.'functions.php';
 
 $current_date_and_time = date("Y-m-d h:i:s");
 $catagory_list = $db->query("SELECT category_name, category_icon FROM tbl_category");
+
 // Menu & Sub Menu list
 // if user loged only avoid to show own product
 if (isset($_SESSION['vendesiya_user_id'])) {

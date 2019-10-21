@@ -236,7 +236,7 @@ body {
 	outline: none;
 	background: none;
 	font-size:12px;
-	color: #acacac;
+	color: #000000;
 	width:75%;
 	padding:8px;
 }
@@ -3997,8 +3997,9 @@ div.prostyle h5 {
 		width: 20%;
 	}
 	.search_box {
-	    width: 30%;
-	    margin-top: 5px;
+		width: 30%;
+	    margin-bottom: 0px;
+	    margin-top: 8px;
 	}
 	.add-cart {
 	    float: right;
@@ -4092,7 +4093,7 @@ div.prostyle h5 {
 	}
 	.see {
 	    float: right;
-	    padding-top: 16px;
+	    padding-top: 10px;
 	}
 	/*.contact-form {
 		padding: 25px 15px 15px 15px;
@@ -4313,6 +4314,12 @@ h2.resp-accordion:hover {
     padding: 0px 30px;
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
+}
+.search-text-field {
+	width: 100% !important;
+}
+input::-webkit-calendar-picker-indicator {
+  display: none;
 }
 
 

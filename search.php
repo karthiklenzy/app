@@ -33,8 +33,8 @@ include 'classes/db_connection.php';
 		   	$product_data = $db->query("SELECT product_id, product_url, product_name, product_main_img, product_initial_price, product_bid_ends_on FROM tbl_product WHERE product_name LIKE :productname AND product_status = :activestatus AND product_bid_ends_on >= :currentdateandtime limit $limit_from, $num_rec_per_page", $product_data_array);
 
 		   	if ($product_data) {
-		   			$product_data_pagination = $db->query("SELECT count(product_id), product_bid_ends_on FROM tbl_product WHERE product_name LIKE :productname AND product_status = :activestatus AND product_bid_ends_on >= :currentdateandtime", $product_data_array);
-
+		   			$product_data_pagination = $db->query("SELECT count(product_id), category_id, product_bid_ends_on FROM tbl_product WHERE product_name LIKE :productname AND product_status = :activestatus AND product_bid_ends_on >= :currentdateandtime", $product_data_array);
+		   			$product_catagory_id = $product_data_pagination[0]['category_id'];
 		   			$total_product = $product_data_pagination[0]['count(product_id)'];
 					$total_pages = $total_product / $num_rec_per_page;
 					$total_pages = ceil($total_pages); //convert to highest full number
@@ -65,7 +65,7 @@ include 'classes/db_connection.php';
 		}
 	}
 	else {
-	  	$error_message = "No product found on that keyworddd";
+	  	$error_message = "No product found on that keyword";
 	}
 
 

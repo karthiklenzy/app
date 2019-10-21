@@ -1,11 +1,16 @@
 <?php ?>
 <div class="row" style="margin: 0;">
 		<nav aria-label="breadcrumb" class="bread-crumb">
+
 		  <ol class="breadcrumb">
 		    <li class="breadcrumb-item"><a href="<?php echo HTTP_PATH; ?>">Home</a></li>
 		    <li class="breadcrumb-item"><a href="<?php echo HTTP_PATH; ?>shop?category=<?= $product_catagory_id; ?>"><?php echo $catagory_name; ?></a></li>
 		    <li class="breadcrumb-item"><a href="<?php echo HTTP_PATH; ?>shop?category=<?= $product_catagory_id; ?>&subid=<?php echo $product_sub_catagory_id; ?>"><?php echo $sub_catagory_name; ?></a></li>
-		    <li class="breadcrumb-item active" aria-current="page"><?php echo $product_name; ?></li>
+		    <li class="breadcrumb-item active" aria-current="page">
+		      <a href="<?php echo HTTP_PATH; ?>product-preview?product-url=<?= $product_url; ?>">
+		        <?php echo $product_name_to_display; ?>
+		      </a>	
+		    </li>
 		  </ol>
 		</nav>
 		<?php if(isset($_COOKIE['SuccessMessage'])){ ?>
