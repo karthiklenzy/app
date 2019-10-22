@@ -75,13 +75,13 @@ else {
 	/*  //Pagination Settings  */
 	if (isset($_GET['subid'])) {
 		$sub_cat_id = filter_var($_GET['subid']);
-		$pagination_sub_product_array = array('pag_sub_cat_id' => $sub_cat_id,);
-		$product_count = $db->query("SELECT count(product_id) FROM tbl_product WHERE sub_category_id = :pag_sub_cat_id AND product_status = 1", $pagination_sub_product_array);
+		$pagination_sub_product_array = array('pag_sub_cat_id' => $sub_cat_id, 'date_time' => $current_date_time);
+		$product_count = $db->query("SELECT count(product_id) FROM tbl_product WHERE sub_category_id = :pag_sub_cat_id AND product_status = 1 AND product_bid_ends_on >= :date_time", $pagination_sub_product_array);
 	}
 	else {
 		$pag_cat_id = filter_var($_GET['category']);
-		$pagination_product_array = array('cat_id' => $pag_cat_id);
-		$product_count = $db->query("SELECT count(product_id) FROM tbl_product WHERE category_id = :cat_id AND product_status = 1", $pagination_product_array);
+		$pagination_product_array = array('cat_id' => $pag_cat_id, 'date_time' => $current_date_time);
+		$product_count = $db->query("SELECT count(product_id) FROM tbl_product WHERE category_id = :cat_id AND product_status = 1 AND product_bid_ends_on >= :date_time", $pagination_product_array);
 	}
 	if (isset($product_count)) {
 		$total_sub_catagory_count = getsubcategorycount($cat_id);

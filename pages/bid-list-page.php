@@ -74,7 +74,7 @@
 					            $user_bidded_max_value = $cat_product_sql[$z]['MAX(tbl_bid.bid_amount)'];
 					            $new_exeed_bidded_value = getproductmaxvalue($cat_product_sql[$z]['product_id']); 
 					            if ($user_bidded_max_value < $new_exeed_bidded_value) { ?>
-					            	<p>BIDDED Amount Rs.<strike><?php echo $cat_product_sql[$z]['MAX(tbl_bid.bid_amount)']; ?></strike></p>
+					            	<p>Bidded Rs.<strike><?php echo $cat_product_sql[$z]['MAX(tbl_bid.bid_amount)']; ?></strike></p>
 					            	<p><b>bid exeed (value Rs. <?php echo $new_exeed_bidded_value; ?>)</b></p>
 					            
 					            <?php 
