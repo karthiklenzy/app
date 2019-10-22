@@ -77,7 +77,8 @@
 					    <div class="card-body text-center">
 					        <div class="ad-title m-auto">
 					            <h5><?php echo substr($cat_product_sql[$z]['product_name'],0, 12); ?></h5>
-					            <p>Rs. <?php echo $cat_product_sql[$z]['product_current_price']; ?></p>
+					            <p>Rs. <?php if ($cat_product_sql[$z]['product_current_price'] == "-1") {
+					            	echo "0"; } else { echo $cat_product_sql[$z]['product_current_price'];} ?></p>
 					            
 					        </div>
 					            <a class="ad-btn" href="<?php echo HTTP_PATH; ?>product-details?prourl=<?php echo $cat_product_sql[$z]['product_url']; ?>&product_id=<?php echo $cat_product_sql[$z]['product_id']; ?>">View

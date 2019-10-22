@@ -3087,6 +3087,9 @@ div.prostyle h5 {
 	.span_1_of_4 {
 		width: 50%;
 	}
+	.footer .container .group .col-xs-6 {
+		height: 27vh;
+	}
 	.add-cart {
 	    float: right;
 	    width: 100%;
@@ -3178,7 +3181,7 @@ div.prostyle h5 {
 	}*/
 	.footer .group {
 	    zoom: 1;
-	    width: 90%;
+	    
 	}
 	.bidder p {
 		margin: 0 0 0px;
@@ -3288,6 +3291,9 @@ div.prostyle h5 {
 	}
 	.span_1_of_4 {
 		width: 50%;
+	}
+	.footer .container .group .col-xs-6 {
+		height: 27vh;
 	}
 	.add-cart {
 	    float: right;
@@ -3470,6 +3476,9 @@ div.prostyle h5 {
 	.span_1_of_4 {
 		width: 50%;
 	}
+	.footer .container .group .col-xs-6 {
+		height: 25vh;
+	}
 	.add-cart {
 	    float: right;
 	    width: 100%;
@@ -3649,6 +3658,9 @@ div.prostyle h5 {
 	.span_1_of_4 {
 		width: 50%;
 	}
+	.footer .container .group .col-xs-6 {
+		height: 25vh;
+	}
 	.add-cart {
 	    float: right;
 	    width: 100%;
@@ -3826,6 +3838,9 @@ div.prostyle h5 {
 	.span_1_of_4 {
 		width: 20%;
 	}
+	.footer .container .group .col-xs-6 {
+	    height: 24vh;
+	}
 	.search_box {
 	    width: 98%;
 	    margin-top: 7px;
@@ -3926,6 +3941,9 @@ div.prostyle h5 {
 		margin: 0 0 0px;
 		font-size: 11px;
 	}
+	.categories ul h3 {
+		margin-top: 2px;
+	}
 }
 /* Xtra Large Devices, Wide Screens */
 @media only screen and (min-width : 1920px) {
@@ -4006,6 +4024,9 @@ div.prostyle h5 {
 	}
 	.span_1_of_4 {
 		width: 20%;
+	}
+	.footer .container .group .col-xs-6 {
+	    height: 24vh;
 	}
 	.search_box {
 		width: 30%;
@@ -4118,6 +4139,22 @@ div.prostyle h5 {
 	.bidder p {
 		margin: 0 0 0px;
 		font-size: 12px;
+	}
+	.categories ul h3 {
+		margin-top: 22px;
+	}
+}
+/*Iphone 8 7 6*/
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) { 
+	.footer .container .group .col-xs-6 {
+    	height: 50vh;
+	}
+}
+/* Iphone 6 5 5s*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.footer .container .group .col-xs-6 {
+    	height: 50vh;
 	}
 }
 /*Responsive Landscape*/

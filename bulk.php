@@ -74,12 +74,12 @@ else {
 	/*  //Pagination Settings  */
 	if (isset($_GET['category'])) {
 		$pag_cat_id = filter_var($_GET['category']);
-		$pagination_product_array = array('cat_id' => $pag_cat_id, 'product_type' => "Bulk", 'status' => 1);
-		$product_count = $db->query("SELECT count(product_id) FROM tbl_product WHERE category_id = :cat_id AND product_status = :status AND product_count_type = :product_type", $pagination_product_array);
+		$pagination_product_array = array('cat_id' => $pag_cat_id, 'product_type' => "Bulk", 'status' => 1, 'currentdateandtime' => $current_date_and_time);
+		$product_count = $db->query("SELECT count(product_id) FROM tbl_product WHERE category_id = :cat_id AND product_status = :status AND product_count_type = :product_type AND product_bid_ends_on >= :currentdateandtime", $pagination_product_array);
 	}
 	else {
-		$pagination_product_array = array('product_type' => "Bulk", 'status' => 1);
-		$product_count = $db->query("SELECT count(product_id) FROM tbl_product WHERE product_status = :status AND product_count_type = :product_type", $pagination_product_array);
+		$pagination_product_array = array('product_type' => "Bulk", 'status' => 1, 'currentdateandtime' => $current_date_and_time);
+		$product_count = $db->query("SELECT count(product_id) FROM tbl_product WHERE product_status = :status AND product_count_type = :product_type AND product_bid_ends_on >= :currentdateandtime", $pagination_product_array);
 	}
 	
 		
